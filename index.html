@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maximilian Bese | Portfolio</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
@@ -15,7 +16,6 @@
     />
   </head>
   <body>
-    <!-- NAVBAR -->
     <nav class="navbar">
       <div class="nav-left">
         <div class="lang-switch">
@@ -29,22 +29,16 @@
         </ul>
       </div>
       <a href="#hero" class="logo">
-        <svg
-          class="logo-svg"
-          width="38"
-          height="38"
-          viewBox="0 0 38 38"
-          fill="none"
-        >
-          <rect x="2" y="2" width="13" height="34" rx="1" fill="#4ed9c2" />
-          <rect x="21" y="2" width="15" height="15" rx="1" fill="#4ed9c2" />
-          <rect x="21" y="21" width="15" height="15" rx="1" fill="#4ed9c2" />
-        </svg>
+        <img
+          src="logo.png"
+          alt="Logo"
+          class="logo-img"
+          style="width: 38px; height: 38px; object-fit: contain"
+        />
         <div class="logo-text">Maximilian<br />Bese</div>
       </a>
     </nav>
 
-    <!-- HERO -->
     <section id="hero" class="section hero-section">
       <main class="hero">
         <div class="hero-center">
@@ -90,7 +84,6 @@
       </div>
     </section>
 
-    <!-- TICKER -->
     <div class="ticker-wrapper">
       <div class="ticker-track">
         <span class="ticker-item" data-i18n="ticker_remote"
@@ -118,7 +111,6 @@
       </div>
     </div>
 
-    <!-- ABOUT -->
     <section id="about" class="section about-section">
       <div class="about-container">
         <div class="about-photo-wrap">
@@ -182,7 +174,6 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
     <section id="skills" class="section skills-section">
       <p class="section-label" data-i18n="skills_label">Technologies</p>
       <div class="skills-container">
@@ -377,7 +368,6 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
     <section id="projects" class="section projects-section">
       <p class="section-label" data-i18n="proj_label">Portfolio</p>
       <h2 class="projects-title" data-i18n="proj_title">Featured Projects</h2>
@@ -430,7 +420,6 @@
           <div class="project-divider"></div>
         </div>
 
-        <!-- Hover preview image (right side) -->
         <div class="project-preview-box" id="projectPreviewBox">
           <div
             class="hatch hatch-br"
@@ -441,13 +430,11 @@
       </div>
     </section>
 
-    <!-- PROJECT OVERLAY -->
     <div class="proj-overlay" id="projOverlay">
       <button class="proj-overlay-close" id="projOverlayClose">
         <i class="fa-solid fa-xmark"></i>
       </button>
       <div class="proj-overlay-inner">
-        <!-- Left: info -->
         <div class="proj-overlay-left">
           <p class="proj-number" id="overlayNumber">01</p>
           <h2 class="proj-overlay-title" id="overlayTitle">Join</h2>
@@ -468,7 +455,6 @@
             </a>
           </div>
         </div>
-        <!-- Right: screenshot -->
         <div class="proj-overlay-right">
           <img src="" alt="" id="overlayScreenshot" />
           <div
@@ -477,14 +463,12 @@
           ></div>
         </div>
       </div>
-      <!-- Next project -->
       <button class="proj-next-btn" id="projNextBtn">
         <span data-i18n="proj_next">Next project</span>
         <i class="fa-solid fa-arrow-right"></i>
       </button>
     </div>
 
-    <!-- TESTIMONIALS -->
     <section class="section testimonials-section">
       <h2 class="testimonials-title" data-i18n="testimonials_title">
         What my colleagues say about me
@@ -537,7 +521,6 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="section contact-section">
       <div class="contact-container">
         <div class="contact-left">
@@ -614,15 +597,15 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-left">
         <a href="#hero" class="footer-logo">
-          <svg width="44" height="44" viewBox="0 0 38 38" fill="none">
-            <rect x="2" y="2" width="13" height="34" rx="1" fill="#4ed9c2" />
-            <rect x="21" y="2" width="15" height="15" rx="1" fill="#4ed9c2" />
-            <rect x="21" y="21" width="15" height="15" rx="1" fill="#4ed9c2" />
-          </svg>
+          <img
+            src="logo.png"
+            alt="Logo"
+            class="footer-logo-img"
+            style="width: 44px; height: 44px; object-fit: contain"
+          />
           <div class="footer-logo-name">Maximilian<br />Bese</div>
         </a>
         <p class="footer-role" data-i18n="footer_role">Web Developer</p>
