@@ -23,9 +23,9 @@
           <span class="lang-btn">DE</span>
         </div>
         <ul class="nav-links">
-          <li><a href="#about">About me</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about" data-i18n="nav_about">About me</a></li>
+          <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+          <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
         </ul>
       </div>
       <a href="#hero" class="logo">
@@ -48,17 +48,17 @@
     <section id="hero" class="section hero-section">
       <main class="hero">
         <div class="hero-center">
-          <p class="subtitle">Frontend Developer</p>
+          <p class="subtitle" data-i18n="hero_subtitle">Frontend Developer</p>
           <h1>Maximilian Bese</h1>
           <div class="cta-buttons">
             <a href="#projects" class="btn">
               <div class="btn-inner">
-                <span>Check my work</span><span>Check my work</span>
+                <span data-i18n="btn_check">Check my work</span>
               </div>
             </a>
             <a href="#contact" class="btn">
               <div class="btn-inner">
-                <span>Contact me</span><span>Contact me</span>
+                <span data-i18n="btn_contact">Contact me</span>
               </div>
             </a>
           </div>
@@ -93,21 +93,27 @@
     <!-- TICKER -->
     <div class="ticker-wrapper">
       <div class="ticker-track">
-        <span class="ticker-item">Available for remote work</span
+        <span class="ticker-item" data-i18n="ticker_remote"
+          >Available for remote work</span
         ><span class="ticker-dot">•</span>
-        <span class="ticker-item">Frontend Developer</span
+        <span class="ticker-item" data-i18n="ticker_role"
+          >Frontend Developer</span
         ><span class="ticker-dot">•</span>
-        <span class="ticker-item">Based in Lübbecke</span
+        <span class="ticker-item" data-i18n="ticker_city">Based in Munich</span
         ><span class="ticker-dot">•</span>
-        <span class="ticker-item">Open to Opportunities</span
+        <span class="ticker-item" data-i18n="ticker_open"
+          >Open to Opportunities</span
         ><span class="ticker-dot">•</span>
-        <span class="ticker-item">Available for remote work</span
+        <span class="ticker-item" data-i18n="ticker_remote"
+          >Available for remote work</span
         ><span class="ticker-dot">•</span>
-        <span class="ticker-item">Frontend Developer</span
+        <span class="ticker-item" data-i18n="ticker_role"
+          >Frontend Developer</span
         ><span class="ticker-dot">•</span>
-        <span class="ticker-item">Based in Lübbecke</span
+        <span class="ticker-item" data-i18n="ticker_city">Based in Munich</span
         ><span class="ticker-dot">•</span>
-        <span class="ticker-item">Open to Opportunities</span
+        <span class="ticker-item" data-i18n="ticker_open"
+          >Open to Opportunities</span
         ><span class="ticker-dot">•</span>
       </div>
     </div>
@@ -118,15 +124,22 @@
         <div class="about-photo-wrap">
           <div class="hatch hatch-tl"></div>
           <div class="photo-frame">
-            <img src="photo.jpg" alt="Maximilian Bese" class="about-photo" />
+            <img
+              src="photo.jpg"
+              alt="Maximilian Bese"
+              class="about-photo"
+              onerror="this.style.display = 'none'"
+            />
           </div>
           <div class="hatch hatch-br"></div>
         </div>
         <div class="about-text-wrap">
-          <p class="section-label">Who I Am</p>
+          <p class="section-label" data-i18n="about_label">Who I Am</p>
           <div class="about-card">
-            <h2 class="about-title">About&nbsp;&nbsp;me</h2>
-            <p class="about-bio">
+            <h2 class="about-title" data-i18n="about_title">
+              Über&nbsp;&nbsp;mich
+            </h2>
+            <p class="about-bio" data-i18n="about_bio">
               Hey there, I'm Maximilian! Write some information about yourself
               that is IT related. Why are you passionate about coding? What is
               your source of inspiration for improving your programming skills?
@@ -136,7 +149,7 @@
                 <span class="about-icon"
                   ><i class="fa-solid fa-location-dot"></i
                 ></span>
-                <span
+                <span data-i18n="about_li1"
                   >Where are you based? Would you be open to working remotely or
                   potentially relocating?</span
                 >
@@ -145,7 +158,7 @@
                 <span class="about-icon"
                   ><i class="fa-solid fa-rotate"></i
                 ></span>
-                <span
+                <span data-i18n="about_li2"
                   >Show that you are open-minded. Are you enthusiastic about
                   learning new technologies and continually improving your
                   skills?</span
@@ -155,7 +168,7 @@
                 <span class="about-icon"
                   ><i class="fa-solid fa-circle-check"></i
                 ></span>
-                <span
+                <span data-i18n="about_li3"
                   >A brief description of your problem-solving approach. Do you
                   learn from each challenge as you search for the most efficient
                   or elegant solution? You can include some keywords like:
@@ -171,26 +184,28 @@
 
     <!-- SKILLS -->
     <section id="skills" class="section skills-section">
-      <p class="section-label">Technologies</p>
+      <p class="section-label" data-i18n="skills_label">Technologies</p>
       <div class="skills-container">
         <div class="skills-card">
-          <h2 class="skills-title">Skill Set</h2>
-          <p class="skills-bio">
+          <h2 class="skills-title" data-i18n="skills_title">Skill Set</h2>
+          <p class="skills-bio" data-i18n="skills_bio">
             A short introduction of your skills. Highlight your experience of
             using different front-end technologies and emphasise your openness
             to learning and adapting to new technologies. Show how important it
             is for you to keep up with the rapid changes in web development.
           </p>
           <p class="skills-cta-line">
-            <strong>You need <span class="accent">another skill?</span></strong>
+            <strong data-i18n="skills_cta"
+              >You need <span class="accent">another skill?</span></strong
+            >
           </p>
-          <p class="skills-sub">
+          <p class="skills-sub" data-i18n="skills_sub">
             Feel free to contact me. I look forward to expanding on my previous
             knowledge.
           </p>
           <a href="#contact" class="btn btn-sm">
             <div class="btn-inner">
-              <span>Let's Talk</span><span>Let's Talk</span>
+              <span data-i18n="btn_talk">Let's Talk</span>
             </div>
           </a>
         </div>
@@ -364,9 +379,9 @@
 
     <!-- PROJECTS -->
     <section id="projects" class="section projects-section">
-      <p class="section-label">Portfolio</p>
-      <h2 class="projects-title">Featured Projects</h2>
-      <p class="projects-sub">
+      <p class="section-label" data-i18n="proj_label">Portfolio</p>
+      <h2 class="projects-title" data-i18n="proj_title">Featured Projects</h2>
+      <p class="projects-sub" data-i18n="proj_sub">
         Explore a selection of my work here - Interact with projects to see my
         skills in action.
       </p>
@@ -436,7 +451,9 @@
         <div class="proj-overlay-left">
           <p class="proj-number" id="overlayNumber">01</p>
           <h2 class="proj-overlay-title" id="overlayTitle">Join</h2>
-          <h3 class="proj-overlay-sub">What is this project about?</h3>
+          <h3 class="proj-overlay-sub" data-i18n="proj_overlay_sub">
+            What is this project about?
+          </h3>
           <p class="proj-overlay-desc" id="overlayDesc">
             Task manager inspired by the Kanban System. Create and organize
             tasks using drag and drop functions, assign users and categories.
@@ -444,14 +461,10 @@
           <div class="proj-overlay-tech" id="overlayTech"></div>
           <div class="proj-overlay-btns">
             <a href="#" class="btn" id="overlayGithub" target="_blank">
-              <div class="btn-inner">
-                <span>GitHub ↗</span><span>GitHub ↗</span>
-              </div>
+              <div class="btn-inner"><span>GitHub ↗</span></div>
             </a>
             <a href="#" class="btn" id="overlayLive" target="_blank">
-              <div class="btn-inner">
-                <span>Live Test ↗</span><span>Live Test ↗</span>
-              </div>
+              <div class="btn-inner"><span>Live Test ↗</span></div>
             </a>
           </div>
         </div>
@@ -466,13 +479,16 @@
       </div>
       <!-- Next project -->
       <button class="proj-next-btn" id="projNextBtn">
-        Next project <i class="fa-solid fa-arrow-right"></i>
+        <span data-i18n="proj_next">Next project</span>
+        <i class="fa-solid fa-arrow-right"></i>
       </button>
     </div>
 
     <!-- TESTIMONIALS -->
     <section class="section testimonials-section">
-      <h2 class="testimonials-title">What my colleagues say about me</h2>
+      <h2 class="testimonials-title" data-i18n="testimonials_title">
+        What my colleagues say about me
+      </h2>
       <div class="testimonials-viewport">
         <div class="testimonials-track" id="testimonialsTrack">
           <div class="testimonial-card t-side">
@@ -525,10 +541,14 @@
     <section id="contact" class="section contact-section">
       <div class="contact-container">
         <div class="contact-left">
-          <p class="section-label">Contact me</p>
-          <h2 class="contact-title">Let's work<br />together</h2>
-          <h3 class="contact-sub">Got a problem to solve?</h3>
-          <p class="contact-body">
+          <p class="section-label" data-i18n="contact_label">Contact me</p>
+          <h2 class="contact-title" data-i18n="contact_title">
+            Let's work<br />together
+          </h2>
+          <h3 class="contact-sub" data-i18n="contact_sub">
+            Got a problem to solve?
+          </h3>
+          <p class="contact-body" data-i18n="contact_body">
             Encourage people to contact you and describe what role you are
             interested in. Show that you will add value to their projects
             through your work.
@@ -542,7 +562,7 @@
         </div>
         <div class="contact-right">
           <div class="form-group">
-            <label class="form-label" for="contactName"
+            <label class="form-label" for="contactName" data-i18n="form_name"
               >What's your name?</label
             >
             <input
@@ -553,7 +573,7 @@
             />
           </div>
           <div class="form-group">
-            <label class="form-label" for="contactEmail"
+            <label class="form-label" for="contactEmail" data-i18n="form_email"
               >What's your email?</label
             >
             <input
@@ -564,7 +584,7 @@
             />
           </div>
           <div class="form-group">
-            <label class="form-label" for="contactMessage"
+            <label class="form-label" for="contactMessage" data-i18n="form_msg"
               >How can I help you?</label
             >
             <input
@@ -586,7 +606,7 @@
           <div class="form-submit-row">
             <button class="btn" id="submitBtn">
               <div class="btn-inner">
-                <span>Say Hello ;)</span><span>Say Hello ;)</span>
+                <span data-i18n="btn_send">Say Hello ;)</span>
               </div>
             </button>
           </div>
@@ -605,8 +625,8 @@
           </svg>
           <div class="footer-logo-name">Maximilian<br />Bese</div>
         </a>
-        <p class="footer-role">Web Developer</p>
-        <p class="footer-city">Lübbecke Germany</p>
+        <p class="footer-role" data-i18n="footer_role">Web Developer</p>
+        <p class="footer-city" data-i18n="footer_city">Munich Germany</p>
       </div>
       <div class="footer-center">
         <p class="mono footer-copy">© Maximilian Bese 2025</p>
@@ -617,7 +637,7 @@
           >LinkedIn</a
         >
         <a href="mailto:maximilian-bese@gmx.de">Email</a>
-        <a href="#">Legal Notice</a>
+        <a href="#" data-i18n="footer_legal">Legal Notice</a>
       </div>
     </footer>
 
