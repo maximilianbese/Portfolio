@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maximilian Bese | Portfolio</title>
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="stylesheet" href="style.css" />
+    <meta
+      name="description"
+      content="Frontend Developer — Maximilian Bese. Portfolio of web projects built with Angular, TypeScript, HTML, CSS and more."
+    />
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/sections.css" />
+    <link rel="stylesheet" href="./css/overlay.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -16,11 +22,14 @@
     />
   </head>
   <body>
-    <nav class="navbar">
+    <!-- ═══════════════════════════════════════════
+         NAVBAR
+    ════════════════════════════════════════════ -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="nav-left">
-        <div class="lang-switch">
-          <span class="lang-btn active">EN</span>
-          <span class="lang-btn">DE</span>
+        <div class="lang-switch" role="group" aria-label="Language selector">
+          <button class="lang-btn active" aria-pressed="true">EN</button>
+          <button class="lang-btn" aria-pressed="false">DE</button>
         </div>
         <ul class="nav-links">
           <li><a href="#about" data-i18n="nav_about">About me</a></li>
@@ -28,19 +37,17 @@
           <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
         </ul>
       </div>
-      <a href="#hero" class="logo">
-        <img
-          src="logo.png"
-          alt="Logo"
-          class="logo-img"
-          style="width: 38px; height: 38px; object-fit: contain"
-        />
-        <div class="logo-text">Maximilian<br />Bese</div>
+      <a href="#hero" class="logo" aria-label="Back to top">
+        <img src="./img/logo.png" alt="MB Logo" class="logo-img" />
+        <span class="logo-text">Maximilian<br />Bese</span>
       </a>
     </nav>
 
-    <section id="hero" class="section hero-section">
-      <main class="hero">
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ════════════════════════════════════════════ -->
+    <section id="hero" class="section hero-section" aria-label="Introduction">
+      <div class="hero">
         <div class="hero-center">
           <p class="subtitle" data-i18n="hero_subtitle">Frontend Developer</p>
           <h1>Maximilian Bese</h1>
@@ -57,34 +64,41 @@
             </a>
           </div>
         </div>
-      </main>
-      <div class="sidebar-left">
-        <div class="sidebar-content">
-          <div class="circle-icon"><i class="fa-solid fa-arrow-down"></i></div>
-          <div class="vertical-line"></div>
-        </div>
       </div>
-      <div class="sidebar-right">
-        <div class="sidebar-content">
-          <a href="mailto:maximilian-bese@gmx.de" class="email"
-            >maximilian-bese@gmx.de</a
-          >
-          <div class="social-icons">
-            <a href="https://github.com/maximilianbese" target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/maximilian-bese/"
-              target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-          </div>
-          <div class="vertical-line"></div>
+
+      <aside class="sidebar-left" aria-hidden="true">
+        <div class="circle-icon"><i class="fa-solid fa-arrow-down"></i></div>
+        <div class="vertical-line"></div>
+      </aside>
+
+      <aside class="sidebar-right" aria-label="Social links">
+        <a href="mailto:maximilian-bese@gmx.de" class="email"
+          >maximilian-bese@gmx.de</a
+        >
+        <div class="social-icons">
+          <a
+            href="https://github.com/maximilianbese"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/maximilian-bese/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
         </div>
-      </div>
+        <div class="vertical-line"></div>
+      </aside>
     </section>
 
-    <div class="ticker-wrapper">
+    <!-- ═══════════════════════════════════════════
+         TICKER
+    ════════════════════════════════════════════ -->
+    <div class="ticker-wrapper" aria-hidden="true">
       <div class="ticker-track">
         <span class="ticker-item" data-i18n="ticker_remote"
           >Available for remote work</span
@@ -111,10 +125,13 @@
       </div>
     </div>
 
+    <!-- ═══════════════════════════════════════════
+         ABOUT
+    ════════════════════════════════════════════ -->
     <section id="about" class="section about-section">
       <div class="about-container">
         <div class="about-photo-wrap">
-          <div class="hatch hatch-tl"></div>
+          <div class="hatch hatch-tl" aria-hidden="true"></div>
           <div class="photo-frame">
             <img
               src="photo.jpg"
@@ -123,13 +140,13 @@
               onerror="this.style.display = 'none'"
             />
           </div>
-          <div class="hatch hatch-br"></div>
+          <div class="hatch hatch-br" aria-hidden="true"></div>
         </div>
         <div class="about-text-wrap">
           <p class="section-label" data-i18n="about_label">Who I Am</p>
           <div class="about-card">
             <h2 class="about-title" data-i18n="about_title">
-              Über&nbsp;&nbsp;mich
+              About&nbsp;&nbsp;me
             </h2>
             <p class="about-bio" data-i18n="about_bio">
               Hey there, I'm Maximilian! Write some information about yourself
@@ -138,7 +155,7 @@
             </p>
             <ul class="about-list">
               <li>
-                <span class="about-icon"
+                <span class="about-icon" aria-hidden="true"
                   ><i class="fa-solid fa-location-dot"></i
                 ></span>
                 <span data-i18n="about_li1"
@@ -147,7 +164,7 @@
                 >
               </li>
               <li>
-                <span class="about-icon"
+                <span class="about-icon" aria-hidden="true"
                   ><i class="fa-solid fa-rotate"></i
                 ></span>
                 <span data-i18n="about_li2"
@@ -157,15 +174,13 @@
                 >
               </li>
               <li>
-                <span class="about-icon"
+                <span class="about-icon" aria-hidden="true"
                   ><i class="fa-solid fa-circle-check"></i
                 ></span>
                 <span data-i18n="about_li3"
                   >A brief description of your problem-solving approach. Do you
                   learn from each challenge as you search for the most efficient
-                  or elegant solution? You can include some keywords like:
-                  analytical thinking, creativity, persistence and
-                  collaboration.</span
+                  or elegant solution?</span
                 >
               </li>
             </ul>
@@ -174,6 +189,9 @@
       </div>
     </section>
 
+    <!-- ═══════════════════════════════════════════
+         SKILLS
+    ════════════════════════════════════════════ -->
     <section id="skills" class="section skills-section">
       <p class="section-label" data-i18n="skills_label">Technologies</p>
       <div class="skills-container">
@@ -182,8 +200,7 @@
           <p class="skills-bio" data-i18n="skills_bio">
             A short introduction of your skills. Highlight your experience of
             using different front-end technologies and emphasise your openness
-            to learning and adapting to new technologies. Show how important it
-            is for you to keep up with the rapid changes in web development.
+            to learning and adapting to new technologies.
           </p>
           <p class="skills-cta-line">
             <strong data-i18n="skills_cta"
@@ -200,267 +217,87 @@
             </div>
           </a>
         </div>
-        <div class="skills-grid">
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                alt="HTML"
-              />
-            </div>
-            <span>HTML</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                alt="CSS"
-              />
-            </div>
-            <span>CSS</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                alt="JavaScript"
-              />
-            </div>
-            <span>JavaScript</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon si-white">
-              <svg viewBox="0 0 48 48" width="44" height="44">
-                <path
-                  d="M24 4L4 44h40L24 4z"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="3"
-                />
-                <path
-                  d="M14 32h20M19 20h10"
-                  stroke="white"
-                  stroke-width="2.5"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </div>
-            <span>Material Design</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                alt="TypeScript"
-              />
-            </div>
-            <span>TypeScript</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
-                alt="Angular"
-              />
-            </div>
-            <span>Angular</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon si-white">
-              <svg viewBox="0 0 48 48" width="44" height="44" fill="none">
-                <polygon
-                  points="24,4 44,14 44,34 24,44 4,34 4,14"
-                  stroke="white"
-                  stroke-width="2.5"
-                />
-                <path
-                  d="M24 4v40M4 14l40 20M44 14L4 34"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-opacity="0.4"
-                />
-              </svg>
-            </div>
-            <span>Supabase</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                alt="Git"
-              />
-            </div>
-            <span>Git</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon si-white">
-              <svg viewBox="0 0 48 48" width="44" height="44" fill="white">
-                <rect x="2" y="14" width="44" height="20" rx="4" />
-                <text
-                  x="24"
-                  y="30"
-                  text-anchor="middle"
-                  font-size="12"
-                  font-weight="700"
-                  fill="#111"
-                  font-family="monospace"
-                >
-                  API
-                </text>
-              </svg>
-            </div>
-            <span>REST-API</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon si-white">
-              <svg viewBox="0 0 48 48" width="44" height="44" fill="none">
-                <circle
-                  cx="24"
-                  cy="24"
-                  r="20"
-                  stroke="white"
-                  stroke-width="2.5"
-                />
-                <path
-                  d="M16 32 Q24 8 32 32"
-                  stroke="white"
-                  stroke-width="2.5"
-                  fill="none"
-                />
-                <path
-                  d="M29 24 L36 30"
-                  stroke="white"
-                  stroke-width="2.5"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </div>
-            <span>Scrum</span>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon si-accent">
-              <svg viewBox="0 0 48 48" width="44" height="44" fill="none">
-                <circle
-                  cx="24"
-                  cy="24"
-                  r="20"
-                  stroke="#4ed9c2"
-                  stroke-width="2.5"
-                />
-                <path
-                  d="M16 18h8M16 24h14M16 30h10"
-                  stroke="#4ed9c2"
-                  stroke-width="2.5"
-                  stroke-linecap="round"
-                />
-                <circle
-                  cx="36"
-                  cy="18"
-                  r="5"
-                  stroke="#4ed9c2"
-                  stroke-width="2"
-                />
-              </svg>
-            </div>
-            <span>Growth mindset</span>
-          </div>
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Populated by js/data.js -->
         </div>
       </div>
     </section>
 
+    <!-- ═══════════════════════════════════════════
+         PROJECTS
+    ════════════════════════════════════════════ -->
     <section id="projects" class="section projects-section">
       <p class="section-label" data-i18n="proj_label">Portfolio</p>
       <h2 class="projects-title" data-i18n="proj_title">Featured Projects</h2>
       <p class="projects-sub" data-i18n="proj_sub">
-        Explore a selection of my work here - Interact with projects to see my
+        Explore a selection of my work here — Interact with projects to see my
         skills in action.
       </p>
-
       <div class="projects-layout">
-        <div class="projects-list">
-          <div class="project-divider"></div>
-
-          <div
-            class="project-row"
-            data-index="0"
-            data-preview="img/join-preview.png"
-          >
-            <span class="project-name"
-              >Join <span class="proj-arrow-inline">↗</span></span
-            >
-            <span class="project-stack"
-              >Angular | TypeScript | HTML | CSS | Firebase</span
-            >
-          </div>
-          <div class="project-divider"></div>
-
-          <div
-            class="project-row"
-            data-index="1"
-            data-preview="img/elpollo-preview.png"
-          >
-            <span class="project-name"
-              >El&nbsp;Pollo&nbsp;Loco
-              <span class="proj-arrow-inline">↗</span></span
-            >
-            <span class="project-stack">HTML | CSS | JavaScript</span>
-          </div>
-          <div class="project-divider"></div>
-
-          <div
-            class="project-row"
-            data-index="2"
-            data-preview="img/dabubble-preview.png"
-          >
-            <span class="project-name"
-              >DA&nbsp;Bubble <span class="proj-arrow-inline">↗</span></span
-            >
-            <span class="project-stack">Angular | Firebase | TypeScript</span>
-          </div>
-          <div class="project-divider"></div>
+        <div class="projects-list" id="projectsList">
+          <!-- Populated by js/projects.js -->
         </div>
-
-        <div class="project-preview-box" id="projectPreviewBox">
-          <div
-            class="hatch hatch-br"
-            style="bottom: -16px; right: -16px; width: 90px; height: 90px"
-          ></div>
-          <img src="" alt="Project Preview" id="projectPreviewImg" />
+        <div
+          class="project-preview-box"
+          id="projectPreviewBox"
+          aria-hidden="true"
+        >
+          <div class="hatch hatch-br"></div>
+          <img src="" alt="Project preview" id="projectPreviewImg" />
         </div>
       </div>
     </section>
 
-    <div class="proj-overlay" id="projOverlay">
-      <button class="proj-overlay-close" id="projOverlayClose">
+    <!-- ═══════════════════════════════════════════
+         PROJECT OVERLAY
+    ════════════════════════════════════════════ -->
+    <div
+      class="proj-overlay"
+      id="projOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Project details"
+    >
+      <button
+        class="proj-overlay-close"
+        id="projOverlayClose"
+        aria-label="Close"
+      >
         <i class="fa-solid fa-xmark"></i>
       </button>
       <div class="proj-overlay-inner">
         <div class="proj-overlay-left">
-          <p class="proj-number" id="overlayNumber">01</p>
-          <h2 class="proj-overlay-title" id="overlayTitle">Join</h2>
+          <p class="proj-number" id="overlayNumber"></p>
+          <h2 class="proj-overlay-title" id="overlayTitle"></h2>
           <h3 class="proj-overlay-sub" data-i18n="proj_overlay_sub">
             What is this project about?
           </h3>
-          <p class="proj-overlay-desc" id="overlayDesc">
-            Task manager inspired by the Kanban System. Create and organize
-            tasks using drag and drop functions, assign users and categories.
-          </p>
+          <p class="proj-overlay-desc" id="overlayDesc"></p>
           <div class="proj-overlay-tech" id="overlayTech"></div>
           <div class="proj-overlay-btns">
-            <a href="#" class="btn" id="overlayGithub" target="_blank">
+            <a
+              href="#"
+              class="btn"
+              id="overlayGithub"
+              target="_blank"
+              rel="noopener"
+            >
               <div class="btn-inner"><span>GitHub ↗</span></div>
             </a>
-            <a href="#" class="btn" id="overlayLive" target="_blank">
+            <a
+              href="#"
+              class="btn"
+              id="overlayLive"
+              target="_blank"
+              rel="noopener"
+            >
               <div class="btn-inner"><span>Live Test ↗</span></div>
             </a>
           </div>
         </div>
         <div class="proj-overlay-right">
           <img src="" alt="" id="overlayScreenshot" />
-          <div
-            class="hatch hatch-br"
-            style="bottom: -16px; right: -16px; width: 90px; height: 90px"
-          ></div>
+          <div class="hatch hatch-br" aria-hidden="true"></div>
         </div>
       </div>
       <button class="proj-next-btn" id="projNextBtn">
@@ -469,7 +306,10 @@
       </button>
     </div>
 
-    <section class="section testimonials-section">
+    <!-- ═══════════════════════════════════════════
+         TESTIMONIALS
+    ════════════════════════════════════════════ -->
+    <section class="section testimonials-section" aria-label="Testimonials">
       <h2 class="testimonials-title" data-i18n="testimonials_title">
         What my colleagues say about me
       </h2>
@@ -477,12 +317,12 @@
         <div class="testimonials-track" id="testimonialsTrack">
           <div class="testimonial-card t-side">
             <p class="t-text">
-              ...Benefiting immensely from Lukas's efficient way of working and
-              his dedication to the team really stood out throughout our
+              Benefiting immensely from Lukas's efficient way of working and his
+              dedication to the team really stood out throughout our
               collaboration.
             </p>
             <div class="t-line"></div>
-            <p class="t-author">T.Schulz - Frontend Developer</p>
+            <p class="t-author">T.Schulz — Frontend Developer</p>
           </div>
           <div class="testimonial-card t-center">
             <div class="t-quote">&ldquo;</div>
@@ -492,35 +332,41 @@
               project.
             </p>
             <div class="t-line"></div>
-            <p class="t-author">H.Janisch - Team Partner</p>
+            <p class="t-author">H.Janisch — Team Partner</p>
           </div>
           <div class="testimonial-card t-side">
             <p class="t-text">
-              I had the good fortune of working with Lukas on a project at the
-              Developer Akademie. He always stayed calm and collected, made sure
-              our team was set up for success. Knowledgeable, easy to work with.
-              Would work with him again given the chance.
+              I had the good fortune of working with Lukas at the Developer
+              Akademie. He always stayed calm and collected, knowledgeable and
+              easy to work with.
             </p>
             <div class="t-line"></div>
-            <p class="t-author">M.Weber - Project Lead</p>
+            <p class="t-author">M.Weber — Project Lead</p>
           </div>
         </div>
       </div>
-      <div class="t-nav">
-        <button class="t-arrow" id="prevBtn">
+      <div class="t-nav" role="group" aria-label="Testimonial navigation">
+        <button class="t-arrow" id="prevBtn" aria-label="Previous">
           <i class="fa-solid fa-arrow-left"></i>
         </button>
         <div class="t-dots">
-          <span class="t-dot active" data-i="0"></span>
-          <span class="t-dot" data-i="1"></span>
-          <span class="t-dot" data-i="2"></span>
+          <button
+            class="t-dot active"
+            data-i="0"
+            aria-label="Testimonial 1"
+          ></button>
+          <button class="t-dot" data-i="1" aria-label="Testimonial 2"></button>
+          <button class="t-dot" data-i="2" aria-label="Testimonial 3"></button>
         </div>
-        <button class="t-arrow" id="nextBtn">
+        <button class="t-arrow" id="nextBtn" aria-label="Next">
           <i class="fa-solid fa-arrow-right"></i>
         </button>
       </div>
     </section>
 
+    <!-- ═══════════════════════════════════════════
+         CONTACT
+    ════════════════════════════════════════════ -->
     <section id="contact" class="section contact-section">
       <div class="contact-container">
         <div class="contact-left">
@@ -553,6 +399,7 @@
               type="text"
               class="form-input"
               placeholder="Your name goes here"
+              autocomplete="name"
             />
           </div>
           <div class="form-group">
@@ -564,6 +411,7 @@
               type="email"
               class="form-input"
               placeholder="youremail@email.com"
+              autocomplete="email"
             />
           </div>
           <div class="form-group">
@@ -578,14 +426,25 @@
             />
           </div>
           <div class="form-check-row">
-            <div class="checkbox" id="privacyCheck" tabindex="0"></div>
+            <button
+              class="checkbox"
+              id="privacyCheck"
+              role="checkbox"
+              aria-checked="false"
+              tabindex="0"
+            ></button>
             <span
               >I've read the
               <a href="#" class="accent mono">privacy policy</a> and agree to
               the processing of my data as outlined.</span
             >
           </div>
-          <div id="formFeedback" class="form-feedback"></div>
+          <p
+            id="formFeedback"
+            class="form-feedback"
+            role="alert"
+            aria-live="polite"
+          ></p>
           <div class="form-submit-row">
             <button class="btn" id="submitBtn">
               <div class="btn-inner">
@@ -597,33 +456,43 @@
       </div>
     </section>
 
+    <!-- ═══════════════════════════════════════════
+         FOOTER
+    ════════════════════════════════════════════ -->
     <footer class="footer">
       <div class="footer-left">
-        <a href="#hero" class="footer-logo">
-          <img
-            src="logo.png"
-            alt="Logo"
-            class="footer-logo-img"
-            style="width: 44px; height: 44px; object-fit: contain"
-          />
-          <div class="footer-logo-name">Maximilian<br />Bese</div>
+        <a href="#hero" class="footer-logo" aria-label="Back to top">
+          <img src="logo.png" alt="MB Logo" class="footer-logo-img" />
+          <span class="footer-logo-name">Maximilian<br />Bese</span>
         </a>
         <p class="footer-role" data-i18n="footer_role">Web Developer</p>
         <p class="footer-city" data-i18n="footer_city">Munich Germany</p>
       </div>
-      <div class="footer-center">
-        <p class="mono footer-copy">© Maximilian Bese 2025</p>
-      </div>
-      <div class="footer-right">
-        <a href="https://github.com/maximilianbese" target="_blank">Github</a>
-        <a href="https://www.linkedin.com/in/maximilian-bese/" target="_blank"
+      <p class="footer-copy mono">© Maximilian Bese 2025</p>
+      <nav class="footer-right" aria-label="Footer links">
+        <a
+          href="https://github.com/maximilianbese"
+          target="_blank"
+          rel="noopener"
+          >Github</a
+        >
+        <a
+          href="https://www.linkedin.com/in/maximilian-bese/"
+          target="_blank"
+          rel="noopener"
           >LinkedIn</a
         >
         <a href="mailto:maximilian-bese@gmx.de">Email</a>
         <a href="#" data-i18n="footer_legal">Legal Notice</a>
-      </div>
+      </nav>
     </footer>
 
-    <script src="main.js"></script>
+    <!-- Scripts — order matters -->
+    <script src="js/data.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/marquee.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/form.js"></script>
   </body>
 </html>

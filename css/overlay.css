@@ -1,0 +1,198 @@
+/* ═══════════════════════════════════════════════
+   TICKER BANNER
+════════════════════════════════════════════════ */
+.ticker-wrapper {
+  position: relative;
+  left: -5%;
+  width: 110%;
+  transform: rotate(-5deg);
+  z-index: 5;
+  overflow: hidden;
+  padding: 16px 0;
+  margin: -30px 0;
+  background: rgba(6, 14, 12, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(78, 217, 194, 0.14);
+  border-bottom: 1px solid rgba(78, 217, 194, 0.14);
+  pointer-events: none;
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: max-content;
+  animation: tickerScroll 22s linear infinite;
+}
+
+.ticker-item {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0 52px;
+}
+.ticker-dot {
+  color: var(--accent);
+  opacity: 0.35;
+  font-size: 18px;
+}
+
+@keyframes tickerScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   PROJECT OVERLAY
+════════════════════════════════════════════════ */
+.proj-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background:
+    radial-gradient(
+      ellipse at 70% 20%,
+      rgba(0, 255, 200, 0.1) 0%,
+      transparent 55%
+    ),
+    #0b1410;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 80px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  overflow-y: auto;
+}
+.proj-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.proj-overlay-close {
+  position: absolute;
+  top: 36px;
+  right: 60px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: var(--text);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--speed);
+  z-index: 10;
+}
+.proj-overlay-close:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.proj-overlay-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.proj-number {
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(60px, 8vw, 110px);
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.proj-overlay-title {
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 32px;
+  line-height: 1;
+}
+.proj-overlay-sub {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.proj-overlay-desc {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.75;
+  max-width: 500px;
+  margin-bottom: 28px;
+}
+
+.proj-overlay-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 36px;
+}
+.proj-tech-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.proj-tech-icon img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.proj-overlay-btns {
+  display: flex;
+  gap: 20px;
+}
+
+.proj-overlay-right {
+  position: relative;
+}
+.proj-overlay-right img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  border: 1px solid rgba(78, 217, 194, 0.2);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+}
+
+.proj-next-btn {
+  position: absolute;
+  bottom: 40px;
+  right: 80px;
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: gap 0.25s;
+}
+.proj-next-btn:hover {
+  gap: 16px;
+}
