@@ -3,13 +3,7 @@
 ════════════════════════════════════════════════ */
 .hero-section {
   min-height: 100vh;
-  background:
-    radial-gradient(
-      ellipse at 75% 15%,
-      rgba(0, 255, 200, 0.14) 0%,
-      transparent 55%
-    ),
-    var(--bg-hero);
+  background: linear-gradient(55.22deg, #1c1c1c 36.26%, #08463b 93.28%);
   overflow: hidden;
   display: flex;
   flex-direction: column;
