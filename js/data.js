@@ -94,22 +94,21 @@ var TRANSLATIONS = {
     btn_send: "Say Hello ;)",
     ticker_remote: "Available for remote work",
     ticker_role: "Frontend Developer",
-    ticker_city: "Based in Munich",
+    ticker_city: "Based in Lübbecke",
     ticker_open: "Open to Opportunities",
     about_label: "Who I Am",
     about_title: "About\u00a0\u00a0me",
     about_bio:
-      "Hey there, I'm Maximilian! Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?",
-    about_li1:
-      "Where are you based? Would you be open to working remotely or potentially relocating?",
+      "Hey, I'm Maximilian. As a frontend developer with an Architect mindset, I combine visionary design with strategic precision. My focus is on continuous optimization and technical excellence to create highly efficient and logically structured web solutions. I am driven by curiosity to transform complex challenges into future-proof, intuitive experiences using modern technologies.",
+    about_li1: "Based in Lübbecke. Open to remote work.",
     about_li2:
-      "Show that you are open-minded. Are you enthusiastic about learning new technologies and continually improving your skills?",
+      "Driven by a passion for technology and elegant problem-solving, I see every new tool as a way to evolve. I’m a fast learner who thrives on deep dives into new tech, constantly expanding my knowledge to build software that lasts.",
     about_li3:
-      "A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution?",
+      "My problem-solving strategy is simple: analyze, iterate, and optimize. I strive for solutions that are not just functional, but elegant and maintainable. Each challenge is an opportunity to sharpen my logic and expand my technical horizon, ensuring that the next solution is even more efficient than the last.",
     skills_label: "Technologies",
     skills_title: "Skill Set",
     skills_bio:
-      "A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies.",
+      "Beyond just writing code, I focus on building scalable and maintainable frontends. I have a proven track record of working with various modern technologies, yet I remain a lifelong student of the craft. Whether it’s adopting a new framework or optimizing a workflow, I embrace change as an opportunity to sharpen my expertise and deliver excellence.",
     skills_cta: 'You need <span class="accent">another skill?</span>',
     skills_sub:
       "Feel free to contact me. I look forward to expanding on my previous knowledge.",
@@ -124,12 +123,12 @@ var TRANSLATIONS = {
     contact_title: "Let's work<br/>together",
     contact_sub: "Got a problem to solve?",
     contact_body:
-      "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
+      "I am currently looking for new opportunities as a Frontend Developer. If you have an exciting project or are looking for a dedicated team member who brings value through clean code and strategic thinking, I'd love to hear from you.",
     form_name: "What's your name?",
     form_email: "What's your email?",
     form_msg: "How can I help you?",
     footer_role: "Web Developer",
-    footer_city: "Munich Germany",
+    footer_city: "Munich, Germany",
     footer_legal: "Legal Notice",
   },
   de: {
@@ -143,22 +142,21 @@ var TRANSLATIONS = {
     btn_send: "Nachricht senden",
     ticker_remote: "F\u00fcr Remote-Arbeit verf\u00fcgbar",
     ticker_role: "Frontend Entwickler",
-    ticker_city: "Wohnhaft in M\u00fcnchen",
+    ticker_city: "Wohnhaft in L\u00fcbbecke",
     ticker_open: "Offen f\u00fcr M\u00f6glichkeiten",
     about_label: "Wer ich bin",
     about_title: "\u00dcber\u00a0\u00a0mich",
     about_bio:
-      "Hallo, ich bin Maximilian! Schreib hier etwas \u00fcber dich, das IT-bezogen ist. Warum begeistert dich Programmieren? Was inspiriert dich dazu, deine Kenntnisse kontinuierlich zu verbessern?",
-    about_li1:
-      "Wo wohnst du? W\u00e4rst du offen f\u00fcr Remote-Arbeit oder einen Umzug?",
+      "Hallo, ich bin Maximilian. Als Frontend-Entwickler mit der Denkweise eines Architekten verbinde ich visionäres Design mit strategischer Präzision. Mein Fokus liegt auf kontinuierlicher Optimierung und technischer Exzellenz, um hocheffiziente und logisch strukturierte Web-Lösungen zu schaffen. Angetrieben von Neugier verwandle ich komplexe Herausforderungen mithilfe moderner Technologien in zukunftssichere, intuitive Erlebnisse.",
+    about_li1: "Wohnhaft in L\u00fcbbecke. Offen für Remote-Arbeit.",
     about_li2:
-      "Zeig, dass du offen bist. Begeisterst du dich f\u00fcr neue Technologien und verbesserst du deine F\u00e4higkeiten kontinuierlich?",
+      "Angetrieben von der Leidenschaft für Technologie und elegante Problemlösungen, betrachte ich jedes neue Werkzeug als Chance zur Weiterentwicklung. Ich lerne schnell, arbeite mich tief in neue Technologien ein und erweitere ständig mein Wissen, um langlebige Software zu entwickeln.",
     about_li3:
-      "Eine kurze Beschreibung deines Probleml\u00f6sungsansatzes. Lernst du aus jeder Herausforderung? Stichworte: analytisches Denken, Kreativit\u00e4t, Ausdauer und Teamgeist.",
+      "Meine Strategie zur Problemlösung ist einfach: analysieren, iterieren und optimieren. Ich strebe nach Lösungen, die nicht nur funktional, sondern auch elegant und wartbar sind. Jede Herausforderung ist eine Gelegenheit, meine Logik zu schärfen und meinen technischen Horizont zu erweitern, um sicherzustellen, dass die nächste Lösung noch effizienter ist als die vorherige.",
     skills_label: "Technologien",
     skills_title: "Skill Set",
     skills_bio:
-      "Eine kurze Vorstellung deiner F\u00e4higkeiten. Hebe deine Erfahrung mit verschiedenen Frontend-Technologien hervor und betone deine Bereitschaft, neue Technologien zu erlernen.",
+      "Über das reine Schreiben von Code hinaus konzentriere ich mich auf die Entwicklung skalierbarer und wartbarer Frontends. Ich habe nachweisliche Erfahrung in der Arbeit mit verschiedenen modernen Technologien, bleibe aber ein lebenslanger Schüler dieses Handwerks. Ob es darum geht, sich in ein neues Framework einzuarbeiten oder einen Workflow zu optimieren – ich begreife Veränderungen als Chance, mein Fachwissen zu schärfen und exzellente Ergebnisse zu liefern.",
     skills_cta:
       'Du brauchst eine <span class="accent">weitere F\u00e4higkeit?</span>',
     skills_sub:
@@ -166,7 +164,7 @@ var TRANSLATIONS = {
     proj_label: "Portfolio",
     proj_title: "Ausgew\u00e4hlte Projekte",
     proj_sub:
-      "Entdecke eine Auswahl meiner Arbeiten \u2013 Interagiere mit den Projekten, um meine F\u00e4higkeiten in Aktion zu sehen.",
+      "Entdecke hier eine Auswahl meiner Arbeiten \u2013 Interagiere mit den Projekten, um meine F\u00e4higkeiten in Aktion zu sehen.",
     proj_overlay_sub: "Worum geht es bei diesem Projekt?",
     proj_next: "N\u00e4chstes Projekt",
     testimonials_title: "Was meine Kollegen \u00fcber mich sagen",
@@ -174,7 +172,7 @@ var TRANSLATIONS = {
     contact_title: "Lass uns zusammen<br/>arbeiten",
     contact_sub: "Hast du ein Problem zu l\u00f6sen?",
     contact_body:
-      "Beschreibe, welche Rolle dich interessiert und wie ich zu deinem Projekt beitragen kann.",
+      "Ich bin derzeit auf der Suche nach neuen beruflichen Herausforderungen als Frontend-Entwickler. Wenn du ein spannendes Projekt hast oder ein engagiertes Teammitglied suchst, das durch sauberen Code und strategisches Denken Mehrwert schafft, freue ich mich auf deine Nachricht.",
     form_name: "Wie hei\u00dft du?",
     form_email: "Wie lautet deine E-Mail?",
     form_msg: "Wie kann ich dir helfen?",
