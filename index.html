@@ -244,14 +244,14 @@
       aria-modal="true"
       aria-label="Project details"
     >
-      <button
-        class="proj-overlay-close"
-        id="projOverlayClose"
-        aria-label="Close"
-      >
-        <i class="fa-solid fa-xmark"></i>
-      </button>
       <div class="proj-overlay-inner">
+        <button
+          class="proj-overlay-close"
+          id="projOverlayClose"
+          aria-label="Close"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
         <div class="proj-overlay-left">
           <p class="proj-number" id="overlayNumber"></p>
           <h2 class="proj-overlay-title" id="overlayTitle"></h2>
@@ -285,11 +285,11 @@
           <img src="" alt="" id="overlayScreenshot" />
           <div class="hatch hatch-br" aria-hidden="true"></div>
         </div>
+        <button class="proj-next-btn" id="projNextBtn">
+          <span data-i18n="proj_next">Next project</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
       </div>
-      <button class="proj-next-btn" id="projNextBtn">
-        <span data-i18n="proj_next">Next project</span>
-        <i class="fa-solid fa-arrow-right"></i>
-      </button>
     </div>
 
     <section class="section testimonials-section" aria-label="Testimonials">

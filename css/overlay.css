@@ -51,26 +51,24 @@
 }
 
 /* ═══════════════════════════════════════════════
-   PROJECT OVERLAY
+   PROJECT OVERLAY — floating card modal
 ════════════════════════════════════════════════ */
+
+/* Dimmer backdrop */
 .proj-overlay {
   position: fixed;
   inset: 0;
   z-index: 500;
-  background:
-    radial-gradient(
-      ellipse at 70% 20%,
-      rgba(0, 255, 200, 0.1) 0%,
-      transparent 55%
-    ),
-    #0b1410;
+  background: rgba(5, 10, 8, 0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding: 60px 80px;
+  padding: 40px 24px;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.35s ease;
   overflow-y: auto;
 }
 .proj-overlay.open {
@@ -78,17 +76,54 @@
   pointer-events: all;
 }
 
+/* The card itself */
+.proj-overlay-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.45fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+  max-width: 1180px;
+  background:
+    radial-gradient(
+      ellipse at 65% 10%,
+      rgba(78, 217, 194, 0.13) 0%,
+      transparent 60%
+    ),
+    linear-gradient(160deg, #0f1f1a 0%, #091410 100%);
+  border: 1px solid rgba(78, 217, 194, 0.22);
+  border-radius: 28px;
+  padding: 56px 60px 72px 60px;
+  box-shadow:
+    0 40px 120px rgba(0, 0, 0, 0.75),
+    0 0 0 1px rgba(78, 217, 194, 0.06) inset;
+  animation: overlayCardIn 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes overlayCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(32px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Close button — top-right of card */
 .proj-overlay-close {
   position: absolute;
-  top: 36px;
-  right: 60px;
-  width: 44px;
-  height: 44px;
+  top: 28px;
+  right: 32px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   background: transparent;
   color: var(--text);
-  font-size: 18px;
+  font-size: 17px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -99,100 +134,122 @@
 .proj-overlay-close:hover {
   border-color: var(--accent);
   color: var(--accent);
+  background: rgba(78, 217, 194, 0.08);
 }
 
-.proj-overlay-inner {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 80px;
-  align-items: center;
-  max-width: 1300px;
-  width: 100%;
-  margin: 0 auto;
+/* Left column */
+.proj-overlay-left {
+  display: flex;
+  flex-direction: column;
 }
 
 .proj-number {
   font-family: "JetBrains Mono", monospace;
-  font-size: clamp(60px, 8vw, 110px);
+  font-size: clamp(56px, 7vw, 100px);
   font-weight: 700;
   color: var(--accent);
   line-height: 1;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .proj-overlay-title {
-  font-size: clamp(40px, 5vw, 72px);
+  font-size: clamp(36px, 4.5vw, 64px);
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   line-height: 1;
 }
 .proj-overlay-sub {
   font-family: "JetBrains Mono", monospace;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--accent);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 .proj-overlay-desc {
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.72);
   line-height: 1.75;
-  max-width: 500px;
-  margin-bottom: 28px;
+  max-width: 460px;
+  margin-bottom: 24px;
 }
 
 .proj-overlay-tech {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 12px;
   align-items: center;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 }
 .proj-tech-icon {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.8);
+  gap: 7px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.82);
 }
 .proj-tech-icon img {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
 }
 
 .proj-overlay-btns {
   display: flex;
-  gap: 20px;
+  gap: 16px;
 }
 
+/* Right column — screenshot */
 .proj-overlay-right {
   position: relative;
 }
 .proj-overlay-right img {
   width: 100%;
-  border-radius: 16px;
+  border-radius: 14px;
   display: block;
-  border: 1px solid rgba(78, 217, 194, 0.2);
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(78, 217, 194, 0.18);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.55),
+    0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
+/* Next project button — bottom-right of card */
 .proj-next-btn {
   position: absolute;
-  bottom: 40px;
-  right: 80px;
+  bottom: 28px;
+  right: 40px;
   background: transparent;
   border: none;
   color: var(--accent);
   font-family: "JetBrains Mono", monospace;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 10px;
   transition: gap 0.25s;
+  letter-spacing: 0.5px;
 }
 .proj-next-btn:hover {
   gap: 16px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .proj-overlay-inner {
+    grid-template-columns: 1fr;
+    padding: 48px 36px 64px 36px;
+    gap: 36px;
+  }
+  .proj-overlay-right {
+    order: -1;
+  }
+  .proj-next-btn {
+    bottom: 20px;
+    right: 28px;
+  }
+  .proj-overlay-close {
+    top: 20px;
+    right: 20px;
+  }
 }

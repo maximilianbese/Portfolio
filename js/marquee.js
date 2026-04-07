@@ -1,63 +1,34 @@
 "use strict";
 
 /* ═══════════════════════════════════════════════
-   BUTTON MARQUEE
-   On hover: clones the span, then rAF-loops both
-   spans left at a fixed speed. On leave: cancels,
-   removes clone, resets transform.
+   BUTTON MARQUEE LOGIC
+   Verhindert das "Verschwinden" des Textes nach dem Hover
 ════════════════════════════════════════════════ */
 (function () {
-  var SPEED = 80; /* px per second */
+  document.querySelectorAll(".btn").forEach(function (btn) {
+    const span = btn.querySelector(".btn-inner span");
+    if (!span) return;
 
-  function initBtn(btn) {
-    var inner = btn.querySelector(".btn-inner");
-    var span = inner && inner.querySelector("span");
-    if (!inner || !span) return;
+    // Hover Start: Text kommt von rechts rein
+    btn.addEventListener("mouseenter", function () {
+      span.classList.remove("btn-marquee-out");
+      void span.offsetWidth; // Force Reflow
+      span.classList.add("btn-marquee-in");
+    });
 
-    var clone = null;
-    var rafId = null;
-    var offset = 0;
-    var spanW = 0;
-    var last = null;
+    // Hover Ende: Text geht nach links raus
+    btn.addEventListener("mouseleave", function () {
+      span.classList.remove("btn-marquee-in");
+      void span.offsetWidth; // Force Reflow
+      span.classList.add("btn-marquee-out");
+    });
 
-    function tick(ts) {
-      if (!last) last = ts;
-      offset += SPEED * ((ts - last) / 1000);
-      last = ts;
-      if (offset >= spanW) offset -= spanW;
-      inner.style.transform = "translateX(" + -offset + "px)";
-      rafId = requestAnimationFrame(tick);
-    }
-
-    function onEnter() {
-      if (clone) return;
-      btn.style.width = btn.getBoundingClientRect().width + "px";
-      spanW = span.getBoundingClientRect().width;
-      clone = span.cloneNode(true);
-      inner.appendChild(clone);
-      offset = 0;
-      last = null;
-      rafId = requestAnimationFrame(tick);
-    }
-
-    function onLeave() {
-      if (rafId) {
-        cancelAnimationFrame(rafId);
-        rafId = null;
+    // WICHTIG: Wenn die "Raus"-Animation fertig ist,
+    // setzen wir den Text sofort wieder auf die Standardposition (Mitte)
+    span.addEventListener("animationend", function (e) {
+      if (e.animationName === "btnSlideOut") {
+        span.classList.remove("btn-marquee-out");
       }
-      offset = 0;
-      last = null;
-      inner.style.transform = "";
-      btn.style.width = "";
-      if (clone) {
-        inner.removeChild(clone);
-        clone = null;
-      }
-    }
-
-    btn.addEventListener("mouseenter", onEnter);
-    btn.addEventListener("mouseleave", onLeave);
-  }
-
-  document.querySelectorAll(".btn").forEach(initBtn);
+    });
+  });
 })();
