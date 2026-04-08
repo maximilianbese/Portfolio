@@ -304,10 +304,6 @@
   /* Nav: only logo + hamburger */
   .navbar {
     padding: 18px 24px;
-    background: rgba(13, 18, 16, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(78, 217, 194, 0.08);
   }
 
   .logo-img {
@@ -728,7 +724,7 @@
   }
 
   .section-label {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .about-title {
@@ -1644,7 +1640,7 @@ img {
 ─────────────────────────────────────────── */
 .section-label {
   font-family: "JetBrains Mono", monospace;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--accent);
   letter-spacing: 1.5px;
@@ -1654,14 +1650,14 @@ img {
 
 @media (max-width: 480px) {
   .section-label {
-    font-size: 12px;
+    font-size: 16px;
     letter-spacing: 1px;
   }
 }
 
 @media (max-width: 320px) {
   .section-label {
-    font-size: 11px;
+    font-size: 16px;
   }
 }
 
