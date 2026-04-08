@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/sections.css" />
     <link rel="stylesheet" href="./css/overlay.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -38,6 +39,65 @@
         <img src="./img/logo.png" alt="MB Logo" class="logo-img" />
         <!-- <span class="logo-text">Maximilian<br />Bese</span> -->
       </a>
+      <button
+        class="hamburger"
+        id="hamburgerBtn"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="mobileNav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div
+      class="mobile-nav-backdrop"
+      id="mobileNavBackdrop"
+      aria-hidden="true"
+    ></div>
+    <nav
+      class="mobile-nav"
+      id="mobileNav"
+      aria-label="Mobile navigation"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <div class="mobile-nav-lang" role="group" aria-label="Language selector">
+        <button class="lang-btn lang-btn-mobile active" aria-pressed="true">
+          EN
+        </button>
+        <button class="lang-btn lang-btn-mobile" aria-pressed="false">
+          DE
+        </button>
+      </div>
+      <a href="#about" data-i18n="nav_about">About me</a>
+      <a href="#skills" data-i18n="nav_skills">Skills</a>
+      <a href="#projects" data-i18n="nav_projects">Projects</a>
+      <div class="mobile-nav-social" aria-label="Social links">
+        <a
+          href="/cdn-cgi/l/email-protection#aec3cfd6c7c3c7c2c7cfc083cccbddcbeec9c3d680cacb"
+          aria-label="Email"
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
+        <a
+          href="https://github.com/maximilianbese"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/maximilian-bese/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
     </nav>
 
     <section id="hero" class="section hero-section" aria-label="Introduction">
@@ -66,8 +126,14 @@
       </aside>
 
       <aside class="sidebar-right" aria-label="Social links">
-        <a href="mailto:maximilian-bese@gmx.de" class="email"
-          >maximilian-bese@gmx.de</a
+        <a
+          href="/cdn-cgi/l/email-protection#a8c5c9d0c1c5c1c4c1c9c685cacddbcde8cfc5d086cccd"
+          class="email"
+          ><span
+            class="__cf_email__"
+            data-cfemail="6805091001050104010906450a0d1b0d280f0510460c0d"
+            >[email&#160;protected]</span
+          ></a
         >
         <div class="social-icons">
           <a
@@ -89,32 +155,34 @@
       </aside>
     </section>
 
-    <div class="ticker-wrapper" aria-hidden="true">
-      <div class="ticker-track">
-        <span class="ticker-item" data-i18n="ticker_remote"
-          >Available for remote work</span
-        ><span class="ticker-dot">•</span>
-        <span class="ticker-item" data-i18n="ticker_role"
-          >Frontend Developer</span
-        ><span class="ticker-dot">•</span>
-        <span class="ticker-item" data-i18n="ticker_city"
-          >Based in Lübbecke</span
-        ><span class="ticker-dot">•</span>
-        <span class="ticker-item" data-i18n="ticker_open"
-          >Open to Opportunities</span
-        ><span class="ticker-dot">•</span>
-        <span class="ticker-item" data-i18n="ticker_remote"
-          >Available for remote work</span
-        ><span class="ticker-dot">•</span>
-        <span class="ticker-item" data-i18n="ticker_role"
-          >Frontend Developer</span
-        ><span class="ticker-dot">•</span>
-        <span class="ticker-item" data-i18n="ticker_city"
-          >Based in Lübbecke</span
-        ><span class="ticker-dot">•</span>
-        <span class="ticker-item" data-i18n="ticker_open"
-          >Open to Opportunities</span
-        ><span class="ticker-dot">•</span>
+    <div class="ticker-clip" aria-hidden="true">
+      <div class="ticker-wrapper" aria-hidden="true">
+        <div class="ticker-track">
+          <span class="ticker-item" data-i18n="ticker_remote"
+            >Available for remote work</span
+          ><span class="ticker-dot">•</span>
+          <span class="ticker-item" data-i18n="ticker_role"
+            >Frontend Developer</span
+          ><span class="ticker-dot">•</span>
+          <span class="ticker-item" data-i18n="ticker_city"
+            >Based in Lübbecke</span
+          ><span class="ticker-dot">•</span>
+          <span class="ticker-item" data-i18n="ticker_open"
+            >Open to Opportunities</span
+          ><span class="ticker-dot">•</span>
+          <span class="ticker-item" data-i18n="ticker_remote"
+            >Available for remote work</span
+          ><span class="ticker-dot">•</span>
+          <span class="ticker-item" data-i18n="ticker_role"
+            >Frontend Developer</span
+          ><span class="ticker-dot">•</span>
+          <span class="ticker-item" data-i18n="ticker_city"
+            >Based in Lübbecke</span
+          ><span class="ticker-dot">•</span>
+          <span class="ticker-item" data-i18n="ticker_open"
+            >Open to Opportunities</span
+          ><span class="ticker-dot">•</span>
+        </div>
       </div>
     </div>
 
@@ -366,7 +434,9 @@
           </p>
           <p class="contact-cta">
             Need a Frontend developer?
-            <a href="mailto:maximilian-bese@gmx.de" class="accent"
+            <a
+              href="/cdn-cgi/l/email-protection#1e737f6677737772777f70337c7b6d7b5e797366307a7b"
+              class="accent"
               >Let's talk!</a
             >
           </p>
@@ -461,7 +531,10 @@
           rel="noopener"
           >LinkedIn</a
         >
-        <a href="mailto:maximilian-bese@gmx.de">Email</a>
+        <a
+          href="/cdn-cgi/l/email-protection#600d0118090d090c09010e4d0205130520070d184e0405"
+          >Email</a
+        >
         <a href="#" data-i18n="footer_legal">Legal Notice</a>
       </nav>
     </footer>
@@ -472,5 +545,6 @@
     <script src="js/projects.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/form.js"></script>
+    <script src="js/mobile-nav.js"></script>
   </body>
 </html>

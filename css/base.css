@@ -28,6 +28,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* overflow-x:clip does NOT break position:fixed (unlike overflow-x:hidden) */
+  overflow-x: clip;
 }
 
 body {
@@ -35,6 +37,7 @@ body {
   background: var(--bg);
   color: var(--text);
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 .section {
@@ -61,6 +64,14 @@ body {
   align-items: center;
   padding: 32px 80px;
   z-index: 200;
+  background: rgba(11, 14, 14, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition:
+    background 0.35s ease,
+    padding 0.35s ease,
+    border-color 0.35s ease;
+  border-bottom: 1px solid transparent;
 }
 
 .nav-left {
@@ -306,4 +317,31 @@ body {
 .hatch-br {
   bottom: -18px;
   right: -18px;
+}
+
+/* ═══════════════════════════════════════════════
+   NAVBAR — Scroll-aware background
+════════════════════════════════════════════════ */
+.navbar.scrolled {
+  background: rgba(13, 18, 16, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(78, 217, 194, 0.08);
+  padding-top: 18px;
+  padding-bottom: 18px;
+  transition: all 0.35s ease;
+}
+
+/* ═══════════════════════════════════════════════
+   SECTION LABEL — global utility
+════════════════════════════════════════════════ */
+.section-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
 }
