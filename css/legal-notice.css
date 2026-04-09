@@ -1,0 +1,70 @@
+/* ═══════════════════════════════════════════════
+   LEGAL PAGE STYLES (Standalone)
+════════════════════════════════════════════════ */
+
+.legal-header {
+  width: 100%;
+  padding: 32px 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.legal-main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px 60px 20px; /* Platz für Header oben */
+}
+
+/* Wir nutzen deine proj-overlay-card Klasse und überschreiben nur die Positionierung */
+.legal-main .proj-overlay-card {
+  position: relative;
+  transform: none;
+  left: auto;
+  top: auto;
+  margin: 0 auto;
+  display: block; /* Damit es nicht als Flex-Item der Projekte agiert */
+}
+
+.legal-content-padding {
+  padding: 20px;
+}
+
+/* Die vertikale Linie links aus deinem Screenshot */
+.legal-visual-line {
+  border-left: 1px solid rgba(var(--accent-rgb), 0.3);
+  padding-left: 32px;
+  margin-top: 40px;
+}
+
+.legal-block {
+  margin-bottom: 32px;
+}
+
+.label {
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.legal-body-text {
+  line-height: 1.6;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.legal-body-text a {
+  text-decoration: none;
+}
+
+/* Responsive Fixes */
+@media (max-width: 900px) {
+  .legal-header {
+    padding: 20px 32px;
+  }
+  .legal-visual-line {
+    padding-left: 20px;
+  }
+}

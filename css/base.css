@@ -55,7 +55,7 @@ body {
    NAVBAR
 ════════════════════════════════════════════════ */
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -313,13 +313,8 @@ body {
    NAVBAR — Scroll-aware background
 ════════════════════════════════════════════════ */
 .navbar.scrolled {
-  background: rgba(13, 18, 16, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(78, 217, 194, 0.08);
   padding-top: 18px;
   padding-bottom: 18px;
-  transition: all 0.35s ease;
 }
 
 /* ═══════════════════════════════════════════════
