@@ -88,19 +88,5 @@
 })();
 
 /* ═══════════════════════════════════════════════
-   NAVBAR — Force fixed position (bulletproof fallback)
-   Ensures the navbar stays fixed regardless of any
-   CSS stacking context issues caused by overflow,
-   transform or backdrop-filter on ancestor elements.
+   NAVBAR — Fixed position handled via CSS (base.css)
 ════════════════════════════════════════════════ */
-(function () {
-  var navbar = document.querySelector(".navbar");
-  if (!navbar) return;
-
-  /* Enforce via inline style — cannot be overridden by CSS inheritance */
-  navbar.style.position = "fixed";
-  navbar.style.top = "0";
-  navbar.style.left = "0";
-  navbar.style.width = "100%";
-  navbar.style.zIndex = "9999";
-})();
