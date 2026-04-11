@@ -28,7 +28,6 @@
     />
   </head>
   <body class="legal-page">
-    <!-- NAVBAR -->
     <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="nav-left">
         <div class="lang-switch" role="group" aria-label="Language selector">
@@ -36,9 +35,11 @@
           <button class="lang-btn" aria-pressed="false">DE</button>
         </div>
         <ul class="nav-links">
-          <li><a href="index.html#about">About me</a></li>
-          <li><a href="index.html#skills">Skills</a></li>
-          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#about" data-i18n="nav_about">About me</a></li>
+          <li><a href="index.html#skills" data-i18n="nav_skills">Skills</a></li>
+          <li>
+            <a href="index.html#projects" data-i18n="nav_projects">Projects</a>
+          </li>
         </ul>
       </div>
       <a href="index.html" class="logo" aria-label="Back to portfolio">
@@ -55,7 +56,6 @@
       </button>
     </nav>
 
-    <!-- MOBILE NAVIGATION DRAWER -->
     <div
       class="mobile-nav-backdrop"
       id="mobileNavBackdrop"
@@ -77,42 +77,40 @@
           DE
         </button>
       </div>
-      <a href="index.html#about">About me</a>
-      <a href="index.html#skills">Skills</a>
-      <a href="index.html#projects">Projects</a>
+      <a href="index.html#about" data-i18n="nav_about">About me</a>
+      <a href="index.html#skills" data-i18n="nav_skills">Skills</a>
+      <a href="index.html#projects" data-i18n="nav_projects">Projects</a>
       <div class="mobile-nav-social" aria-label="Social links">
-        <a href="mailto:maximilian-bese@gmx.de" aria-label="Email">
-          <i class="fa-solid fa-envelope"></i>
-        </a>
+        <a href="mailto:maximilian-bese@gmx.de" aria-label="Email"
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
         <a
           href="https://github.com/maximilianbese"
           target="_blank"
           rel="noopener"
           aria-label="GitHub"
-        >
-          <i class="fab fa-github"></i>
-        </a>
+          ><i class="fab fa-github"></i
+        ></a>
         <a
           href="https://www.linkedin.com/in/maximilian-bese/"
           target="_blank"
           rel="noopener"
           aria-label="LinkedIn"
-        >
-          <i class="fab fa-linkedin"></i>
-        </a>
+          ><i class="fab fa-linkedin"></i
+        ></a>
       </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
     <main class="legal-main">
       <a href="index.html" class="legal-back-btn">
-        <i class="fa-solid fa-arrow-left"></i> Back
+        <i class="fa-solid fa-arrow-left"></i>
+        <span data-i18n="legal_back">Back</span>
       </a>
 
-      <h1 class="legal-title">Legal Notice</h1>
+      <h1 class="legal-title" data-i18n="legal_title">Legal Notice</h1>
 
       <div class="legal-section">
-        <h2>Imprint</h2>
+        <h2 data-i18n="legal_h_imprint">Imprint</h2>
         <ul>
           <li>Maximilian Bese</li>
           <li>Lübbecke, North Rhine-Westphalia, Germany</li>
@@ -121,7 +119,7 @@
       </div>
 
       <div class="legal-section">
-        <h2>Exploring the Portfolio</h2>
+        <h2 data-i18n="legal_h_exploring">Exploring the Portfolio</h2>
         <p>
           Email:
           <a href="mailto:maximilian-bese@gmx.de">maximilian-bese@gmx.de</a>
@@ -129,8 +127,8 @@
       </div>
 
       <div class="legal-section">
-        <h2>Acceptance of terms</h2>
-        <p>
+        <h2 data-i18n="legal_h_acceptance">Acceptance of terms</h2>
+        <p data-i18n="legal_p_acceptance">
           By accessing and using <strong>Portfolio</strong> (Product), you
           acknowledge and agree to the following terms and conditions, and any
           policies, guidelines, or amendments thereto that may be presented to
@@ -140,8 +138,8 @@
       </div>
 
       <div class="legal-section">
-        <h2>Scope and ownership of the product</h2>
-        <p>
+        <h2 data-i18n="legal_h_scope">Scope and ownership of the product</h2>
+        <p data-i18n="legal_p_scope1">
           <strong>Portfolio</strong> has been developed as part of a student
           group project in a web development bootcamp at the
           <strong>Developer Akademie GmbH</strong>. It has an educational
@@ -150,7 +148,7 @@
           reliability, accuracy, or any other aspect of quality regarding this
           Product.
         </p>
-        <p>
+        <p data-i18n="legal_p_scope2">
           The design of <strong>Portfolio</strong> is owned by the
           <strong>Developer Akademie GmbH</strong>. Unauthorized use,
           reproduction, modification, distribution, or replication of the design
@@ -159,8 +157,8 @@
       </div>
 
       <div class="legal-section">
-        <h2>Proprietary rights</h2>
-        <p>
+        <h2 data-i18n="legal_h_proprietary">Proprietary rights</h2>
+        <p data-i18n="legal_p_proprietary">
           Aside from the design owned by
           <strong>Developer Akademie GmbH</strong>, we, the listed students,
           retain all proprietary rights in <strong>Portfolio</strong>, including
@@ -170,8 +168,8 @@
       </div>
 
       <div class="legal-section">
-        <h2>Use of the product</h2>
-        <p>
+        <h2 data-i18n="legal_h_use">Use of the product</h2>
+        <p data-i18n="legal_p_use">
           <strong>Portfolio</strong> is intended to be used for lawful purposes
           only, in accordance with all applicable laws and regulations. Any use
           of <strong>Portfolio</strong> for illegal activities, or to harass,
@@ -182,8 +180,10 @@
       </div>
 
       <div class="legal-section">
-        <h2>Disclaimer of warranties and limitation of liability</h2>
-        <p>
+        <h2 data-i18n="legal_h_disclaimer">
+          Disclaimer of warranties and limitation of liability
+        </h2>
+        <p data-i18n="legal_p_disclaimer">
           <strong>Portfolio</strong> is provided "as is" without warranty of any
           kind, whether express or implied, including but not limited to the
           implied warranties of merchantability, fitness for a particular
@@ -198,34 +198,31 @@
       </div>
 
       <div class="legal-section">
-        <h2>Indemnity</h2>
-        <p>
+        <h2 data-i18n="legal_h_indemnity">Indemnity</h2>
+        <p data-i18n="legal_p_indemnity">
           You agree to indemnify, defend and hold harmless us, the listed
-          students, the
-          <strong>Developer Akademie</strong>, and our affiliates, partners,
-          officers, directors, agents, and employees, from and against any
-          claim, demand, loss, damage, cost, or liability (including reasonable
-          legal fees) arising out of or relating to your use of
-          <strong>Portfolio</strong>
-          and/or your breach of this Legal Notice.
+          students, the <strong>Developer Akademie</strong>, and our affiliates,
+          partners, officers, directors, agents, and employees, from and against
+          any claim, demand, loss, damage, cost, or liability (including
+          reasonable legal fees) arising out of or relating to your use of
+          <strong>Portfolio</strong> and/or your breach of this Legal Notice.
         </p>
-        <p>
+        <p data-i18n="legal_p_contact">
           For any questions or notices, please contact us at
           <a href="mailto:maximilian-bese@gmx.de">maximilian-bese@gmx.de</a>.
         </p>
-        <p class="legal-date">Date: July 26, 2025</p>
+        <p class="legal-date" data-i18n="legal_date">Date: July 26, 2025</p>
       </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-left">
         <a href="index.html" class="footer-logo" aria-label="Back to top">
           <img src="./img/logo.png" alt="MB Logo" class="footer-logo-img" />
           <span class="footer-logo-name">Maximilian<br />Bese</span>
         </a>
-        <p class="footer-role">Web Developer</p>
-        <p class="footer-city">Lübbecke, Germany</p>
+        <p class="footer-role" data-i18n="footer_role">Web Developer</p>
+        <p class="footer-city" data-i18n="footer_city">Lübbecke, Germany</p>
       </div>
       <p class="footer-copy mono">© Maximilian Bese 2025</p>
       <nav class="footer-right" aria-label="Footer links">
@@ -242,10 +239,17 @@
           >LinkedIn</a
         >
         <a href="mailto:maximilian-bese@gmx.de">Email</a>
-        <a href="legal.html" class="footer-link-active">Legal Notice</a>
+        <a
+          href="legal-notice.html"
+          class="footer-link-active"
+          data-i18n="footer_legal"
+          >Legal Notice</a
+        >
       </nav>
     </footer>
 
+    <script src="js/data.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/mobile-nav.js"></script>
   </body>
 </html>

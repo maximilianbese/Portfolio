@@ -130,6 +130,33 @@ var TRANSLATIONS = {
     footer_role: "Web Developer",
     footer_city: "Munich, Germany",
     footer_legal: "Legal Notice",
+    legal_title: "Legal Notice",
+    legal_back: "Back",
+    legal_h_imprint: "Imprint",
+    legal_h_exploring: "Exploring the Portfolio",
+    legal_h_acceptance: "Acceptance of terms",
+    legal_p_acceptance:
+      "By accessing and using <strong>Portfolio</strong> (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice.",
+    legal_h_scope: "Scope and ownership of the product",
+    legal_p_scope1:
+      "<strong>Portfolio</strong> has been developed as part of a student group project in a web development bootcamp at the <strong>Developer Akademie GmbH</strong>. It has an educational purpose and is not intended for extensive personal &amp; business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product.",
+    legal_p_scope2:
+      "The design of <strong>Portfolio</strong> is owned by the <strong>Developer Akademie GmbH</strong>. Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.",
+    legal_h_proprietary: "Proprietary rights",
+    legal_p_proprietary:
+      "Aside from the design owned by <strong>Developer Akademie GmbH</strong>, we, the listed students, retain all proprietary rights in <strong>Portfolio</strong>, including any associated copyrighted material, trademarks, and other proprietary information.",
+    legal_h_use: "Use of the product",
+    legal_p_use:
+      "<strong>Portfolio</strong> is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of <strong>Portfolio</strong> for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of <strong>Portfolio</strong>.",
+    legal_h_disclaimer: "Disclaimer of warranties and limitation of liability",
+    legal_p_disclaimer:
+      '<strong>Portfolio</strong> is provided "as is" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the <strong>Developer Akademie</strong>, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of <strong>Portfolio</strong>.',
+    legal_h_indemnity: "Indemnity",
+    legal_p_indemnity:
+      "You agree to indemnify, defend and hold harmless us, the listed students, the <strong>Developer Akademie</strong>, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of <strong>Portfolio</strong> and/or your breach of this Legal Notice.",
+    legal_p_contact:
+      'For any questions or notices, please contact us at <a href="mailto:maximilian-bese@gmx.de">maximilian-bese@gmx.de</a>.',
+    legal_date: "Date: July 26, 2025",
   },
   de: {
     nav_about: "\u00dcber mich",
@@ -179,6 +206,33 @@ var TRANSLATIONS = {
     footer_role: "Web Entwickler",
     footer_city: "M\u00fcnchen, Deutschland",
     footer_legal: "Impressum",
+    legal_title: "Impressum",
+    legal_back: "Zur\u00fcck",
+    legal_h_imprint: "Impressum",
+    legal_h_exploring: "Portfolio erkunden",
+    legal_h_acceptance: "Nutzungsbedingungen",
+    legal_p_acceptance:
+      "Durch den Zugriff auf und die Nutzung von <strong>Portfolio</strong> (Produkt) erkennst du die folgenden Nutzungsbedingungen sowie alle Richtlinien und \u00c4nderungen an, die dir von Zeit zu Zeit mitgeteilt werden k\u00f6nnen. Wir, die aufgef\u00fchrten Studierenden, k\u00f6nnen die Bedingungen jederzeit ohne Vorank\u00fcndigung \u00e4ndern.",
+    legal_h_scope: "Umfang und Eigent\u00fcmerschaft",
+    legal_p_scope1:
+      "<strong>Portfolio</strong> wurde im Rahmen eines Gruppenarbeitsprojekts in einem Webentwicklungs-Bootcamp bei der <strong>Developer Akademie GmbH</strong> entwickelt. Es hat einen Bildungszweck und ist nicht f\u00fcr eine umfangreiche private oder gesch\u00e4ftliche Nutzung gedacht. Daher k\u00f6nnen wir keine konsistente Verf\u00fcgbarkeit, Zuverl\u00e4ssigkeit oder Qualit\u00e4t garantieren.",
+    legal_p_scope2:
+      "Das Design von <strong>Portfolio</strong> geh\u00f6rt der <strong>Developer Akademie GmbH</strong>. Unerlaubte Nutzung, Vervielf\u00e4ltigung, \u00c4nderung, Verbreitung oder Replikation des Designs ist strengstens untersagt.",
+    legal_h_proprietary: "Eigentumsrechte",
+    legal_p_proprietary:
+      "Abgesehen vom Design der <strong>Developer Akademie GmbH</strong> behalten wir, die aufgef\u00fchrten Studierenden, alle Eigentumsrechte an <strong>Portfolio</strong>, einschlie\u00dflich aller damit verbundenen urheberrechtlich gesch\u00fctzten Materialien, Marken und sonstigen Informationen.",
+    legal_h_use: "Nutzung des Produkts",
+    legal_p_use:
+      "<strong>Portfolio</strong> darf ausschlie\u00dflich f\u00fcr legale Zwecke in \u00dcbereinstimmung mit allen geltenden Gesetzen genutzt werden. Jede Nutzung f\u00fcr illegale Aktivit\u00e4ten oder zur Bel\u00e4stigung, Bedrohung oder Einsch\u00fcchterung anderer Personen ist strengstens verboten. Du tr\u00e4gst die alleinige Verantwortung f\u00fcr deine Interaktionen.",
+    legal_h_disclaimer: "Haftungsausschluss",
+    legal_p_disclaimer:
+      '<strong>Portfolio</strong> wird "wie besehen" ohne jegliche ausdr\u00fcckliche oder stillschweigende Garantie bereitgestellt. In keinem Fall haften wir, die Studierenden oder die <strong>Developer Akademie</strong>, f\u00fcr direkte, indirekte, besondere oder Folgesch\u00e4den, die aus der Nutzung oder Nichtverf\u00fcgbarkeit von <strong>Portfolio</strong> entstehen.',
+    legal_h_indemnity: "Freistellung",
+    legal_p_indemnity:
+      "Du erkl\u00e4rst dich bereit, uns, die aufgef\u00fchrten Studierenden, die <strong>Developer Akademie</strong> sowie unsere Partner und Mitarbeiter von jeglichen Anspr\u00fcchen, Sch\u00e4den, Kosten oder Verbindlichkeiten freizustellen, die aus deiner Nutzung von <strong>Portfolio</strong> oder einem Versto\u00df gegen dieses Impressum entstehen.",
+    legal_p_contact:
+      'F\u00fcr Fragen oder Hinweise kontaktiere uns bitte unter <a href="mailto:maximilian-bese@gmx.de">maximilian-bese@gmx.de</a>.',
+    legal_date: "Datum: 26. Juli 2025",
   },
 };
 
@@ -191,15 +245,15 @@ var TRANSLATIONS = {
 
   var svgs = {
     "svg-api":
-      '<svg viewBox="0 0 48 48" width="44" height="44" fill="white"><rect x="2" y="14" width="44" height="20" rx="4"/><text x="24" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#111" font-family="monospace">API</text></svg>',
+      '<svg viewBox="0 0 48 48" fill="white"><rect x="2" y="14" width="44" height="20" rx="4"/><text x="24" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#111" font-family="monospace">API</text></svg>',
     "svg-scrum":
-      '<svg viewBox="0 0 48 48" width="44" height="44" fill="none"><circle cx="24" cy="24" r="20" stroke="white" stroke-width="2.5"/><path d="M16 32 Q24 8 32 32" stroke="white" stroke-width="2.5"/><path d="M29 24 L36 30" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>',
+      '<svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="white" stroke-width="2.5"/><path d="M16 32 Q24 8 32 32" stroke="white" stroke-width="2.5"/><path d="M29 24 L36 30" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>',
     "svg-md":
-      '<svg viewBox="0 0 48 48" width="44" height="44"><path d="M24 4L4 44h40L24 4z" fill="none" stroke="white" stroke-width="3"/><path d="M14 32h20M19 20h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>',
+      '<svg viewBox="0 0 48 48"><path d="M24 4L4 44h40L24 4z" fill="none" stroke="white" stroke-width="3"/><path d="M14 32h20M19 20h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>',
     "svg-sb":
-      '<svg viewBox="0 0 48 48" width="44" height="44" fill="none"><polygon points="24,4 44,14 44,34 24,44 4,34 4,14" stroke="white" stroke-width="2.5"/><path d="M24 4v40M4 14l40 20M44 14L4 34" stroke="white" stroke-width="1.5" stroke-opacity="0.4"/></svg>',
+      '<svg viewBox="0 0 48 48" fill="none"><polygon points="24,4 44,14 44,34 24,44 4,34 4,14" stroke="white" stroke-width="2.5"/><path d="M24 4v40M4 14l40 20M44 14L4 34" stroke="white" stroke-width="1.5" stroke-opacity="0.4"/></svg>',
     "svg-gm":
-      '<svg viewBox="0 0 48 48" width="44" height="44" fill="none"><circle cx="24" cy="24" r="20" stroke="#4ed9c2" stroke-width="2.5"/><path d="M16 18h8M16 24h14M16 30h10" stroke="#4ed9c2" stroke-width="2.5" stroke-linecap="round"/><circle cx="36" cy="18" r="5" stroke="#4ed9c2" stroke-width="2"/></svg>',
+      '<svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="#4ed9c2" stroke-width="2.5"/><path d="M16 18h8M16 24h14M16 30h10" stroke="#4ed9c2" stroke-width="2.5" stroke-linecap="round"/><circle cx="36" cy="18" r="5" stroke="#4ed9c2" stroke-width="2"/></svg>',
   };
 
   grid.innerHTML = SKILLS.map(function (s) {
