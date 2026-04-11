@@ -28,7 +28,6 @@
 
 html {
   scroll-behavior: smooth;
-  /* overflow-x:clip does NOT break position:fixed (unlike overflow-x:hidden) */
   overflow-x: clip;
 }
 
@@ -62,8 +61,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 80px;
+  padding: 22px 80px;
   z-index: 9999;
+  transition:
+    background 0.35s ease,
+    padding 0.35s ease,
+    border-color 0.35s ease;
 }
 
 .nav-left {
@@ -76,7 +79,6 @@ body {
   display: flex;
   gap: 40px;
 }
-
 .nav-links a {
   text-decoration: none;
   color: var(--text);
@@ -86,7 +88,6 @@ body {
 }
 .nav-links a:hover {
   color: var(--accent);
-  opacity: 1;
 }
 
 .lang-switch {
@@ -95,7 +96,6 @@ body {
   border-radius: 30px;
   overflow: hidden;
 }
-
 .lang-btn {
   padding: 6px 16px;
   background: transparent;
@@ -133,7 +133,7 @@ body {
 }
 
 /* ═══════════════════════════════════════════════
-   BUTTONS (Fixed Marquee)
+   BUTTONS
 ════════════════════════════════════════════════ */
 .cta-buttons {
   display: flex;
@@ -158,12 +158,10 @@ body {
     border-color 0.35s ease,
     background 0.35s ease;
 }
-
 .btn:hover {
   border-color: var(--accent);
   background: rgba(var(--accent-rgb), 0.04);
 }
-
 .btn-sm {
   height: 46px;
   margin-top: 8px;
@@ -175,7 +173,6 @@ body {
   justify-content: center;
   width: 100%;
 }
-
 .btn-inner span {
   padding: 0 28px;
   font-size: 15px;
@@ -183,37 +180,33 @@ body {
   color: var(--text);
   white-space: nowrap;
   display: inline-block;
-  transform: translateX(0); /* Standard: Mitte */
+  transform: translateX(0);
   opacity: 1;
 }
 
-/* Animationen */
 @keyframes btnSlideIn {
-  0% {
+  from {
     transform: translateX(100%);
     opacity: 0;
   }
-  100% {
+  to {
     transform: translateX(0);
     opacity: 1;
   }
 }
-
 @keyframes btnSlideOut {
-  0% {
+  from {
     transform: translateX(0);
     opacity: 1;
   }
-  100% {
+  to {
     transform: translateX(-100%);
     opacity: 0;
   }
 }
-
 .btn-marquee-in {
   animation: btnSlideIn 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
-
 .btn-marquee-out {
   animation: btnSlideOut 0.35s cubic-bezier(0.4, 0, 1, 1) forwards;
 }
@@ -310,7 +303,7 @@ body {
 }
 
 /* ═══════════════════════════════════════════════
-   SECTION LABEL — global utility
+   SECTION LABEL
 ════════════════════════════════════════════════ */
 .section-label {
   font-family: "JetBrains Mono", monospace;
