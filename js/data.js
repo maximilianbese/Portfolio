@@ -59,6 +59,7 @@ var TECH_ICONS = {
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
   Firebase:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+  Git: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
 };
 
 /* ═══════════════════════════════════════════════
@@ -68,14 +69,13 @@ var SKILLS = [
   { name: "HTML", icon: "img" },
   { name: "CSS", icon: "img" },
   { name: "JavaScript", icon: "img" },
+  { name: "Material Design", icon: "svg-md" },
   { name: "TypeScript", icon: "img" },
   { name: "Angular", icon: "img" },
+  { name: "Supabase", icon: "svg-sb" },
   { name: "Git", icon: "img" },
-  { name: "Firebase", icon: "img" },
   { name: "REST-API", icon: "svg-api" },
   { name: "Scrum", icon: "svg-scrum" },
-  { name: "Material Design", icon: "svg-md" },
-  { name: "Supabase", icon: "svg-sb" },
   { name: "Growth mindset", icon: "svg-gm" },
 ];
 
@@ -243,24 +243,72 @@ var TRANSLATIONS = {
   var grid = document.getElementById("skillsGrid");
   if (!grid) return;
 
+  var S = ' width="52" height="52"';
   var svgs = {
+    "svg-html":
+      "<svg" +
+      S +
+      ' viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 4l3.6 40L24 48l14.4-4L42 4H6z" fill="#E44D26"/><path d="M24 44.5l11.6-3.2 3.1-34.7H24v37.9z" fill="#F16529"/><path d="M24 20.5h-6.2l-.4-4.9H24v-4.8H12.8l1.2 13.5H24v-3.8zm0 10.7l-.1.1-5.2-1.4-.3-3.8H13.6l.7 7.5 9.7 2.7h.1v-5.1z" fill="#EBEBEB"/><path d="M24 20.5v3.8h5.8l-.5 6.1-5.3 1.4v5.1l9.7-2.7.1-.6 1.1-12.7.1-1.4H24zm0-9.7v4.8h11.3l.1-.9.2-2.4.1-1.5H24z" fill="#fff"/></svg>',
+    "svg-css":
+      "<svg" +
+      S +
+      ' viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 4l3.6 40L24 48l14.4-4L42 4H6z" fill="#1572B6"/><path d="M24 44.5l11.6-3.2 3.1-34.7H24v37.9z" fill="#33A9DC"/><path d="M24 20.3h6.3l-.4 5-5.9 1.6v5.1l10.8-3 .1-1.4 1.2-14.2.1-1.4H24v5.3zm0-10.5v5.2h12.5l.1-1 .3-2.7.1-1.5H24z" fill="#fff"/><path d="M24 20.3H13.1l.4 5 5.6 1.6v-.1H24v-5H19l-.3-3.3H24v-5.2H12.3l.1 1.5.3 2.7.1 1H24v3.8zm0 11.8l-.1.1-5.2-1.4-.3-3.8H13.6l.7 7.5 9.7 2.7h.1v-5.1z" fill="#EBEBEB"/></svg>',
+    "svg-js":
+      "<svg" +
+      S +
+      ' viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="3" fill="#F7DF1E"/><path d="M13.5 37.4l3.3-2c.6 1.1 1.2 2 2.5 2 1.3 0 2.1-.5 2.1-2.5V22.7h4.1v12.3c0 4.1-2.4 6-5.9 6-3.2 0-5-1.7-5.9-3.6M26.4 37l3.3-2c.9 1.4 2 2.4 4 2.4 1.7 0 2.8-.8 2.8-2 0-1.4-1.1-1.9-2.9-2.7l-1-.4c-2.9-1.2-4.8-2.8-4.8-6 0-3 2.3-5.3 5.8-5.3 2.5 0 4.3.9 5.6 3.2l-3.1 2c-.7-1.2-1.4-1.7-2.5-1.7s-1.8.7-1.8 1.7c0 1.2.7 1.7 2.4 2.4l1 .4c3.4 1.4 5.3 2.9 5.3 6.2 0 3.6-2.8 5.6-6.6 5.6-3.7 0-6.1-1.8-7.3-4.8" fill="#222"/></svg>',
+    "svg-ts":
+      "<svg" +
+      S +
+      ' viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="3" fill="#3178C6"/><path d="M22.6 37.7v3.8c.6.3 1.4.6 2.3.7.9.2 1.8.2 2.8.2 1 0 1.9-.1 2.7-.3.9-.2 1.6-.5 2.2-1 .6-.5 1.1-1 1.5-1.8.4-.7.5-1.6.5-2.7 0-.8-.1-1.4-.3-2-.2-.6-.5-1.1-.9-1.5-.4-.4-.9-.8-1.4-1.1-.6-.3-1.2-.6-1.9-.9-.5-.2-1-.4-1.4-.6-.4-.2-.7-.4-1-.6-.3-.2-.5-.4-.6-.6-.1-.2-.2-.5-.2-.8 0-.3.1-.5.2-.7.1-.2.3-.4.5-.5.2-.1.5-.2.8-.3.3-.1.6-.1 1-.1.3 0 .6 0 .9.1.3 0 .7.1 1 .2.3.1.7.3 1 .4.3.2.6.4.9.6v-3.5c-.5-.2-1.1-.4-1.8-.5-.7-.1-1.4-.2-2.2-.2-1 0-1.9.1-2.7.3-.8.2-1.5.6-2.1 1-.6.4-1.1 1-1.4 1.7-.3.7-.5 1.5-.5 2.4 0 1.2.3 2.2 1 3 .7.8 1.7 1.4 3.1 2l1.5.6c.5.2.9.4 1.2.6.3.2.6.4.7.7.2.2.3.5.3.9 0 .3-.1.6-.2.8-.1.2-.3.4-.6.6-.2.1-.5.3-.9.3-.3.1-.7.1-1.1.1-.8 0-1.5-.1-2.2-.4-.9-.3-1.6-.7-2.2-1.2zM15.4 27.6h5.3V24H6v3.6h5.3V42h4.1V27.6z" fill="#fff"/></svg>',
+    "svg-angular":
+      "<svg" +
+      S +
+      ' viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M24 4L5 11l2.9 25.2L24 44l16.1-7.8L43 11z" fill="#DD0031"/><path d="M24 4v4.6l.1 30.9 13.1-6.3L39.7 11z" fill="#C3002F"/><path d="M24 8.6L13.2 35h4l2.2-5.5h9.2L30.8 35h3.9L24 8.6zm0 7.8l3.4 8.8h-6.8L24 16.4z" fill="#fff"/></svg>',
+    "svg-git":
+      "<svg" +
+      S +
+      ' viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M44.5 21.8L26.2 3.5a3.3 3.3 0 00-4.7 0l-4.6 4.7 5.9 5.9c1.4-.5 3 .2 3.6 1.7.6 1.5 0 3.2-1.4 3.9l5.7 5.7c1.6-.6 3.4.2 4 1.8.8 2-.3 4.2-2.4 4.2-1.8 0-3.3-1.5-3.3-3.3 0-.4.1-.8.2-1.2l-5.3-5.3v13.9c.4.2.7.4 1 .7 1.2 1.2 1.2 3.2 0 4.4-1.2 1.2-3.2 1.2-4.4 0-1.2-1.2-1.2-3.2 0-4.4.3-.3.7-.6 1.1-.8V21.8c-.4-.2-.8-.5-1.1-.8-1.2-1.2-1.2-3.2 0-4.4.1-.1.2-.2.3-.3l-5.8-5.8-15.5 15.5c-1.3 1.3-1.3 3.4 0 4.7l18.3 18.3c1.3 1.3 3.4 1.3 4.7 0L44.5 26.5c1.3-1.3 1.3-3.4 0-4.7z" fill="#F05032"/></svg>',
     "svg-api":
-      '<svg viewBox="0 0 48 48" fill="white"><rect x="2" y="14" width="44" height="20" rx="4"/><text x="24" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#111" font-family="monospace">API</text></svg>',
+      "<svg" +
+      S +
+      ' viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="40" height="24" rx="5" fill="white"/><text x="24" y="29" text-anchor="middle" font-size="12" font-weight="800" fill="#111" font-family="monospace,sans-serif">API</text></svg>',
     "svg-scrum":
-      '<svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="white" stroke-width="2.5"/><path d="M16 32 Q24 8 32 32" stroke="white" stroke-width="2.5"/><path d="M29 24 L36 30" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>',
+      "<svg" +
+      S +
+      ' viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="20" stroke="white" stroke-width="2.5"/><path d="M24 8C14 8 8 16 8 24c0 8 6 16 16 16" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M30 33 L38 37 L34 28" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
     "svg-md":
-      '<svg viewBox="0 0 48 48"><path d="M24 4L4 44h40L24 4z" fill="none" stroke="white" stroke-width="3"/><path d="M14 32h20M19 20h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>',
+      "<svg" +
+      S +
+      ' viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="21" fill="none" stroke="white" stroke-width="2"/><polygon points="24,7 41,41 7,41" fill="none" stroke="white" stroke-width="2.5"/></svg>',
     "svg-sb":
-      '<svg viewBox="0 0 48 48" fill="none"><polygon points="24,4 44,14 44,34 24,44 4,34 4,14" stroke="white" stroke-width="2.5"/><path d="M24 4v40M4 14l40 20M44 14L4 34" stroke="white" stroke-width="1.5" stroke-opacity="0.4"/></svg>',
+      "<svg" +
+      S +
+      ' viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27 5L27 31L41 14H27" fill="white"/><path d="M21 43L21 17L7 34H21" fill="white" opacity="0.55"/></svg>',
     "svg-gm":
-      '<svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="#4ed9c2" stroke-width="2.5"/><path d="M16 18h8M16 24h14M16 30h10" stroke="#4ed9c2" stroke-width="2.5" stroke-linecap="round"/><circle cx="36" cy="18" r="5" stroke="#4ed9c2" stroke-width="2"/></svg>',
+      "<svg" +
+      S +
+      ' viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="20" stroke="#4ed9c2" stroke-width="2.5"/><path d="M13 29 L19 22 L25 27 L34 17" stroke="#4ed9c2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="37" cy="14" r="5" stroke="#4ed9c2" stroke-width="2"/><path d="M34 14h6M37 11v6" stroke="#4ed9c2" stroke-width="1.8" stroke-linecap="round"/></svg>',
+  };
+
+  /* Map skill names to their inline SVG key */
+  var iconMap = {
+    HTML: "svg-html",
+    CSS: "svg-css",
+    JavaScript: "svg-js",
+    TypeScript: "svg-ts",
+    Angular: "svg-angular",
+    Git: "svg-git",
+    "REST-API": "svg-api",
+    Scrum: "svg-scrum",
+    "Material Design": "svg-md",
+    Supabase: "svg-sb",
+    "Growth mindset": "svg-gm",
   };
 
   grid.innerHTML = SKILLS.map(function (s) {
-    var iconHtml =
-      s.icon === "img"
-        ? '<img src="' + TECH_ICONS[s.name] + '" alt="' + s.name + '"/>'
-        : svgs[s.icon] || "";
+    var key = iconMap[s.name] || s.icon;
+    var iconHtml = svgs[key] || "";
     return (
       '<div class="skill-item"><div class="skill-icon">' +
       iconHtml +
