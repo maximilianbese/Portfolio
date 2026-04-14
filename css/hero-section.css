@@ -20,10 +20,12 @@
 }
 
 .hero-title {
-  font-size: 120px;
-  font-weight: 700;
-  color: #e0e0e0;
-  margin-bottom: 40px;
+  /* Die Schrift passt sich zwischen 2.5rem (klein) und 8rem (groß) an */
+  font-size: clamp(2.5rem, 8vw, 8rem);
+  line-height: 1.1;
+  white-space: nowrap; /* Verhindert Umbruch, wenn gewollt */
+  width: 100%;
+  text-align: center;
 }
 
 .btn-ghost {
