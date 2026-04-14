@@ -10,7 +10,7 @@ const projectData = {
     img: "./assets/img/join-preview.png",
     tech: ["CSS", "HTML", "Firebase", "Angular", "TypeScript"],
     github: "https://github.com/dein-profil/join",
-    live: "https://dein-projekt-join.de",
+    live: "https://join.maximilian-bese.de/",
   },
   loco: {
     number: "02",
@@ -19,7 +19,7 @@ const projectData = {
     img: "./assets/img/elpollo-preview.png",
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/dein-profil/pollo-loco",
-    live: "https://dein-projekt-loco.de",
+    live: "https://el-pollo-loco.maximilian-bese.de/",
   },
   bubble: {
     number: "03",
