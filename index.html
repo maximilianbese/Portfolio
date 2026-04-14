@@ -1,561 +1,417 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maximilian Bese | Portfolio</title>
-    <meta
-      name="description"
-      content="Frontend Developer — Maximilian Bese. Portfolio of web projects built with Angular, TypeScript, HTML, CSS and more."
+    <title>Maximilian Bese | Frontend Developer Portfolio</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.png"
+      type="image/x-icon"
     />
-    <link rel="icon" type="image/png" href="./img/favicon.png" />
-    <link rel="stylesheet" href="./css/base.css" />
-    <link rel="stylesheet" href="./css/sections-hero-about.css" />
-    <link rel="stylesheet" href="./css/sections-skills-projects.css" />
-    <link rel="stylesheet" href="./css/sections-rest.css" />
-    <link rel="stylesheet" href="./css/overlay.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/hero-section.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/about-me.css" />
+    <link rel="stylesheet" href="./css/skills-section.css" />
+    <link rel="stylesheet" href="./css/projects-section.css" />
+    <link rel="stylesheet" href="./css/contact-section.css" />
+    <link rel="stylesheet" href="./css/testimonial-section.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
-    <link rel="stylesheet" href="./css/responsive-sm.css" />
-    <link rel="stylesheet" href="./css/mobile-nav.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
   </head>
   <body>
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <header class="main-header container">
       <div class="nav-left">
-        <div class="lang-switch" role="group" aria-label="Language selector">
-          <button class="lang-btn active" aria-pressed="true">EN</button>
-          <button class="lang-btn" aria-pressed="false">DE</button>
+        <div class="lang-toggle">
+          <span class="lang active">EN</span>
+          <span class="lang">DE</span>
         </div>
-        <ul class="nav-links">
-          <li><a href="#about" data-i18n="nav_about">About me</a></li>
-          <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
-          <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
-        </ul>
+        <nav class="nav-links">
+          <a href="#about">About me</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+        </nav>
       </div>
-      <a href="#hero" class="logo" aria-label="Back to top">
-        <img src="./img/logo.png" alt="MB Logo" class="logo-img" />
-        <!-- <span class="logo-text">Maximilian<br />Bese</span> -->
-      </a>
-      <button
-        class="hamburger"
-        id="hamburgerBtn"
-        aria-label="Open navigation"
-        aria-expanded="false"
-        aria-controls="mobileNav"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </nav>
+      <div class="nav-right">
+        <img src="./assets/img/logo.png" alt="Logo" class="nav-right" />
+      </div>
+    </header>
 
-    <!-- Mobile Navigation Drawer -->
-    <div
-      class="mobile-nav-backdrop"
-      id="mobileNavBackdrop"
-      aria-hidden="true"
-    ></div>
-    <nav
-      class="mobile-nav"
-      id="mobileNav"
-      aria-label="Mobile navigation"
-      role="dialog"
-      aria-modal="true"
-      aria-hidden="true"
-    >
-      <div class="mobile-nav-lang" role="group" aria-label="Language selector">
-        <button class="lang-btn lang-btn-mobile active" aria-pressed="true">
-          EN
-        </button>
-        <button class="lang-btn lang-btn-mobile" aria-pressed="false">
-          DE
-        </button>
-      </div>
-      <a href="#about" data-i18n="nav_about">About me</a>
-      <a href="#skills" data-i18n="nav_skills">Skills</a>
-      <a href="#projects" data-i18n="nav_projects">Projects</a>
-      <div class="mobile-nav-social" aria-label="Social links">
-        <a
-          href="/cdn-cgi/l/email-protection#aec3cfd6c7c3c7c2c7cfc083cccbddcbeec9c3d680cacb"
-          aria-label="Email"
-          ><i class="fa-solid fa-envelope"></i
-        ></a>
-        <a
-          href="https://github.com/maximilianbese"
-          target="_blank"
-          rel="noopener"
-          aria-label="GitHub"
-          ><i class="fab fa-github"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/maximilian-bese/"
-          target="_blank"
-          rel="noopener"
-          aria-label="LinkedIn"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-      </div>
-    </nav>
-
-    <section id="hero" class="section hero-section" aria-label="Introduction">
-      <div class="hero">
-        <div class="hero-center">
-          <p class="subtitle" data-i18n="hero_subtitle">Frontend Developer</p>
-          <h1>Maximilian Bese</h1>
-          <div class="cta-buttons">
-            <a href="#projects" class="btn">
-              <div class="btn-inner">
-                <span data-i18n="btn_check">Check my work</span>
-              </div>
-            </a>
-            <a href="#contact" class="btn">
-              <div class="btn-inner">
-                <span data-i18n="btn_contact">Contact me</span>
-              </div>
-            </a>
+    <main>
+      <section class="hero">
+        <div class="sidebar-left">
+          <div class="scroll-indicator">
+            <div class="arrow-circle">↓</div>
+            <div class="scroll-line"></div>
           </div>
         </div>
-      </div>
 
-      <aside class="sidebar-left" aria-hidden="true">
-        <div class="circle-icon"><i class="fa-solid fa-arrow-down"></i></div>
-        <div class="vertical-line"></div>
-      </aside>
-
-      <aside class="sidebar-right" aria-label="Social links">
-        <a
-          href="/cdn-cgi/l/email-protection#a8c5c9d0c1c5c1c4c1c9c685cacddbcde8cfc5d086cccd"
-          class="email"
-          ><span
-            class="__cf_email__"
-            data-cfemail="6805091001050104010906450a0d1b0d280f0510460c0d"
-            >[email&#160;protected]</span
-          ></a
-        >
-        <div class="social-icons">
-          <a
-            href="https://github.com/maximilianbese"
-            target="_blank"
-            rel="noopener"
-            aria-label="GitHub"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/maximilian-bese/"
-            target="_blank"
-            rel="noopener"
-            aria-label="LinkedIn"
-            ><i class="fab fa-linkedin"></i
-          ></a>
+        <div class="hero-center">
+          <span class="hero-role">Frontend Developer</span>
+          <h1 class="hero-title">Maximilian Bese</h1>
+          <div class="hero-btns">
+            <a href="#projects" class="btn-ghost">Check my work</a>
+            <a href="#contact" class="btn-ghost">Contact me</a>
+          </div>
         </div>
-        <div class="vertical-line"></div>
-      </aside>
-    </section>
 
-    <div class="ticker-clip" aria-hidden="true">
-      <div class="ticker-wrapper" aria-hidden="true">
-        <div class="ticker-track">
-          <span class="ticker-item" data-i18n="ticker_remote"
-            >Available for remote work</span
-          ><span class="ticker-dot">•</span>
-          <span class="ticker-item" data-i18n="ticker_role"
-            >Frontend Developer</span
-          ><span class="ticker-dot">•</span>
-          <span class="ticker-item" data-i18n="ticker_city"
-            >Based in Lübbecke</span
-          ><span class="ticker-dot">•</span>
-          <span class="ticker-item" data-i18n="ticker_open"
-            >Open to Opportunities</span
-          ><span class="ticker-dot">•</span>
-          <span class="ticker-item" data-i18n="ticker_remote"
-            >Available for remote work</span
-          ><span class="ticker-dot">•</span>
-          <span class="ticker-item" data-i18n="ticker_role"
-            >Frontend Developer</span
-          ><span class="ticker-dot">•</span>
-          <span class="ticker-item" data-i18n="ticker_city"
-            >Based in Lübbecke</span
-          ><span class="ticker-dot">•</span>
-          <span class="ticker-item" data-i18n="ticker_open"
-            >Open to Opportunities</span
-          ><span class="ticker-dot">•</span>
+        <div class="sidebar-right">
+          <a href="mailto:maximilian-bese@gmx.de" class="vertical-mail"
+            >maximilian-bese@gmx.de</a
+          >
+          <div class="social-icons">
+            <a href="#"
+              ><img src="./assets/icons/github-logo.svg" alt="Github"
+            /></a>
+            <a href="#"
+              ><img src="./assets/icons/linkedin-logo.svg" alt="LinkedIn"
+            /></a>
+          </div>
         </div>
-      </div>
-    </div>
+        <div class="hero-ticker">
+          <div class="ticker-content">
+            <span>Available for remote work</span> <span class="dot">•</span>
+            <span>Frontend Developer</span> <span class="dot">•</span>
+            <span>Based in Munich</span> <span class="dot">•</span>
 
-    <section id="about" class="section about-section">
-      <div class="about-container">
-        <div class="about-photo-wrap">
-          <div class="hatch hatch-tl" aria-hidden="true"></div>
-          <div class="photo-frame">
+            <span>Available for remote work</span> <span class="dot">•</span>
+            <span>Frontend Developer</span> <span class="dot">•</span>
+            <span>Based in Munich</span> <span class="dot">•</span>
+
+            <span>Available for remote work</span> <span class="dot">•</span>
+            <span>Frontend Developer</span> <span class="dot">•</span>
+            <span>Based in Munich</span> <span class="dot">•</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about-section container">
+        <div class="about-grid">
+          <div class="about-image-wrapper">
+            <div class="background-lines"></div>
             <img
-              src="/img/me.png"
+              src="./assets/img/me.png"
               alt="Maximilian Bese"
-              class="about-photo"
-              onerror="this.style.display = 'none'"
+              class="about-portrait"
             />
           </div>
-          <div class="hatch hatch-br" aria-hidden="true"></div>
-        </div>
-        <div class="about-text-wrap">
-          <p class="section-label" data-i18n="about_label">Who I Am</p>
-          <div class="about-card">
-            <h2 class="about-title" data-i18n="about_title">
-              About&nbsp;&nbsp;me
-            </h2>
-            <p class="about-bio" data-i18n="about_bio">
-              Hey, I'm Maximilian. As a frontend developer with an Architect
-              mindset, I combine visionary design with strategic precision. My
-              focus is on continuous optimization and technical excellence to
-              create highly efficient and logically structured web solutions. I
-              am driven by curiosity to transform complex challenges into
-              future-proof, intuitive experiences using modern technologies.
-            </p>
-            <ul class="about-list">
-              <li>
-                <span class="about-icon" aria-hidden="true"
-                  ><i class="fa-solid fa-location-dot"></i
-                ></span>
-                <span data-i18n="about_li1"
-                  >Based in Lübbecke. Open to remote work.</span
-                >
-              </li>
-              <li>
-                <span class="about-icon" aria-hidden="true"
-                  ><i class="fa-solid fa-rotate"></i
-                ></span>
-                <span data-i18n="about_li2"
-                  >Driven by a passion for technology and elegant
-                  problem-solving, I see every new tool as a way to evolve. I’m
-                  a fast learner who thrives on deep dives into new tech,
-                  constantly expanding my knowledge to build software that
-                  lasts.</span
-                >
-              </li>
-              <li>
-                <span class="about-icon" aria-hidden="true"
-                  ><i class="fa-solid fa-circle-check"></i
-                ></span>
-                <span data-i18n="about_li3"
-                  >My problem-solving strategy is simple: analyze, iterate, and
-                  optimize. I strive for solutions that are not just functional,
-                  but elegant and maintainable. Each challenge is an opportunity
-                  to sharpen my logic and expand my technical horizon, ensuring
-                  that the next solution is even more efficient than the
-                  last.</span
-                >
-              </li>
-            </ul>
+
+          <div class="about-info">
+            <span class="about-subtitle">Who I Am</span>
+            <div class="about-card">
+              <h2 class="about-title">
+                <span class="word-about">About</span>
+                <span class="word-me">me</span>
+              </h2>
+
+              <p class="about-intro">
+                Hey there, I'm Maximilian! Write some information about yourself
+                that is IT related. Why are you passionate about coding? What is
+                your source of inspiration for improving your programming
+                skills?
+              </p>
+
+              <ul class="about-details">
+                <li>
+                  <span class="detail-icon"
+                    ><img src="./assets/icons/location.svg" alt=""
+                  /></span>
+                  <p>
+                    Where are you based? Would you be open to working remotely
+                    or potentially relocating?
+                  </p>
+                </li>
+                <li>
+                  <span class="detail-icon"
+                    ><img src="./assets/icons/brain.svg" alt=""
+                  /></span>
+                  <p>
+                    Show that you are open-minded. Are you enthusiastic about
+                    learning new technologies and continually improving your
+                    skills?
+                  </p>
+                </li>
+                <li>
+                  <span class="detail-icon"
+                    ><img src="./assets/icons/solutions.svg" alt=""
+                  /></span>
+                  <p>
+                    A brief description of your problem-solving approach. Do you
+                    learn from each challenge as you search for the most
+                    efficient or elegant solution?
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="skills" class="section skills-section">
-      <p class="section-label" data-i18n="skills_label">Technologies</p>
+      <section id="skills" class="skills-section container">
+        <span class="section-subtitle">Technologies</span>
 
-      <div class="skills-container">
-        <div class="skills-card">
-          <h2 class="skills-title" data-i18n="skills_title">Skill Set</h2>
-
-          <p class="skills-bio" data-i18n="skills_bio">
-            Beyond just writing code, I focus on building scalable and
-            maintainable frontends. I have a proven track record of working with
-            various modern technologies, yet I remain a lifelong student of the
-            craft. Whether it’s adopting a new framework or optimizing a
-            workflow, I embrace change as an opportunity to sharpen my expertise
-            and deliver excellence.
-          </p>
-
-          <div class="skills-footer">
-            <p class="skills-cta-line">
-              <strong data-i18n="skills_cta">
-                You need <span class="accent">another skill?</span>
-              </strong>
-            </p>
-            <p class="skills-sub" data-i18n="skills_sub">
-              Feel free to contact me. I look forward to expanding on my
-              previous knowledge.
+        <div class="skills-layout">
+          <div class="skills-card">
+            <h2 class="skills-heading">Skill Set</h2>
+            <p class="skills-description">
+              A short introduction of your skills. Highlight your experience of
+              using different front-end technologies and emphasise your openness
+              to learning and adapting to new technologies. Show how important
+              it is for you to keep up with the rapid changes in web
+              development.
             </p>
 
-            <a href="#contact" class="btn btn-sm">
-              <div class="btn-inner">
-                <span data-i18n="btn_talk">Let's Talk</span>
+            <div class="skills-cta">
+              <h3>You need <span>another skill?</span></h3>
+              <p>
+                Feel free to contact me. I look forward to expanding on my
+                previous knowledge.
+              </p>
+              <a href="#contact" class="btn-small">Let's Talk</a>
+            </div>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-item">
+              <img src="./assets/icons/html-logo.svg" alt="" /><span>HTML</span>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/icons/css-logo.svg" alt="" /><span>CSS</span>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/icons/js-logo.svg" alt="" /><span
+                >JavaScript</span
+              >
+            </div>
+            <div class="skill-item">
+              <img src="./assets/icons/md-logo.svg" alt="" /><span
+                >Material Design</span
+              >
+            </div>
+            <div class="skill-item">
+              <img src="./assets/icons/ts-logo.svg" alt="" /><span
+                >TypeScript</span
+              >
+            </div>
+            <div class="skill-item">
+              <img src="./assets/icons/angular-logo.svg" alt="" /><span
+                >Angular</span
+              >
+            </div>
+            <div class="skill-item">
+              <img src="./assets/icons/supabase-logo.svg" alt="" /><span
+                >Supabase</span
+              >
+            </div>
+            <div class="skill-item">
+              <img src="./assets/icons/git-logo.svg" alt="" /><span>Git</span>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/icons/rest-api-logo.svg" alt="" /><span
+                >REST-API</span
+              >
+            </div>
+            <div class="skill-item">
+              <img src="./assets/icons/scrum-logo.svg" alt="" /><span
+                >Scrum</span
+              >
+            </div>
+            <div class="skill-item accent">
+              <img src="./assets/icons/growth-mindset.svg" alt="" /><span
+                >Growth mindset</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-section container">
+        <span class="section-subtitle">Portfolio</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-intro">
+          Explore a selection of my work here - Interact with projects to see my
+          skills in action.
+        </p>
+
+        <div class="projects-layout">
+          <div class="projects-list">
+            <div class="project-item active" data-project="join">
+              <div class="project-info">
+                <h3>Join <span>↗</span></h3>
+                <div class="project-tech">
+                  Angular | TypeScript | HTML | CSS | Firebase
+                </div>
               </div>
-            </a>
+            </div>
+
+            <div class="project-item" data-project="loco">
+              <div class="project-info">
+                <h3>El Pollo Loco</h3>
+                <div class="project-tech">HTML | CSS | JavaScript</div>
+              </div>
+            </div>
+
+            <div class="project-item" data-project="bubble">
+              <div class="project-info">
+                <h3>DA Bubble <span class="status-badge">In Progress</span></h3>
+                <div class="project-tech">Angular | Firebase | TypeScript</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-preview">
+            <div class="preview-container">
+              <div class="diag-pattern"></div>
+              <img
+                id="project-image"
+                src="assets/join-preview.png"
+                alt="Project Preview"
+              />
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="skills-grid" id="skillsGrid"></div>
-      </div>
-    </section>
+      <section class="testimonials-section container">
+        <h2 class="section-title centered">What my colleagues say about me</h2>
 
-    <section id="projects" class="section projects-section">
-      <p class="section-label" data-i18n="proj_label">Portfolio</p>
-      <h2 class="projects-title" data-i18n="proj_title">Featured Projects</h2>
-      <p class="projects-sub" data-i18n="proj_sub">
-        Explore a selection of my work here — Interact with projects to see my
-        skills in action.
-      </p>
-      <div class="projects-layout">
-        <div class="projects-list" id="projectsList"></div>
-        <div
-          class="project-preview-box"
-          id="projectPreviewBox"
-          aria-hidden="true"
-        >
-          <div class="hatch hatch-br"></div>
-          <img src="" alt="Project preview" id="projectPreviewImg" />
-        </div>
-      </div>
-    </section>
-
-    <div
-      class="proj-overlay"
-      id="projOverlay"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Project details"
-    >
-      <div class="proj-overlay-inner">
-        <button
-          class="proj-overlay-close"
-          id="projOverlayClose"
-          aria-label="Close"
-        >
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-        <div class="proj-overlay-left">
-          <p class="proj-number" id="overlayNumber"></p>
-          <h2 class="proj-overlay-title" id="overlayTitle"></h2>
-          <h3 class="proj-overlay-sub" data-i18n="proj_overlay_sub">
-            What is this project about?
-          </h3>
-          <p class="proj-overlay-desc" id="overlayDesc"></p>
-          <div class="proj-overlay-tech" id="overlayTech"></div>
-          <div class="proj-overlay-btns">
-            <a
-              href="#"
-              class="btn"
-              id="overlayGithub"
-              target="_blank"
-              rel="noopener"
-            >
-              <div class="btn-inner"><span>GitHub ↗</span></div>
-            </a>
-            <a
-              href="#"
-              class="btn"
-              id="overlayLive"
-              target="_blank"
-              rel="noopener"
-            >
-              <div class="btn-inner"><span>Live Test ↗</span></div>
-            </a>
+        <div class="testimonial-slider">
+          <div class="testimonial-card side">
+            <p>"...efficient way."</p>
+            <div class="testimonial-footer">
+              <span class="author">T. Schulz - Frontend Developer</span>
+            </div>
           </div>
-        </div>
-        <div class="proj-overlay-right">
-          <img src="" alt="" id="overlayScreenshot" />
-          <div class="hatch hatch-br" aria-hidden="true"></div>
-        </div>
-        <button class="proj-next-btn" id="projNextBtn">
-          <span data-i18n="proj_next">Next project</span>
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
-      </div>
-    </div>
 
-    <section class="section testimonials-section" aria-label="Testimonials">
-      <h2 class="testimonials-title" data-i18n="testimonials_title">
-        What my colleagues say about me
-      </h2>
-      <div class="testimonials-viewport">
-        <div class="testimonials-track" id="testimonialsTrack">
-          <div class="testimonial-card t-side">
-            <p class="t-text">
-              Benefiting immensely from Lukas's efficient way of working and his
-              dedication to the team really stood out throughout our
-              collaboration.
-            </p>
-            <div class="t-line"></div>
-            <p class="t-author">T.Schulz — Frontend Developer</p>
-          </div>
-          <div class="testimonial-card t-center">
-            <div class="t-quote">&ldquo;</div>
-            <p class="t-text">
+          <div class="testimonial-card active">
+            <div class="quote-icon">“</div>
+            <p>
               Lukas has proven to be a reliable group partner. His technical
               skills and proactive approach were crucial to the success of our
               project.
             </p>
-            <div class="t-line"></div>
-            <p class="t-author">H.Janisch — Team Partner</p>
+            <div class="testimonial-footer">
+              <hr class="footer-line" />
+              <span class="author">H. Janisch - Team Partner</span>
+            </div>
           </div>
-          <div class="testimonial-card t-side">
-            <p class="t-text">
-              I had the good fortune of working with Lukas at the Developer
-              Akademie. He always stayed calm and collected, knowledgeable and
-              easy to work with.
-            </p>
-            <div class="t-line"></div>
-            <p class="t-author">M.Weber — Project Lead</p>
-          </div>
-        </div>
-      </div>
-      <div class="t-nav" role="group" aria-label="Testimonial navigation">
-        <button class="t-arrow" id="prevBtn" aria-label="Previous">
-          <i class="fa-solid fa-arrow-left"></i>
-        </button>
-        <div class="t-dots">
-          <button
-            class="t-dot active"
-            data-i="0"
-            aria-label="Testimonial 1"
-          ></button>
-          <button class="t-dot" data-i="1" aria-label="Testimonial 2"></button>
-          <button class="t-dot" data-i="2" aria-label="Testimonial 3"></button>
-        </div>
-        <button class="t-arrow" id="nextBtn" aria-label="Next">
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
-      </div>
-    </section>
 
-    <section id="contact" class="section contact-section">
-      <div class="contact-container">
-        <div class="contact-left">
-          <p class="section-label" data-i18n="contact_label">Contact me</p>
-          <h2 class="contact-title" data-i18n="contact_title">
-            Let's work<br />together
-          </h2>
-          <h3 class="contact-sub" data-i18n="contact_sub">
-            Got a problem to solve?
-          </h3>
-          <p class="contact-body" data-i18n="contact_body">
-            I am currently looking for new opportunities as a Frontend
-            Developer. If you have an exciting project or are looking for a
-            dedicated team member who brings value through clean code and
-            strategic thinking, I'd love to hear from you.
-          </p>
-          <p class="contact-cta">
-            Need a Frontend developer?
-            <a
-              href="/cdn-cgi/l/email-protection#1e737f6677737772777f70337c7b6d7b5e797366307a7b"
-              class="accent"
-              >Let's talk!</a
-            >
-          </p>
+          <div class="testimonial-card side">
+            <p>"I had the good fortune of working..."</p>
+            <div class="testimonial-footer">
+              <span class="author">Name - Position</span>
+            </div>
+          </div>
         </div>
-        <div class="contact-right">
-          <div class="form-group">
-            <label class="form-label" for="contactName" data-i18n="form_name"
-              >What's your name?</label
-            >
-            <input
-              id="contactName"
-              type="text"
-              class="form-input"
-              placeholder="Your name goes here"
-              autocomplete="name"
-            />
+
+        <div class="slider-controls">
+          <button class="arrow prev">←</button>
+          <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
           </div>
-          <div class="form-group">
-            <label class="form-label" for="contactEmail" data-i18n="form_email"
-              >What's your email?</label
-            >
-            <input
-              id="contactEmail"
-              type="email"
-              class="form-input"
-              placeholder="youremail@email.com"
-              autocomplete="email"
-            />
+          <button class="arrow next">→</button>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <span class="section-subtitle">Contact me</span>
+            <h2 class="contact-title">Let's work together</h2>
+            <div class="contact-description">
+              <h3>Got a problem to solve?</h3>
+              <p>
+                Encourage people to contact you and describe what role you are
+                interested in. Show that you will add value to their projects
+                through your work.
+              </p>
+              <p>
+                Need a Frontend developer?
+                <a href="mailto:maximilian-bese@gmx.de">Let's talk!</a>
+              </p>
+            </div>
           </div>
-          <div class="form-group">
-            <label class="form-label" for="contactMessage" data-i18n="form_msg"
-              >How can I help you?</label
-            >
-            <input
-              id="contactMessage"
-              type="text"
-              class="form-input"
-              placeholder="Hello, I am interested in…"
-            />
-          </div>
-          <div class="form-check-row">
-            <button
-              class="checkbox"
-              id="privacyCheck"
-              role="checkbox"
-              aria-checked="false"
-              tabindex="0"
-            ></button>
-            <span
-              >I've read the
-              <a href="#" class="accent mono">privacy policy</a> and agree to
-              the processing of my data as outlined.</span
-            >
-          </div>
-          <p
-            id="formFeedback"
-            class="form-feedback"
-            role="alert"
-            aria-live="polite"
-          ></p>
-          <div class="form-submit-row">
-            <button class="btn" id="submitBtn">
-              <div class="btn-inner">
-                <span data-i18n="btn_send">Say Hello ;)</span>
+
+          <div class="contact-form-container">
+            <form id="contact-form">
+              <div class="form-group">
+                <label>What's your name?</label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your name goes here"
+                  required
+                />
               </div>
-            </button>
+
+              <div class="form-group">
+                <label>What's your email?</label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="youremail@email.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label>How can I help you?</label>
+                <textarea
+                  name="message"
+                  placeholder="Hello Maximilian, I am interested in..."
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="privacy-check">
+                <input type="checkbox" id="privacy" required />
+                <label for="privacy"
+                  >I've read the <a href="#">privacy policy</a> and agree to the
+                  processing of my data as outlined.</label
+                >
+              </div>
+
+              <div class="form-submit">
+                <button type="submit" class="btn-submit">Say Hello ;)</button>
+              </div>
+            </form>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <footer class="footer">
-      <div class="footer-left">
-        <a href="#hero" class="footer-logo" aria-label="Back to top">
-          <img src="./img/logo.png" alt="MB Logo" class="footer-logo-img" />
-          <span class="footer-logo-name">Maximilian<br />Bese</span>
-        </a>
-        <p class="footer-role" data-i18n="footer_role">Web Developer</p>
-        <p class="footer-city" data-i18n="footer_city">Munich, Germany</p>
-      </div>
-      <p class="footer-copy mono">© Maximilian Bese 2025</p>
-      <nav class="footer-right" aria-label="Footer links">
-        <a
-          href="https://github.com/maximilianbese"
-          target="_blank"
-          rel="noopener"
-          >Github</a
-        >
-        <a
-          href="https://www.linkedin.com/in/maximilian-bese/"
-          target="_blank"
-          rel="noopener"
-          >LinkedIn</a
-        >
-        <a
-          href="/cdn-cgi/l/email-protection#600d0118090d090c09010e4d0205130520070d184e0405"
-          >Email</a
-        >
-        <a href="./legal-notice.html" data-i18n="footer_legal">Legal Notice</a>
-      </nav>
-    </footer>
+      <footer class="main-footer container">
+        <div class="footer-left">
+          <img
+            src="./assets/img/logo.png"
+            alt="Maximilian Bese Logo"
+            class="footer-logo"
+          />
+          <div class="footer-subtext">
+            <p>Web Developer</p>
+            <p>L&uumlbbecke Germany</p>
+          </div>
+        </div>
 
-    <script src="js/data.js"></script>
-    <script src="js/i18n.js"></script>
-    <script src="js/marquee.js"></script>
-    <script src="js/projects.js"></script>
-    <script src="js/slider.js"></script>
-    <script src="js/form.js"></script>
-    <script src="js/mobile-nav.js"></script>
+        <div class="footer-center">
+          <p>© Maximilian Bese 2026</p>
+        </div>
+
+        <div class="footer-right">
+          <nav class="footer-links">
+            <a href="https://github.com" target="_blank">Github</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="mailto:maximilian-bese@gmx.de">Email</a>
+            <a href="#">Legal Notice</a>
+          </nav>
+        </div>
+      </footer>
+    </main>
+    <script src="./js/contact.js"></script>
+    <script src="./js/testimonial.js"></script>
+    <script src="./js/project.js"></script>
   </body>
 </html>

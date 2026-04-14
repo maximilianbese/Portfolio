@@ -1,0 +1,112 @@
+.about-section {
+  padding: 120px 0;
+  position: relative;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+/* --- Foto & Linien Muster --- */
+.about-image-wrapper {
+  position: relative;
+}
+
+.background-lines {
+  position: absolute;
+  top: -50px; /* Versatz nach oben */
+  left: -50px; /* Versatz nach links */
+  width: 250px; /* Größe des Musters */
+  height: 250px;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(61, 207, 182, 0.1),
+    rgba(61, 207, 182, 0.1) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  z-index: 1; /* Hinter das Foto */
+}
+
+.about-portrait {
+  width: 100%;
+  border-radius: 40px;
+  position: relative;
+  z-index: 5;
+}
+
+/* --- Info Box --- */
+.about-subtitle {
+  display: block;
+  color: var(--accent-green);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.about-card {
+  background: rgba(61, 207, 182, 0.1);
+  border: 1px solid var(--accent-green); /* Dünner leuchtender Rand */
+  border-radius: 30px;
+  padding: 50px;
+  backdrop-filter: blur(10px);
+}
+
+/* --- Verzerrter Titel "About me" --- */
+.about-title {
+  font-size: 64px;
+  color: var(--accent-green);
+  margin-bottom: 30px;
+  display: flex;
+  gap: 15px;
+  line-height: 1;
+}
+
+.word-about {
+  position: relative;
+  transform: perspective(300px) rotateY(-5deg); /* Leichte Drehung */
+}
+
+.word-me {
+  position: relative;
+  top: 5px; /* Kleiner vertikaler Versatz */
+  transform: perspective(300px) rotateY(5deg); /* Gegendrehung */
+}
+
+/* --- Text & Details --- */
+.about-intro {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.about-details {
+  list-style: none;
+}
+
+.about-details li {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.detail-icon {
+  width: 24px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.detail-icon img {
+  width: 100%;
+}
+
+.about-details p {
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}

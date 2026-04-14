@@ -1,0 +1,102 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 60px; /* Mehr Padding für den "High-End" Look */
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.lang-toggle {
+  background: rgba(61, 207, 182, 0.1);
+  border: 1px solid var(--accent-green);
+  border-radius: 20px;
+  padding: 4px;
+  display: inline-flex;
+  gap: 10px;
+  margin-right: 30px;
+}
+
+.lang {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.lang.active {
+  background: var(--accent-green);
+  color: var(--bg-dark);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  position: relative; /* Wichtig, damit der Punkt relativ zum Link positioniert wird */
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -8px; /* Abstand unter dem Text */
+  left: 50%; /* Horizontal zentrieren */
+  transform: translateX(-50%) scale(0); /* Startet unsichtbar und klein */
+  width: 6px; /* Größe des Punktes */
+  height: 6px;
+  background-color: var(--accent-green);
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-links a:hover::after {
+  transform: translateX(-50%) scale(1);
+}
+
+.nav-links a.active::after {
+  transform: translateX(-50%) scale(1);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Exakter Abstand zwischen Sprache und Links */
+}
+
+.nav-right {
+  width: 150px;
+  height: 100px;
+}
+
+/* Logo Styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  border: 2px solid var(--accent-green);
+  color: var(--accent-green);
+  padding: 5px 8px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  font-size: 20px;
+  font-weight: 700;
+}

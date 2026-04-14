@@ -1,0 +1,68 @@
+.main-footer {
+  padding: 80px 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid rgba(255, 255, 255, 0.05); /* Dezente Trennung */
+  margin-top: 50px;
+}
+
+/* Linke Seite */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-logo {
+  height: 50px; /* Passe die Höhe an dein Logo an */
+  width: auto;
+  display: block;
+}
+
+.footer-subtext p {
+  color: #888;
+  font-size: 14px;
+  margin: 3px 0;
+}
+
+/* Mittlere Sektion */
+.footer-center {
+  align-self: center;
+  color: var(--accent-green);
+  font-family: var(--font-mono); /* Falls du eine Monospace-Schrift nutzt */
+  font-size: 16px;
+}
+
+/* Rechte Seite */
+.footer-right .footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: right;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent-green);
+}
+
+/* Responsive Anpassung für Handys */
+@media (max-width: 768px) {
+  .main-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .footer-right .footer-links {
+    text-align: center;
+  }
+}

@@ -1,0 +1,94 @@
+.skills-section {
+  padding: 100px 0;
+}
+
+.skills-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Links etwas schmaler als rechts */
+  gap: 80px;
+  align-items: start;
+  margin-top: 30px;
+}
+
+/* Linke Karte */
+.skills-card {
+  background: rgba(61, 207, 182, 0.1);
+  border: 1px solid var(--accent-green);
+  border-radius: 40px;
+  padding: 60px;
+}
+
+.skills-heading {
+  font-size: 80px; /* Sehr groß wie im Design */
+  color: var(--accent-green);
+  margin-bottom: 30px;
+  line-height: 1;
+}
+
+.skills-description {
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.skills-cta h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.skills-cta h3 span {
+  color: var(--accent-green);
+}
+
+.btn-small {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  margin-top: 25px;
+  transition: 0.3s;
+}
+
+.btn-small:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Rechtes Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 Icons pro Zeile */
+  gap: 60px 40px; /* Mehr vertikaler Abstand als horizontaler */
+  padding-top: 40px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+
+.skill-item img {
+  width: 60px;
+  height: 60px;
+  filter: brightness(0) invert(1); /* Macht Icons weiß */
+}
+
+.skill-item span {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: #888;
+}
+
+/* Das farbige Icon (Growth Mindset) */
+.skill-item.accent img {
+  filter: none; /* Zeigt Originalfarbe */
+}
+
+.skill-item.accent span {
+  color: white;
+}

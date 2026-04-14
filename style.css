@@ -1,0 +1,44 @@
+/* Google Fonts Import */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Karla:wght@400;700&display=swap");
+
+:root {
+  /* Farben aus deinen Screenshots */
+  --bg-dark: rgba(28, 28, 28, 1);
+  --bg-gradient-green: rgba(8, 70, 59, 1);
+  --accent-green: rgba(61, 207, 182, 1);
+  --accent-green-10: rgba(61, 207, 182, 0.1);
+
+  /* Schriften */
+  --font-main: "Karla", sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  /* Abstände */
+  --container-padding: 10%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  /* Der Verlauf aus Figma */
+  background: linear-gradient(
+    45deg,
+    var(--bg-dark) 25%,
+    var(--bg-gradient-green) 100%
+  );
+  background-attachment: fixed;
+  color: white;
+  font-family: var(--font-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 0 var(--container-padding);
+  max-width: 1440px;
+  margin: 0 auto;
+}
