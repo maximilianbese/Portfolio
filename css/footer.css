@@ -1,5 +1,5 @@
 .main-footer {
-  padding: 80px 0 50px;
+  padding: 80px 30px 50px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -15,8 +15,8 @@
 }
 
 .footer-logo {
-  height: 50px; /* Passe die Höhe an dein Logo an */
-  width: auto;
+  height: 75px; /* Passe die Höhe an dein Logo an */
+  width: 100px;
   display: block;
 }
 

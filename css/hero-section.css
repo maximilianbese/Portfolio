@@ -11,6 +11,10 @@
   text-align: center;
 }
 
+.hero-btns {
+  margin-top: 20px;
+}
+
 .hero-role {
   font-family: var(--font-mono);
   font-size: 32px;

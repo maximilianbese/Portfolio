@@ -25,7 +25,7 @@ const projectData = {
     number: "03",
     title: "DA Bubble",
     descKey: "desc_bubble",
-    img: "./assets/img/bubble-preview.png",
+    img: "./assets/img/in-progress.png",
     tech: ["Angular", "Firebase", "TypeScript"],
     github: "https://github.com/dein-profil/da-bubble",
     live: "https://dein-projekt-bubble.de",

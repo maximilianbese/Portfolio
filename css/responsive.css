@@ -1,16 +1,27 @@
 /* ==========================================================================
-   RESPONSIVE DESIGN (Ab 1024px bis 320px)
+   RESPONSIVE DESIGN – komplett neu geschrieben für 320px–1024px
+   Basiert 1:1 auf den Screenshots (mobile-first, Ziel: 320px)
    ========================================================================== */
 
-/* --- Tablets & kleine Laptops (max-width: 1024px) --- */
+/* ==========================================================================
+   1024px – Tablets & kleine Laptops
+   ========================================================================== */
 @media (max-width: 1024px) {
   .container {
-    padding: 0 40px;
+    padding: 50px 40px;
+  }
+
+  .nav-right {
+    width: 100px;
+    height: 75px;
+  }
+
+  .hero-btns {
+    margin-top: 20px;
   }
 
   .contact-grid,
   .about-grid {
-    /* Falls vorhanden */
     gap: 50px;
   }
 
@@ -18,140 +29,749 @@
   .featured-projects-title {
     font-size: 60px;
   }
+
+  .skills-heading {
+    font-size: 60px;
+  }
+
+  .skills-layout {
+    gap: 50px;
+  }
+
+  .projects-layout {
+    gap: 60px;
+  }
 }
 
-/* --- Smartphones & kleine Tablets (max-width: 850px) --- */
+/* ==========================================================================
+   850px – Smartphones & kleine Tablets
+   ========================================================================== */
 @media (max-width: 850px) {
-  /* Testimonial Slider: Fokus auf eine Karte */
-  .testimonial-card {
-    width: 85%;
-    padding: 40px;
+  .nav-links {
+    display: none;
+  }
+
+  .lang-toggle {
+    margin-right: 0;
+  }
+
+  .contact-grid,
+  .skill-set-grid,
+  .about-grid,
+  .skills-layout,
+  .projects-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-left,
+  .sidebar-right {
+    display: none;
   }
 
   .testimonial-card.prev {
     transform: scale(0.8) translateX(-120%);
-    opacity: 0; /* Versteckt die Karte links, damit sie nicht überlappt */
+    opacity: 0;
   }
 
   .testimonial-card.next {
     transform: scale(0.8) translateX(120%);
-    opacity: 0; /* Versteckt die Karte rechts */
+    opacity: 0;
   }
 
-  /* Grids auf einspaltig umstellen */
-  .contact-grid,
-  .skill-set-grid {
-    grid-template-columns: 1fr;
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-preview {
+    display: none;
+  }
+
+  .projects-list {
+    width: 100%;
   }
 
   .contact-info {
     text-align: center;
     margin-bottom: 40px;
   }
-
-  /* Featured Projects: Liste untereinander */
-  .project-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
 }
 
-/* --- Smartphones (max-width: 480px) --- */
+/* ==========================================================================
+   480px – Smartphones
+   ========================================================================== */
 @media (max-width: 480px) {
   .container {
     padding: 0 20px;
   }
 
-  /* Headlines */
-  .contact-title,
+  /* --- HEADER --- */
+  .main-header {
+    padding: 20px 20px;
+    height: auto;
+  }
+
+  .lang-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-right {
+    height: 60px;
+    width: auto;
+  }
+
+  /* --- HERO --- */
+  .hero {
+    height: 100svh;
+    padding-top: 80px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-center {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding-bottom: 330px;
+  }
+
+  .hero-role {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 10vw, 3rem);
+    white-space: normal;
+    line-height: 1.1;
+  }
+
+  .hero-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .btn-ghost {
+    padding: 12px 24px;
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .sidebar-left {
+    display: flex;
+    left: 15px;
+    bottom: 80px;
+  }
+
+  .sidebar-right {
+    display: flex;
+    right: 15px;
+    bottom: 80px;
+    gap: 12px;
+  }
+
+  .sidebar-right .vertical-mail {
+    display: none;
+  }
+
+  .social-icons {
+    gap: 12px;
+    margin-bottom: 0;
+  }
+
+  .social-icons img {
+    width: 22px;
+    margin-top: 0;
+  }
+
+  .arrow-circle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hero-ticker {
+    bottom: 30px;
+  }
+
+  .ticker-content span {
+    font-size: 16px;
+  }
+
+  /* --- ABOUT ME --- */
+  .about-section {
+    padding: 70px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-image-wrapper {
+    width: 100%;
+  }
+
+  .about-portrait {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .background-lines {
+    width: 140px;
+    height: 140px;
+    top: -25px;
+    left: -25px;
+  }
+
+  .about-info {
+    padding: 30px;
+  }
+
+  .about-card {
+    padding: 28px 22px;
+    border-radius: 20px;
+  }
+
+  .about-subtitle {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .about-title {
+    font-size: 42px;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .about-intro {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+    text-align: justify;
+  }
+
+  .about-details li {
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+
+  .detail-icon {
+    width: 20px;
+  }
+
+  .about-details p {
+    font-size: 0.85rem;
+  }
+
+  /* --- SKILLS --- */
+  .skills-section {
+    padding: 30px 30px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+  }
+
+  .skills-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  .skills-card {
+    padding: 30px 24px;
+    border-radius: 24px;
+  }
+
+  .skills-heading {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+
+  .skills-description {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+    text-align: justify;
+  }
+
+  .skills-cta h3 {
+    font-size: 18px;
+  }
+
+  .btn-small {
+    padding: 10px 22px;
+    font-size: 14px;
+    margin-top: 16px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 20px;
+    padding-top: 20px;
+  }
+
+  .skill-item img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .skill-item span {
+    font-size: 11px;
+  }
+
+  /* --- FEATURED PROJECTS --- */
+  .projects-section {
+    padding: 30px 30px;
+  }
+
   .section-title {
     font-size: 42px;
     line-height: 1.1;
   }
 
-  /* About Me Sektion */
-  .about-image-container {
-    width: 100%;
+  .section-intro {
+    font-size: 0.9rem;
     margin-bottom: 30px;
+    text-align: justify;
   }
 
-  /* Testimonial Slider Mobile */
+  .projects-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .project-preview {
+    display: none;
+  }
+
+  .project-item {
+    padding: 24px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .project-info h3 {
+    font-size: 22px;
+  }
+
+  .project-info h3 span {
+    font-size: 18px;
+  }
+
+  .project-tech {
+    font-size: 12px;
+    margin-top: 6px;
+    display: block;
+  }
+
+  .project-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .status-badge {
+    font-size: 11px;
+    padding: 4px 12px;
+    margin-left: 0;
+    margin-top: 6px;
+    display: inline-block;
+  }
+
+  /* --- TESTIMONIALS --- */
+  .testimonials-section {
+    padding: 30px 30px;
+  }
+
   .testimonial-slider {
     height: auto;
-    min-height: 450px;
+    min-height: 380px;
+    margin-top: 30px;
   }
 
   .testimonial-card {
     width: 100%;
-    position: relative;
+    position: absolute;
     left: 0 !important;
     transform: scale(1) !important;
     opacity: 0;
     display: none;
+    padding: 50px 28px 36px;
+    border-radius: 20px;
   }
 
   .testimonial-card.active {
     display: flex;
     opacity: 1;
-    position: absolute;
+    position: relative;
+    transform: none !important;
+  }
+
+  .testimonial-card.active p {
+    font-size: 1rem;
+  }
+
+  .testimonial-card.prev,
+  .testimonial-card.next {
+    display: none;
+    opacity: 0;
   }
 
   .quote-icon {
-    font-size: 80px;
-    top: -35px;
-    left: 0;
+    font-size: 90px;
+    top: -30px;
+    left: -5px;
   }
 
-  /* Formular */
+  .testimonial-footer {
+    margin-top: 24px;
+  }
+
+  .author {
+    font-size: 13px;
+  }
+
+  .slider-controls {
+    margin-top: 24px;
+    gap: 20px;
+  }
+
+  .arrow {
+    font-size: 22px;
+  }
+
+  /* --- CONTACT --- */
+  .contact-section {
+    padding: 30px 30px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-info {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .contact-title {
+    font-size: 48px;
+    line-height: 1;
+    margin: 12px 0 24px;
+  }
+
+  .contact-description h3 {
+    font-size: 18px;
+  }
+
+  .contact-description p {
+    font-size: 0.9rem;
+  }
+
+  .form-group {
+    padding: 22px 0;
+  }
+
   .form-group label {
     font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .form-group input,
   .form-group textarea {
+    font-size: 15px;
+  }
+
+  .privacy-container {
+    margin-top: 24px;
+  }
+
+  .privacy-check {
+    margin-top: 24px;
+    font-size: 13px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .checkbox-text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .privacy-check input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+
+  .form-submit {
+    margin-top: 36px;
+  }
+
+  .btn-submit {
+    padding: 14px 36px;
     font-size: 16px;
   }
 
-  /* Footer */
+  /* --- FOOTER --- */
   .main-footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 40px;
-    padding-bottom: 30px;
+    gap: 30px;
+    padding: 50px 30px 30px 30px;
+    margin-top: 30px;
+  }
+
+  .footer-logo {
+    height: 75px;
+    width: 100px;
+  }
+
+  .footer-subtext p {
+    font-size: 13px;
   }
 
   .footer-right .footer-links {
-    text-align: center;
+    text-align: left;
+    align-items: flex-start;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
     align-items: center;
   }
 
   .footer-center {
-    order: 3; /* Copyright ganz nach unten */
-    margin-top: 20px;
+    order: 3;
+    margin-top: 10px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* --- OVERLAY --- */
+  .overlay-content {
+    padding: 40px 20px 60px;
+    border-radius: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .overlay-body {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  #overlay-number {
+    font-size: 4rem;
+  }
+
+  #overlay-title {
+    font-size: 2rem;
+    margin: -10px 0 20px;
+  }
+
+  .overlay-text h3 {
+    font-size: 1rem;
+  }
+
+  #overlay-description {
+    font-size: 0.9rem;
+  }
+
+  .tech-stack-icons,
+  .overlay-btns {
+    justify-content: center;
+  }
+
+  .overlay-btns {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .next-project-btn {
+    bottom: 20px;
+    right: 20px;
+    font-size: 0.9rem;
+  }
+
+  .close-btn {
+    top: 18px;
+    right: 20px;
+    font-size: 26px;
   }
 }
 
-/* --- Kleinstgeräte (320px - z.B. iPhone SE alt) --- */
+/* ==========================================================================
+   375px – Standard iPhone
+   ========================================================================== */
+@media (max-width: 375px) {
+  .hero-title {
+    font-size: clamp(1.8rem, 9vw, 2.4rem);
+  }
+
+  .about-title {
+    font-size: 36px;
+  }
+
+  .skills-heading {
+    font-size: 42px;
+  }
+
+  .section-title {
+    font-size: 38px;
+  }
+
+  .contact-title {
+    font-size: 42px;
+  }
+
+  .skills-grid {
+    gap: 24px 16px;
+  }
+
+  .skill-item img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .skill-item span {
+    font-size: 10px;
+  }
+}
+
+/* ==========================================================================
+   320px – Kleinstgeräte (iPhone SE alt, Galaxy S5)
+   ========================================================================== */
 @media (max-width: 320px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .hero-role {
+    font-size: 15px;
+  }
+
+  .hero-title {
+    font-size: 1.7rem;
+  }
+
+  .btn-ghost {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+
+  .about-card {
+    padding: 20px 16px;
+  }
+
+  .about-title {
+    font-size: 32px;
+  }
+
+  .about-intro {
+    font-size: 0.82rem;
+  }
+
+  .skills-card {
+    padding: 22px 16px;
+  }
+
+  .skills-heading {
+    font-size: 36px;
+  }
+
+  .skills-description {
+    font-size: 0.82rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px 10px;
+  }
+
+  .skill-item img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .skill-item span {
+    font-size: 9px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .project-info h3 {
+    font-size: 18px;
+  }
+
+  .testimonial-card {
+    padding: 44px 18px 28px;
+  }
+
+  .testimonial-card.active p {
+    font-size: 0.88rem;
+  }
+
+  .quote-icon {
+    font-size: 70px;
+    top: -22px;
+  }
+
   .contact-title {
     font-size: 34px;
+  }
+
+  .form-group label {
+    font-size: 17px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 14px;
   }
 
   .btn-submit {
     width: 100%;
     padding: 12px;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .checkbox-text {
-    font-size: 12px;
+    font-size: 11px;
   }
 
-  .checkmark {
-    height: 18px;
-    width: 18px;
-    margin-right: 10px;
+  .footer-logo {
+    height: 36px;
+  }
+
+  .footer-center {
+    font-size: 12px;
   }
 }
