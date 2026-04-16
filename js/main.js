@@ -554,3 +554,64 @@ function updateProjectsLang(lang) {
     feedback.className = "form-feedback";
   }
 })();
+
+/* ================================================
+   HAMBURGER MENÜ
+   ================================================ */
+(function () {
+  var hamburgerBtn = document.getElementById("hamburger-btn");
+  var mobileMenu = document.getElementById("mobile-menu");
+  var mobileLinks = document.querySelectorAll(".mobile-nav-link");
+
+  if (!hamburgerBtn || !mobileMenu) return;
+
+  function openMenu() {
+    hamburgerBtn.classList.add("is-open");
+    mobileMenu.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+    hamburgerBtn.setAttribute("aria-label", "Menü schließen");
+  }
+
+  function closeMenu() {
+    hamburgerBtn.classList.remove("is-open");
+    mobileMenu.classList.remove("is-open");
+    document.body.style.overflow = "";
+    hamburgerBtn.setAttribute("aria-label", "Menü öffnen");
+  }
+
+  function toggleMenu() {
+    if (mobileMenu.classList.contains("is-open")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
+  hamburgerBtn.addEventListener("click", toggleMenu);
+
+  // Schließen beim Klick auf den Overlay-Hintergrund
+  mobileMenu.addEventListener("click", function (e) {
+    if (e.target === mobileMenu) {
+      closeMenu();
+    }
+  });
+
+  // Schließen beim Klick auf einen Nav-Link
+  mobileLinks.forEach(function (link) {
+    link.addEventListener("click", closeMenu);
+  });
+
+  // Schließen bei ESC
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && mobileMenu.classList.contains("is-open")) {
+      closeMenu();
+    }
+  });
+
+  // Schließen wenn Bildschirm wieder groß genug
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 850) {
+      closeMenu();
+    }
+  });
+})();

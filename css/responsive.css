@@ -55,6 +55,47 @@
     margin-right: 0;
   }
 
+  .hamburger {
+    display: flex;
+  }
+
+  .legal-main {
+    padding-top: 110px;
+    padding-bottom: 60px;
+    max-width: 100%;
+  }
+
+  .lang-toggle {
+    display: none;
+  }
+
+  .legal-title {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+  }
+
+  .legal-section {
+    margin-bottom: 28px;
+  }
+
+  .mobile-menu-content {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin: 5px;
+    background: linear-gradient(
+      45deg,
+      var(--bg-dark) 5%,
+      var(--bg-gradient-green) 100%
+    );
+  }
+
+  .nav-right {
+    display: none;
+  }
+
   .contact-grid,
   .skill-set-grid,
   .about-grid,

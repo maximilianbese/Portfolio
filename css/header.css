@@ -100,3 +100,136 @@
   font-size: 20px;
   font-weight: 700;
 }
+
+/* ==========================================================================
+   HAMBURGER BUTTON
+   ========================================================================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 2001;
+  position: relative;
+}
+
+.hamburger-line {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: var(--accent-green);
+  border-radius: 2px;
+  transition:
+    transform 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 0.25s ease;
+  transform-origin: center;
+}
+
+/* X-Animation wenn Menü offen */
+.hamburger.is-open .hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.is-open .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger.is-open .hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ==========================================================================
+   MOBILE MENÜ OVERLAY
+   ========================================================================== */
+.mobile-menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.mobile-menu.is-open {
+  pointer-events: all;
+  visibility: visible;
+}
+
+/* Dunkler Hintergrund-Overlay */
+.mobile-menu::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  backdrop-filter: blur(2px);
+}
+
+.mobile-menu.is-open::before {
+  opacity: 1;
+}
+
+/* Menü-Panel von rechts */
+.mobile-menu-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(80vw, 300px);
+  height: 100%;
+  background: rgba(10, 30, 25, 0.97);
+  border-left: 1px solid rgba(61, 207, 182, 0.2);
+  padding: 100px 40px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.4);
+}
+
+.mobile-menu.is-open .mobile-menu-content {
+  transform: translateX(0);
+}
+
+/* Nav Links im mobilen Menü */
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.mobile-nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+  display: inline-block;
+}
+
+.mobile-nav-link:hover {
+  color: var(--accent-green);
+  transform: translateX(6px);
+}
+
+/* Sprach-Toggle im mobilen Menü */
+.mobile-lang-toggle {
+  background: rgba(61, 207, 182, 0.1);
+  border: 1px solid var(--accent-green);
+  border-radius: 20px;
+  padding: 4px;
+  display: inline-flex;
+  gap: 10px;
+  align-self: flex-start;
+}

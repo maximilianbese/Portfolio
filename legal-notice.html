@@ -3,123 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Legal Notice | Maximilian Bese</title>
-    <meta
-      name="description"
-      content="Legal Notice — Maximilian Bese Frontend Developer Portfolio."
+    <title>Legal Notice | Lukas Müller</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.png"
+      type="image/x-icon"
     />
-    <link rel="icon" type="image/png" href="./img/favicon.png" />
-    <link rel="stylesheet" href="./css/base.css" />
-    <link rel="stylesheet" href="./css/sections-hero-about.css" />
-    <link rel="stylesheet" href="./css/sections-skills-projects.css" />
-    <link rel="stylesheet" href="./css/sections-rest.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/legal-notice.css" />
-    <link rel="stylesheet" href="./css/overlay.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
-    <link rel="stylesheet" href="./css/responsive-sm.css" />
-    <link rel="stylesheet" href="./css/mobile-nav.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
   </head>
   <body class="legal-page">
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <header class="main-header container">
       <div class="nav-left">
-        <div class="lang-switch" role="group" aria-label="Language selector">
-          <button class="lang-btn active" aria-pressed="true">EN</button>
-          <button class="lang-btn" aria-pressed="false">DE</button>
+        <div class="lang-toggle">
+          <span class="lang active" id="btn-en" onclick="changeLanguage('en')"
+            >EN</span
+          >
+          <span class="lang" id="btn-de" onclick="changeLanguage('de')"
+            >DE</span
+          >
         </div>
-        <ul class="nav-links">
-          <li><a href="index.html#about" data-i18n="nav_about">About me</a></li>
-          <li><a href="index.html#skills" data-i18n="nav_skills">Skills</a></li>
-          <li>
-            <a href="index.html#projects" data-i18n="nav_projects">Projects</a>
-          </li>
-        </ul>
+        <nav class="nav-links">
+          <a href="./index.html#about">About me</a>
+          <a href="./index.html#skills">Skills</a>
+          <a href="./index.html#projects">Projects</a>
+        </nav>
       </div>
-      <a href="index.html" class="logo" aria-label="Back to portfolio">
-        <img src="./img/logo.png" alt="MB Logo" class="logo-img" />
-      </a>
-      <button
-        class="hamburger"
-        id="hamburgerBtn"
-        aria-label="Open navigation"
-        aria-expanded="false"
-        aria-controls="mobileNav"
-      >
-        <span></span><span></span><span></span>
+      <div class="nav-right">
+        <img src="./assets/img/logo.png" alt="Logo" class="nav-right" />
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Menü öffnen">
+        <img
+          src="./assets/icons/menu.svg"
+          alt="Menü Icon"
+          class="hamburger-icon"
+        />
       </button>
-    </nav>
+    </header>
 
-    <div
-      class="mobile-nav-backdrop"
-      id="mobileNavBackdrop"
-      aria-hidden="true"
-    ></div>
-    <nav
-      class="mobile-nav"
-      id="mobileNav"
-      aria-label="Mobile navigation"
-      role="dialog"
-      aria-modal="true"
-      aria-hidden="true"
-    >
-      <div class="mobile-nav-lang" role="group" aria-label="Language selector">
-        <button class="lang-btn lang-btn-mobile active" aria-pressed="true">
-          EN
-        </button>
-        <button class="lang-btn lang-btn-mobile" aria-pressed="false">
-          DE
-        </button>
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-content">
+        <nav class="mobile-nav-links">
+          <a href="./index.html#about" class="mobile-nav-link">About me</a>
+          <a href="./index.html#skills" class="mobile-nav-link">Skills</a>
+          <a href="./index.html#projects" class="mobile-nav-link">Projects</a>
+        </nav>
+        <div class="mobile-lang-toggle">
+          <span class="lang active" onclick="changeLanguage('en')">EN</span>
+          <span class="lang" onclick="changeLanguage('de')">DE</span>
+        </div>
       </div>
-      <a href="index.html#about" data-i18n="nav_about">About me</a>
-      <a href="index.html#skills" data-i18n="nav_skills">Skills</a>
-      <a href="index.html#projects" data-i18n="nav_projects">Projects</a>
-      <div class="mobile-nav-social" aria-label="Social links">
-        <a href="mailto:maximilian-bese@gmx.de" aria-label="Email"
-          ><i class="fa-solid fa-envelope"></i
-        ></a>
-        <a
-          href="https://github.com/maximilianbese"
-          target="_blank"
-          rel="noopener"
-          aria-label="GitHub"
-          ><i class="fab fa-github"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/maximilian-bese/"
-          target="_blank"
-          rel="noopener"
-          aria-label="LinkedIn"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-      </div>
-    </nav>
+    </div>
 
-    <main class="legal-main">
-      <a href="index.html" class="legal-back-btn">
-        <i class="fa-solid fa-arrow-left"></i>
-        <span data-i18n="legal_back">Back</span>
-      </a>
-
-      <h1 class="legal-title" data-i18n="legal_title">Legal Notice</h1>
+    <main class="legal-main container">
+      <h1 class="legal-title">Legal Notice</h1>
 
       <div class="legal-section">
-        <h2 data-i18n="legal_h_imprint">Imprint</h2>
+        <h2>Imprint</h2>
         <ul>
           <li>Maximilian Bese</li>
-          <li>Lübbecke, North Rhine-Westphalia, Germany</li>
-          <li>maximilian-bese@gmx.de</li>
+          <li>Friedrichsstraße 14</li>
+          <li>32312 Lübbecke</li>
         </ul>
       </div>
 
       <div class="legal-section">
-        <h2 data-i18n="legal_h_exploring">Exploring the Portfolio</h2>
+        <h2>Exploring the Board</h2>
         <p>
           Email:
           <a href="mailto:maximilian-bese@gmx.de">maximilian-bese@gmx.de</a>
@@ -127,8 +79,8 @@
       </div>
 
       <div class="legal-section">
-        <h2 data-i18n="legal_h_acceptance">Acceptance of terms</h2>
-        <p data-i18n="legal_p_acceptance">
+        <h2>Acceptance of terms</h2>
+        <p>
           By accessing and using <strong>Portfolio</strong> (Product), you
           acknowledge and agree to the following terms and conditions, and any
           policies, guidelines, or amendments thereto that may be presented to
@@ -138,8 +90,8 @@
       </div>
 
       <div class="legal-section">
-        <h2 data-i18n="legal_h_scope">Scope and ownership of the product</h2>
-        <p data-i18n="legal_p_scope1">
+        <h2>Scope and ownership of the product</h2>
+        <p>
           <strong>Portfolio</strong> has been developed as part of a student
           group project in a web development bootcamp at the
           <strong>Developer Akademie GmbH</strong>. It has an educational
@@ -148,7 +100,7 @@
           reliability, accuracy, or any other aspect of quality regarding this
           Product.
         </p>
-        <p data-i18n="legal_p_scope2">
+        <p>
           The design of <strong>Portfolio</strong> is owned by the
           <strong>Developer Akademie GmbH</strong>. Unauthorized use,
           reproduction, modification, distribution, or replication of the design
@@ -157,8 +109,8 @@
       </div>
 
       <div class="legal-section">
-        <h2 data-i18n="legal_h_proprietary">Proprietary rights</h2>
-        <p data-i18n="legal_p_proprietary">
+        <h2>Proprietary rights</h2>
+        <p>
           Aside from the design owned by
           <strong>Developer Akademie GmbH</strong>, we, the listed students,
           retain all proprietary rights in <strong>Portfolio</strong>, including
@@ -168,8 +120,8 @@
       </div>
 
       <div class="legal-section">
-        <h2 data-i18n="legal_h_use">Use of the product</h2>
-        <p data-i18n="legal_p_use">
+        <h2>Use of the product</h2>
+        <p>
           <strong>Portfolio</strong> is intended to be used for lawful purposes
           only, in accordance with all applicable laws and regulations. Any use
           of <strong>Portfolio</strong> for illegal activities, or to harass,
@@ -180,10 +132,8 @@
       </div>
 
       <div class="legal-section">
-        <h2 data-i18n="legal_h_disclaimer">
-          Disclaimer of warranties and limitation of liability
-        </h2>
-        <p data-i18n="legal_p_disclaimer">
+        <h2>Disclaimer of warranties and limitation of liability</h2>
+        <p>
           <strong>Portfolio</strong> is provided "as is" without warranty of any
           kind, whether express or implied, including but not limited to the
           implied warranties of merchantability, fitness for a particular
@@ -198,8 +148,8 @@
       </div>
 
       <div class="legal-section">
-        <h2 data-i18n="legal_h_indemnity">Indemnity</h2>
-        <p data-i18n="legal_p_indemnity">
+        <h2>Indemnity</h2>
+        <p>
           You agree to indemnify, defend and hold harmless us, the listed
           students, the <strong>Developer Akademie</strong>, and our affiliates,
           partners, officers, directors, agents, and employees, from and against
@@ -207,49 +157,37 @@
           reasonable legal fees) arising out of or relating to your use of
           <strong>Portfolio</strong> and/or your breach of this Legal Notice.
         </p>
-        <p data-i18n="legal_p_contact">
+        <p class="legal-contact">
           For any questions or notices, please contact us at
           <a href="mailto:maximilian-bese@gmx.de">maximilian-bese@gmx.de</a>.
         </p>
-        <p class="legal-date" data-i18n="legal_date">Date: July 26, 2025</p>
+        <p class="legal-date">Date: April 16, 2026</p>
       </div>
     </main>
 
-    <footer class="footer">
+    <footer class="main-footer container">
       <div class="footer-left">
-        <a href="index.html" class="footer-logo" aria-label="Back to top">
-          <img src="./img/logo.png" alt="MB Logo" class="footer-logo-img" />
-          <span class="footer-logo-name">Maximilian<br />Bese</span>
-        </a>
-        <p class="footer-role" data-i18n="footer_role">Web Developer</p>
-        <p class="footer-city" data-i18n="footer_city">Lübbecke, Germany</p>
+        <img src="./assets/img/logo.png" alt="Logo" class="footer-logo" />
+        <div class="footer-subtext">
+          <p>Web Developer</p>
+          <p>Lübbecke Germany</p>
+        </div>
       </div>
-      <p class="footer-copy mono">© Maximilian Bese 2025</p>
-      <nav class="footer-right" aria-label="Footer links">
-        <a
-          href="https://github.com/maximilianbese"
-          target="_blank"
-          rel="noopener"
-          >Github</a
-        >
-        <a
-          href="https://www.linkedin.com/in/maximilian-bese/"
-          target="_blank"
-          rel="noopener"
-          >LinkedIn</a
-        >
-        <a href="mailto:maximilian-bese@gmx.de">Email</a>
-        <a
-          href="legal-notice.html"
-          class="footer-link-active"
-          data-i18n="footer_legal"
-          >Legal Notice</a
-        >
-      </nav>
+      <div class="footer-center"><p>© Maximilian Bese 2026</p></div>
+      <div class="footer-right">
+        <nav class="footer-links">
+          <a href="https://github.com/maximilianbese" target="_blank">Github</a>
+          <a href="https://www.linkedin.com/in/maximilian-bese/" target="_blank"
+            >LinkedIn</a
+          >
+          <a href="maximilian-bese@gmx.de">Email</a>
+          <a href="./legal-notice.html" class="footer-link-active"
+            >Legal Notice</a
+          >
+        </nav>
+      </div>
     </footer>
 
-    <script src="js/data.js"></script>
-    <script src="js/i18n.js"></script>
-    <script src="js/mobile-nav.js"></script>
+    <script src="./js/mobile-nav.js"></script>
   </body>
 </html>

@@ -40,7 +40,36 @@
       <div class="nav-right">
         <img src="./assets/img/logo.png" alt="Logo" class="nav-right" />
       </div>
+      <!-- Hamburger Button (nur mobil sichtbar) -->
+      <button class="hamburger" id="hamburger-btn" aria-label="Menü öffnen">
+        <img
+          src="./assets/icons/menu.svg"
+          alt="Menü Icon"
+          class="hamburger-icon"
+        />
+      </button>
     </header>
+
+    <!-- Mobile Menü Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-content">
+        <nav class="mobile-nav-links">
+          <a href="#about" data-key="nav_about" class="mobile-nav-link"
+            >About me</a
+          >
+          <a href="#skills" data-key="nav_skills" class="mobile-nav-link"
+            >Skills</a
+          >
+          <a href="#projects" data-key="nav_projects" class="mobile-nav-link"
+            >Projects</a
+          >
+        </nav>
+        <div class="mobile-lang-toggle">
+          <span class="lang active" onclick="changeLanguage('en')">EN</span>
+          <span class="lang" onclick="changeLanguage('de')">DE</span>
+        </div>
+      </div>
+    </div>
 
     <main>
       <section class="hero">
@@ -459,5 +488,7 @@
     <script src="./js/project.js"></script>
     <script src="./js/contact.js"></script>
     <script src="./js/testimonial.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/mobile-nav.js"></script>
   </body>
 </html>
