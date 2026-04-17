@@ -6,10 +6,11 @@ header("Access-Control-Allow-Headers: Content-Type");
 header("Content-Type: application/json; charset=utf-8");
 
 // ════════════════ KONFIGURATION ════════════════
+// 1. Hier kommt die Mail an (dein privates Postfach)
 $empfaengerEmail = "maximilian-bese@gmx.de"; 
 
-// WICHTIG: Ersetze 'deine-domain.de' durch deine echte Domain bei Netcup!
-$absenderSystem  = "maximilian-bese.de"; 
+// 2. Deine offizielle Netcup-Adresse (muss in Plesk angelegt sein!)
+$absenderSystem  = "contact@maximilian-bese.de"; 
 // ═══════════════════════════════════════════════
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
@@ -26,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // Daten aus JS (form.js) abgreifen
-    $visitorName    = $params->name ?? '';
+    // Daten aus dem Formular abgreifen
+    $visitorName    = $params->name ?? 'Unbekannter Absender';
     $visitorEmail   = $params->email ?? '';
     $visitorMessage = $params->message ?? '';
 
@@ -38,36 +39,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // Bereinigung für HTML-Mail
+    // Bereinigung für die E-Mail
     $safeName    = htmlspecialchars($visitorName, ENT_QUOTES, 'UTF-8');
     $safeEmail   = htmlspecialchars($visitorEmail, ENT_QUOTES, 'UTF-8');
     $safeMessage = nl2br(htmlspecialchars($visitorMessage, ENT_QUOTES, 'UTF-8'));
 
-    $subject = "Portfolio Kontakt: $safeName";
+    // Betreffzeile
+    $subject = "Portfolio-Anfrage von: $safeName";
 
-    // E-Mail Inhalt
+    // E-Mail Inhalt (HTML)
     $mailBody = "
         <html>
         <head><title>Kontaktanfrage</title></head>
-        <body>
-            <h2>Neue Nachricht von deinem Portfolio</h2>
+        <body style='font-family: Arial, sans-serif; line-height: 1.6;'>
+            <h2 style='color: #333;'>Neue Nachricht von deinem Portfolio</h2>
             <p><strong>Name:</strong> {$safeName}</p>
-            <p><strong>E-Mail:</strong> {$safeEmail}</p>
-            <hr>
+            <p><strong>E-Mail:</strong> <a href='mailto:{$safeEmail}'>{$safeEmail}</a></p>
+            <hr style='border: 0; border-top: 1px solid #eee;'>
             <p><strong>Nachricht:</strong><br>{$safeMessage}</p>
         </body>
         </html>
     ";
 
-    // Mail Header für Netcup optimiert
+    // ════════════════ HEADER FÜR GMX OPTIMIERT ════════════════
     $headers   = [];
     $headers[] = 'MIME-Version: 1.0';
     $headers[] = 'Content-type: text/html; charset=utf-8';
-    $headers[] = 'From: Portfolio Webseite <' . $absenderSystem . '>';
-    $headers[] = 'Reply-To: ' . $visitorEmail; // Ermöglicht direktes Antworten in GMX
+    
+    // HIER PASSIERT DIE MAGIE: 
+    // GMX zeigt dir "$safeName" als Absender an, nutzt aber technisch $absenderSystem
+    $headers[] = "From: $safeName <$absenderSystem>";
+    
+    // Wenn du auf "Antworten" klickst, geht die Mail an den Besucher
+    $headers[] = "Reply-To: $visitorEmail";
+    
     $headers[] = 'X-Mailer: PHP/' . phpversion();
 
-    // Versand mit dem "-f" Parameter (erzwingt den Absender beim Server)
+    // Versand mit dem "-f" Parameter (wichtig für Netcup Spam-Filter)
     $success = mail(
         $empfaengerEmail, 
         $subject, 

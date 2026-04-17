@@ -2,7 +2,7 @@
 
 (function () {
   const CARDS_SEL = ".testimonial-card";
-  const DOTS_SEL = ".dot";
+  const DOTS_SEL = ".dots .dot";
   const STATE_CLASSES = ["active", "prev", "next"];
 
   function getElements() {

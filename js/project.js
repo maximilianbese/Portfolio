@@ -86,8 +86,16 @@ function nextProject() {
 
 function initProjectHover() {
   const previewImg = document.getElementById("project-image");
+
+  // Hide image and remove active state on initial load
+  document
+    .querySelectorAll(".project-item")
+    .forEach((i) => i.classList.remove("active"));
+  previewImg.style.opacity = 0;
+
   document.querySelectorAll(".project-item").forEach((item) => {
     const key = item.getAttribute("data-project");
+
     item.addEventListener("mouseenter", () => {
       document
         .querySelectorAll(".project-item")
@@ -99,6 +107,12 @@ function initProjectHover() {
         previewImg.style.opacity = 1;
       }, 150);
     });
+
+    item.addEventListener("mouseleave", () => {
+      item.classList.remove("active");
+      previewImg.style.opacity = 0;
+    });
+
     item.addEventListener("click", () => openProject(key));
   });
 }

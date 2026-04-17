@@ -46,7 +46,7 @@ const TRANSLATIONS = {
       "A real-time messaging app inspired by Slack. Built with Angular and Firebase, supporting channels and direct messages.",
     testimonials_title: "What my colleagues say about me",
     testimonial_1:
-      "Maximilian is a reliable and committed team member. His technical curiosity and proactive attitude made a real difference in our project.",
+      "Maximilian, your willingness to help was worth its weight in gold for the entire team. No matter what challenge we faced, you always had an open ear and actively helped find solutions. You complemented the team perfectly, both personally and professionally. Through your level-headed nature and your commitment, you played a key role in ensuring that our collaboration ran so smoothly.",
     testimonial_2:
       "Working with him on complex tasks was a pleasure. He thinks logically and always finds a clear path forward.",
     testimonial_3: "He solves problems with remarkable efficiency and focus.",
@@ -70,6 +70,37 @@ const TRANSLATIONS = {
     footer_role: "Web Developer",
     footer_loc: "Lübbecke, Germany",
     footer_link_legal: "Legal Notice",
+    legal_page_title: "Legal Notice",
+    legal_nav_about: "About me",
+    legal_nav_skills: "Skills",
+    legal_nav_projects: "Projects",
+    legal_h1: "Legal Notice",
+    legal_imprint_h2: "Imprint",
+    legal_contact_h2: "Contact",
+    legal_contact_p: "Email:",
+    legal_terms_h2: "Acceptance of terms",
+    legal_terms_p:
+      "By accessing and using Portfolio, you acknowledge and agree to the following terms and conditions, and any policies or amendments presented from time to time.",
+    legal_scope_h2: "Scope and ownership",
+    legal_scope_p:
+      "Portfolio was developed as part of a student project at Developer Akademie GmbH. It serves an educational purpose and is not intended for commercial use. The design is owned by Developer Akademie GmbH. Unauthorized reproduction or modification is prohibited.",
+    legal_prop_h2: "Proprietary rights",
+    legal_prop_p:
+      "All proprietary rights in Portfolio — including copyrighted material, trademarks, and other intellectual property — are retained by the listed students, except where otherwise noted.",
+    legal_permitted_h2: "Permitted use",
+    legal_permitted_p:
+      "Portfolio is intended for lawful purposes only. Any use for illegal activities or to harm, harass, or intimidate others is strictly prohibited.",
+    legal_disclaimer_h2: "Disclaimer",
+    legal_disclaimer_p:
+      'Portfolio is provided "as is" without warranty of any kind. Neither the listed students nor Developer Akademie GmbH shall be liable for any direct, indirect, incidental, or consequential damages arising from its use.',
+    legal_indemnity_h2: "Indemnity",
+    legal_indemnity_p:
+      "You agree to indemnify and hold harmless the listed students, Developer Akademie GmbH, and their affiliates from any claim or liability arising from your use of Portfolio or breach of this Legal Notice.",
+    legal_questions: "Questions? Contact us at",
+    legal_date: "Date: April 16, 2026",
+    legal_footer_role: "Aspiring Software Developer",
+    legal_footer_loc: "Lübbecke, Germany",
+    legal_footer_legal: "Legal Notice",
   },
   de: {
     nav_about: "Über mich",
@@ -115,7 +146,7 @@ const TRANSLATIONS = {
       "Eine Echtzeit-Messaging-App inspiriert von Slack. Mit Angular und Firebase, Kanal- und Direktnachrichten-Funktion.",
     testimonials_title: "Was meine Kollegen über mich sagen",
     testimonial_1:
-      "Maximilian ist ein zuverlässiger Teamkollege. Seine Neugier und sein proaktives Auftreten haben unser Projekt vorangebracht.",
+      "Maximilian deine Hilfsbereitschaft war für das gesamte Team Gold wert. Egal, vor welcher Herausforderung wir standen, du hattest immer ein offenes Ohr und hast aktiv mitgeholfen, Lösungen zu finden. Du hast das Team menschlich und fachlich perfekt ergänzt. Durch deine besonnene Art und dein Engagement hast du maßgeblich dazu beigetragen, dass die Zusammenarbeit so reibungslos verlaufen ist.",
     testimonial_2:
       "Die Zusammenarbeit war eine Freude. Er denkt logisch und findet immer einen klaren Weg.",
     testimonial_3: "Er löst Probleme mit bemerkenswerter Effizienz.",
@@ -123,7 +154,7 @@ const TRANSLATIONS = {
     contact_title: "Lass uns zusammenarbeiten",
     contact_h3: "Auf der Suche nach einem Junior-Entwickler?",
     contact_text:
-      "Ich suche aktiv meine erste Stelle — Praktikum, Werkstudentenstelle oder Junior-Position. Ich bringe Motivation, frische Ideen und Lernbereitschaft.",
+      "Ich suche aktiv meine erste Stelle — Praktikum, Werkstudentenstelle oder Junior-Position. Ich bringe Motivation, frische Ideen und Lernbereitschaft. ",
     contact_need: "Junior-Entwickler gesucht?",
     contact_link: "Lass uns reden!",
     form_name_label: "Wie heißt du?",
@@ -139,6 +170,37 @@ const TRANSLATIONS = {
     footer_role: "Web-Entwickler",
     footer_loc: "Lübbecke, Deutschland",
     footer_link_legal: "Impressum",
+    legal_page_title: "Impressum",
+    legal_nav_about: "Über mich",
+    legal_nav_skills: "Skills",
+    legal_nav_projects: "Projekte",
+    legal_h1: "Impressum",
+    legal_imprint_h2: "Angaben gemäß § 5 TMG",
+    legal_contact_h2: "Kontakt",
+    legal_contact_p: "E-Mail:",
+    legal_terms_h2: "Nutzungsbedingungen",
+    legal_terms_p:
+      "Durch den Zugriff auf und die Nutzung von Portfolio erkennen Sie die folgenden Nutzungsbedingungen sowie etwaige Änderungen an.",
+    legal_scope_h2: "Umfang und Eigentum",
+    legal_scope_p:
+      "Portfolio wurde im Rahmen eines studentischen Projekts bei der Developer Akademie GmbH entwickelt. Es dient ausschließlich Bildungszwecken und ist nicht für den kommerziellen Einsatz bestimmt. Das Design ist Eigentum der Developer Akademie GmbH. Unerlaubte Vervielfältigung oder Bearbeitung ist untersagt.",
+    legal_prop_h2: "Eigentumsrechte",
+    legal_prop_p:
+      "Alle Eigentumsrechte an Portfolio — einschließlich urheberrechtlich geschützter Materialien, Marken und sonstiger geistiger Eigentumsrechte — verbleiben bei den aufgeführten Studierenden, sofern nicht anders angegeben.",
+    legal_permitted_h2: "Erlaubte Nutzung",
+    legal_permitted_p:
+      "Portfolio ist ausschließlich für rechtmäßige Zwecke bestimmt. Jede Nutzung für illegale Aktivitäten oder zur Schädigung, Belästigung oder Einschüchterung anderer ist strengstens untersagt.",
+    legal_disclaimer_h2: "Haftungsausschluss",
+    legal_disclaimer_p:
+      'Portfolio wird „wie besehen" ohne jegliche Gewährleistung bereitgestellt. Weder die aufgeführten Studierenden noch die Developer Akademie GmbH haften für direkte, indirekte, zufällige oder Folgeschäden, die sich aus der Nutzung ergeben.',
+    legal_indemnity_h2: "Freistellung",
+    legal_indemnity_p:
+      "Sie verpflichten sich, die aufgeführten Studierenden, die Developer Akademie GmbH und deren verbundene Unternehmen von Ansprüchen oder Verbindlichkeiten freizustellen, die aus Ihrer Nutzung von Portfolio oder einem Verstoß gegen dieses Impressum entstehen.",
+    legal_questions: "Fragen? Schreiben Sie uns an",
+    legal_date: "Stand: 16. April 2026",
+    legal_footer_role: "Angehender Software-Entwickler",
+    legal_footer_loc: "Lübbecke, Deutschland",
+    legal_footer_legal: "Impressum",
   },
 };
 
