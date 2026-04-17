@@ -8,7 +8,8 @@ const PROJECT_DATA = {
     descKey: "desc_join",
     img: "./assets/img/join-preview.png",
     tech: ["angular", "typescript", "html", "css", "firebase"],
-    github: "https://github.com/maximilianbese/join",
+    github:
+      "https://github.com/Jan-OliverKaemmererDev/Join/commits?author=maximilianbese",
     live: "https://join.maximilian-bese.de/",
   },
   loco: {
@@ -17,7 +18,7 @@ const PROJECT_DATA = {
     descKey: "desc_loco",
     img: "./assets/img/elpollo-preview.png",
     tech: ["html", "css", "javascript"],
-    github: "https://github.com/maximilianbese/pollo-loco",
+    github: "https://github.com/maximilianbese/El-Pollo-Loco.git",
     live: "https://el-pollo-loco.maximilian-bese.de/",
   },
   bubble: {
