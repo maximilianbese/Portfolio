@@ -1,31 +1,36 @@
+"use strict";
+
 (function () {
-  var btn = document.getElementById("hamburger-btn");
-  var menu = document.getElementById("mobile-menu");
-  var links = document.querySelectorAll(".mobile-nav-link");
+  const btn = document.getElementById("hamburger-btn");
+  const menu = document.getElementById("mobile-menu");
+  const links = document.querySelectorAll(".mobile-nav-link");
   if (!btn || !menu) return;
-  function open() {
+
+  const open = () => {
     btn.classList.add("is-open");
     menu.classList.add("is-open");
     document.body.style.overflow = "hidden";
-  }
-  function close() {
+    btn.setAttribute("aria-expanded", "true");
+  };
+
+  const close = () => {
     btn.classList.remove("is-open");
     menu.classList.remove("is-open");
     document.body.style.overflow = "";
-  }
-  btn.addEventListener("click", function () {
-    menu.classList.contains("is-open") ? close() : open();
-  });
-  menu.addEventListener("click", function (e) {
+    btn.setAttribute("aria-expanded", "false");
+  };
+
+  btn.addEventListener("click", () =>
+    menu.classList.contains("is-open") ? close() : open(),
+  );
+  menu.addEventListener("click", (e) => {
     if (e.target === menu) close();
   });
-  links.forEach(function (l) {
-    l.addEventListener("click", close);
-  });
-  document.addEventListener("keydown", function (e) {
+  links.forEach((l) => l.addEventListener("click", close));
+  document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") close();
   });
-  window.addEventListener("resize", function () {
+  window.addEventListener("resize", () => {
     if (window.innerWidth > 850) close();
   });
 })();

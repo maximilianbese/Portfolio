@@ -1,0 +1,143 @@
+/* Responsive — tablet & large mobile (≤1024px, ≤850px) */
+
+/* ==========================================================================
+   1024px – Tablets & kleine Laptops
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .container {
+    padding: 50px 40px;
+  }
+
+  .nav-right {
+    width: 100px;
+    height: 75px;
+  }
+
+  .nav-right img {
+    padding-bottom: 30px;
+  }
+
+  .hero-btns {
+    margin-top: 20px;
+  }
+
+  .contact-grid,
+  .about-grid {
+    gap: 50px;
+  }
+
+  .contact-title,
+  .featured-projects-title {
+    font-size: 60px;
+  }
+
+  .skills-heading {
+    font-size: 60px;
+  }
+
+  .skills-layout {
+    gap: 50px;
+  }
+
+  .projects-layout {
+    gap: 60px;
+  }
+}
+
+/* ==========================================================================
+   850px – Smartphones & kleine Tablets
+   ========================================================================== */
+@media (max-width: 850px) {
+  .nav-links {
+    display: none;
+  }
+
+  .lang-toggle {
+    margin-right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .legal-main {
+    padding-top: 110px;
+    padding-bottom: 60px;
+    max-width: 100%;
+  }
+
+  .lang-toggle {
+    display: none;
+  }
+
+  .legal-title {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+  }
+
+  .legal-section {
+    margin-bottom: 28px;
+  }
+
+  .mobile-menu-content {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin: 5px;
+    background: linear-gradient(
+      45deg,
+      var(--bg-dark) 5%,
+      var(--bg-gradient-green) 100%
+    );
+  }
+
+  .nav-right {
+    display: none;
+  }
+
+  .contact-grid,
+  .skill-set-grid,
+  .about-grid,
+  .skills-layout,
+  .projects-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-left,
+  .sidebar-right {
+    display: none;
+  }
+
+  .testimonial-card.prev {
+    transform: scale(0.8) translateX(-120%);
+    opacity: 0;
+  }
+
+  .testimonial-card.next {
+    transform: scale(0.8) translateX(120%);
+    opacity: 0;
+  }
+
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-preview {
+    display: none;
+  }
+
+  .projects-list {
+    width: 100%;
+  }
+
+  .contact-info {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}

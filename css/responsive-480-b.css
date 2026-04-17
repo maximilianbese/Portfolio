@@ -1,0 +1,298 @@
+/* Responsive 480px — projects, testimonials, contact, footer, overlay */
+
+@media (max-width: 480px) {
+  /* --- FEATURED PROJECTS --- */
+  .projects-section {
+    padding: 30px 30px;
+  }
+
+  .section-title {
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  .section-intro {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+
+  .projects-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .project-preview {
+    display: none;
+  }
+
+  .project-item {
+    padding: 24px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .project-info h3 {
+    font-size: 22px;
+  }
+
+  .project-info h3 span {
+    font-size: 18px;
+  }
+
+  .project-tech {
+    font-size: 12px;
+    margin-top: 6px;
+    display: block;
+  }
+
+  .project-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .status-badge {
+    font-size: 11px;
+    padding: 4px 12px;
+    margin-left: 0;
+    margin-top: 6px;
+    display: inline-block;
+  }
+
+  /* --- TESTIMONIALS --- */
+  .testimonials-section {
+    padding: 30px 30px;
+  }
+
+  .testimonial-slider {
+    height: auto;
+    min-height: 380px;
+    margin-top: 30px;
+  }
+
+  .testimonial-card {
+    width: 100%;
+    position: absolute;
+    left: 0 !important;
+    transform: scale(1) !important;
+    opacity: 0;
+    display: none;
+    padding: 50px 28px 36px;
+    border-radius: 20px;
+  }
+
+  .testimonial-card.active {
+    display: flex;
+    opacity: 1;
+    position: relative;
+    transform: none !important;
+  }
+
+  .testimonial-card.active p {
+    font-size: 1rem;
+  }
+
+  .testimonial-card.prev,
+  .testimonial-card.next {
+    display: none;
+    opacity: 0;
+  }
+
+  .quote-icon {
+    font-size: 90px;
+    top: -30px;
+    left: -5px;
+  }
+
+  .testimonial-footer {
+    margin-top: 24px;
+  }
+
+  .author {
+    font-size: 13px;
+  }
+
+  .slider-controls {
+    margin-top: 24px;
+    gap: 20px;
+  }
+
+  .arrow {
+    font-size: 22px;
+  }
+
+  /* --- CONTACT --- */
+  .contact-section {
+    padding: 30px 30px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-info {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .contact-title {
+    font-size: 48px;
+    line-height: 1;
+    margin: 12px 0 24px;
+  }
+
+  .contact-description h3 {
+    font-size: 18px;
+  }
+
+  .contact-description p {
+    font-size: 0.9rem;
+  }
+
+  .form-group {
+    padding: 22px 0;
+  }
+
+  .form-group label {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 15px;
+  }
+
+  .privacy-container {
+    margin-top: 24px;
+  }
+
+  .privacy-check {
+    margin-top: 24px;
+    font-size: 13px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .checkbox-text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .privacy-check input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+
+  .form-submit {
+    margin-top: 36px;
+  }
+
+  .btn-submit {
+    padding: 14px 36px;
+    font-size: 16px;
+  }
+
+  /* --- FOOTER --- */
+  .main-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 50px 30px 30px 30px;
+    margin-top: 30px;
+  }
+
+  .footer-logo {
+    height: 75px;
+    width: 100px;
+  }
+
+  .footer-subtext p {
+    font-size: 13px;
+  }
+
+  .footer-right .footer-links {
+    text-align: left;
+    align-items: flex-start;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-center {
+    order: 3;
+    margin-top: 10px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* --- OVERLAY --- */
+  .overlay-content {
+    padding: 40px 20px 60px;
+    border-radius: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .overlay-body {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  #overlay-number {
+    font-size: 4rem;
+  }
+
+  #overlay-title {
+    font-size: 2rem;
+    margin: -10px 0 20px;
+  }
+
+  .overlay-text h3 {
+    font-size: 1rem;
+  }
+
+  #overlay-description {
+    font-size: 0.9rem;
+  }
+
+  .tech-stack-icons,
+  .overlay-btns {
+    justify-content: center;
+  }
+
+  .overlay-btns {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .next-project-btn {
+    bottom: 20px;
+    right: 20px;
+    font-size: 0.9rem;
+  }
+
+  .close-btn {
+    top: 18px;
+    right: 20px;
+    font-size: 26px;
+  }
+}

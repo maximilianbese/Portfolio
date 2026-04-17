@@ -1,0 +1,234 @@
+/* Responsive 480px — header, hero, about, skills */
+
+/* Responsive styles — generated split */
+
+/* ==========================================================================
+   480px – Smartphones
+   ========================================================================== */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  /* --- HEADER --- */
+  .main-header {
+    padding: 20px 20px;
+    height: auto;
+  }
+
+  .lang-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-right {
+    height: 60px;
+    width: auto;
+  }
+
+  /* --- HERO --- */
+  .hero {
+    height: 100svh;
+    padding-top: 80px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-center {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding-bottom: 330px;
+  }
+
+  .hero-role {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 10vw, 3rem);
+    white-space: normal;
+    line-height: 1.1;
+  }
+
+  .hero-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .btn-ghost {
+    padding: 12px 24px;
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .sidebar-left {
+    display: flex;
+    left: 15px;
+    bottom: 80px;
+  }
+
+  .sidebar-right {
+    display: flex;
+    right: 15px;
+    bottom: 80px;
+    gap: 12px;
+  }
+
+  .sidebar-right .vertical-mail {
+    display: none;
+  }
+
+  .social-icons {
+    gap: 12px;
+    margin-bottom: 0;
+  }
+
+  .social-icons img {
+    width: 22px;
+    margin-top: 0;
+  }
+
+  .arrow-circle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hero-ticker {
+    bottom: 30px;
+  }
+
+  .ticker-content span {
+    font-size: 16px;
+  }
+
+  /* --- ABOUT ME --- */
+  .about-section {
+    padding: 70px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-image-wrapper {
+    width: 100%;
+  }
+
+  .about-portrait {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .background-lines {
+    width: 140px;
+    height: 140px;
+    top: -25px;
+    left: -25px;
+  }
+
+  .about-info {
+    padding: 30px;
+  }
+
+  .about-card {
+    padding: 28px 22px;
+    border-radius: 20px;
+  }
+
+  .about-subtitle {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .about-title {
+    font-size: 42px;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .about-intro {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+    text-align: justify;
+  }
+
+  .about-details li {
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+
+  .detail-icon {
+    width: 20px;
+  }
+
+  .about-details p {
+    font-size: 0.85rem;
+  }
+
+  /* --- SKILLS --- */
+  .skills-section {
+    padding: 30px 30px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+  }
+
+  .skills-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  .skills-card {
+    padding: 30px 24px;
+    border-radius: 24px;
+  }
+
+  .skills-heading {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+
+  .skills-description {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+    text-align: justify;
+  }
+
+  .skills-cta h3 {
+    font-size: 18px;
+  }
+
+  .btn-small {
+    padding: 10px 22px;
+    font-size: 14px;
+    margin-top: 16px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 20px;
+    padding-top: 20px;
+  }
+
+  .skill-item img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .skill-item span {
+    font-size: 11px;
+  }
+}

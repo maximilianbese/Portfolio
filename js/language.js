@@ -1,4 +1,7 @@
-const translations = {
+"use strict";
+
+/** @type {{ en: Record<string,string>, de: Record<string,string> }} */
+const TRANSLATIONS = {
   en: {
     nav_about: "About me",
     nav_skills: "Skills",
@@ -14,16 +17,16 @@ const translations = {
     about_word_1: "About",
     about_word_2: "me",
     about_text:
-      "Hey, I'm Maximilian — a passionate software developer with a strong focus on frontend technologies. I transitioned into software development because I love building things that are both functional and visually appealing. Every project I take on is a chance to apply what I've learned and push my skills further.",
+      "Hey, I'm Maximilian — a passionate software developer with a strong focus on frontend technologies. Every project I take on is a chance to apply what I've learned and push my skills further.",
     about_detail_1: "Based in Lübbecke. Open to remote work.",
     about_detail_2:
-      "I embrace every new technology as an opportunity to grow. I pick up new concepts quickly and enjoy diving deep into unfamiliar tools — whether that's a new framework, a design pattern, or a development workflow. My goal is to keep learning and improving every single day.",
+      "I embrace every new technology as an opportunity to grow. I pick up new concepts quickly and enjoy diving deep — whether it's a new framework, a design pattern, or a development workflow.",
     about_detail_3:
-      "When I face a problem, I break it down step by step: understand the requirements, experiment with solutions, and refine until the result is clean and maintainable. I believe writing good code is not just about making it work — it's about making it easy to understand for the next developer.",
+      "When I face a problem, I break it down step by step: understand, experiment, refine. Good code isn't just functional — it's easy to understand for the next developer.",
     skills_subtitle: "Technologies",
     skills_heading: "Skill Set",
     skills_text:
-      "During my training and personal projects, I've built hands-on experience with modern frontend technologies. I'm always expanding my toolkit and excited to tackle new challenges beyond what I already know.",
+      "During my training I've built hands-on experience with modern frontend technologies. I'm always expanding my toolkit and excited to tackle challenges beyond what I already know.",
     skills_cta_title: "Need a different skill?",
     skills_cta_text:
       "Don't hesitate to reach out. I'm motivated to learn whatever a project requires.",
@@ -31,14 +34,14 @@ const translations = {
     skill_growth: "Growth mindset",
     projects_title: "My Projects",
     projects_intro:
-      "Here's a selection of projects I've built during my training — each one taught me something new. Click on a project to learn more.",
+      "Projects I built during my training — each one taught me something new. Click to learn more.",
     badge_progress: "In Progress",
     overlay_question: "What is this project about?",
     overlay_next: "Next project",
     desc_join:
-      "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      "Task manager inspired by the Kanban System. Create and organize tasks with drag & drop, assign users and categories.",
     desc_loco:
-      "A jump-and-run game built with object-oriented JavaScript. Help Pepe collect coins and salsa bottles to defeat the final boss.",
+      "A jump-and-run game in object-oriented JavaScript. Help Pepe collect coins and bottles to defeat the final boss.",
     desc_bubble:
       "A real-time messaging app inspired by Slack. Built with Angular and Firebase, supporting channels and direct messages.",
     testimonials_title: "What my colleagues say about me",
@@ -51,7 +54,7 @@ const translations = {
     contact_title: "Let's work together",
     contact_h3: "Looking for a junior developer?",
     contact_text:
-      "I'm actively looking for my first position as a software developer for junior position — I'm ready to bring my motivation, fresh ideas, and eagerness to grow to your team.",
+      "I'm actively looking for my first position as a software developer — internship, working student role, or junior position. I bring motivation, fresh ideas, and eagerness to grow.",
     contact_need: "Hiring junior developers?",
     contact_link: "Let's talk!",
     form_name_label: "What's your name?",
@@ -64,7 +67,7 @@ const translations = {
       "I've read the privacy policy and agree to the processing of my data as outlined.",
     form_error: "Please accept the privacy policy.",
     form_btn: "Say Hello ;)",
-    footer_role: "Frontend Developer",
+    footer_role: "Web Developer",
     footer_loc: "Lübbecke, Germany",
     footer_link_legal: "Legal Notice",
   },
@@ -76,23 +79,23 @@ const translations = {
     hero_btn_work: "Projekte ansehen",
     hero_btn_contact: "Kontakt aufnehmen",
     ticker_1: "Offen für Einstiegspositionen",
-    ticker_2: "Angehender Software-Entwickler",
+    ticker_2: "Frontend-Entwickler",
     ticker_3: "Wohnhaft in Lübbecke",
     ticker_4: "Lernbereit & motiviert",
     about_subtitle: "Wer ich bin",
     about_word_1: "Über",
     about_word_2: "mich",
     about_text:
-      "Hey, ich bin Maximilian — ein leidenschaftlicher Software-Entwickler mit Schwerpunkt auf Frontend-Technologien. Ich habe den Weg in die Softwareentwicklung gewählt, weil ich es liebe, Dinge zu bauen, die sowohl funktional als auch ansprechend sind. Jedes Projekt ist für mich eine Chance, mein Wissen anzuwenden und meine Fähigkeiten weiterzuentwickeln.",
-    about_detail_1: "Wohnhaft in Lübbecke. Offen für Remote-Arbeit und Umzug.",
+      "Hey, ich bin Maximilian — ein leidenschaftlicher Software-Entwickler mit Schwerpunkt auf Frontend-Technologien. Jedes Projekt ist für mich eine Chance, mein Wissen anzuwenden und meine Fähigkeiten weiterzuentwickeln.",
+    about_detail_1: "Wohnhaft in Lübbecke. Offen für Remote-Arbeit.",
     about_detail_2:
-      "Ich sehe jede neue Technologie als Chance zu wachsen. Neue Konzepte eigne ich mir schnell an und tauche gerne tief in unbekannte Tools ein — egal ob neues Framework, Design-Pattern oder Entwicklungs-Workflow. Mein Ziel ist es, jeden Tag besser zu werden.",
+      "Ich sehe jede neue Technologie als Wachstumschance. Neue Konzepte eigne ich mir schnell an — ob Framework, Design-Pattern oder Workflow.",
     about_detail_3:
-      "Wenn ich auf ein Problem stoße, gehe ich systematisch vor: Anforderungen verstehen, Lösungen testen und so lange verfeinern, bis das Ergebnis sauber und wartbar ist. Guter Code funktioniert nicht nur — er ist auch für andere Entwickler leicht verständlich.",
+      "Bei Problemen gehe ich systematisch vor: verstehen, testen, verfeinern. Guter Code funktioniert nicht nur — er ist auch für andere lesbar.",
     skills_subtitle: "Technologien",
     skills_heading: "Skill Set",
     skills_text:
-      "In meiner Ausbildung und durch eigene Projekte habe ich praktische Erfahrung mit modernen Frontend-Technologien gesammelt. Ich erweitere mein Know-how kontinuierlich und freue mich auf neue Herausforderungen.",
+      "In meiner Ausbildung habe ich praktische Erfahrung mit modernen Frontend-Technologien gesammelt. Ich erweitere mein Know-how kontinuierlich.",
     skills_cta_title: "Fehlt ein bestimmter Skill?",
     skills_cta_text:
       "Melde dich gerne. Ich bin motiviert, alles zu lernen, was ein Projekt erfordert.",
@@ -100,27 +103,27 @@ const translations = {
     skill_growth: "Wachstums-Mindset",
     projects_title: "Meine Projekte",
     projects_intro:
-      "Hier sind Projekte, die ich während meiner Ausbildung entwickelt habe — jedes hat mir etwas Neues beigebracht. Klicke auf ein Projekt, um mehr zu erfahren.",
+      "Projekte aus meiner Ausbildung — jedes hat mir etwas Neues beigebracht. Klicke zum Erkunden.",
     badge_progress: "In Arbeit",
     overlay_question: "Worum geht es in diesem Projekt?",
     overlay_next: "Nächstes Projekt",
     desc_join:
-      "Aufgaben-Manager nach dem Kanban-Prinzip. Aufgaben per Drag-and-Drop erstellen und organisieren, Benutzer und Kategorien zuweisen.",
+      "Aufgaben-Manager nach dem Kanban-Prinzip. Per Drag & Drop erstellen und organisieren, Benutzer und Kategorien zuweisen.",
     desc_loco:
-      "Ein Jump-and-Run-Spiel in objektorientiertem JavaScript. Hilf Pepe, Münzen und Salsa-Flaschen zu sammeln, um den Endgegner zu besiegen.",
+      "Ein Jump-and-Run-Spiel in objektorientiertem JavaScript. Hilf Pepe, Münzen und Flaschen zu sammeln.",
     desc_bubble:
-      "Eine Echtzeit-Messaging-App inspiriert von Slack. Mit Angular und Firebase gebaut, mit Kanal- und Direktnachrichten-Funktion.",
+      "Eine Echtzeit-Messaging-App inspiriert von Slack. Mit Angular und Firebase, Kanal- und Direktnachrichten-Funktion.",
     testimonials_title: "Was meine Kollegen über mich sagen",
     testimonial_1:
-      "Maximilian ist ein zuverlässiger und engagierter Teamkollege. Seine technische Neugier und sein proaktives Auftreten haben unser Projekt wirklich vorangebracht.",
+      "Maximilian ist ein zuverlässiger Teamkollege. Seine Neugier und sein proaktives Auftreten haben unser Projekt vorangebracht.",
     testimonial_2:
-      "Die Zusammenarbeit mit ihm an komplexen Aufgaben war eine Freude. Er denkt logisch und findet immer einen klaren Weg nach vorne.",
-    testimonial_3: "Er löst Probleme mit bemerkenswerter Effizienz und Fokus.",
+      "Die Zusammenarbeit war eine Freude. Er denkt logisch und findet immer einen klaren Weg.",
+    testimonial_3: "Er löst Probleme mit bemerkenswerter Effizienz.",
     contact_subtitle: "Kontakt",
     contact_title: "Lass uns zusammenarbeiten",
     contact_h3: "Auf der Suche nach einem Junior-Entwickler?",
     contact_text:
-      "Ich bin aktiv auf der Suche nach meiner ersten Stelle als Software-Entwickler in der Junior-Position — ich bringe Motivation, frische Ideen und den Willen zu wachsen in dein Team.",
+      "Ich suche aktiv meine erste Stelle — Praktikum, Werkstudentenstelle oder Junior-Position. Ich bringe Motivation, frische Ideen und Lernbereitschaft.",
     contact_need: "Junior-Entwickler gesucht?",
     contact_link: "Lass uns reden!",
     form_name_label: "Wie heißt du?",
@@ -133,49 +136,60 @@ const translations = {
       "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten zu.",
     form_error: "Bitte akzeptiere die Datenschutzerklärung.",
     form_btn: "Sag Hallo ;)",
-    footer_role: "Frontend-Entwickler",
+    footer_role: "Web-Entwickler",
     footer_loc: "Lübbecke, Deutschland",
     footer_link_legal: "Impressum",
   },
 };
 
-function changeLanguage(lang) {
-  // 1. Texte in normalen Elementen ändern
-  document.querySelectorAll("[data-key]").forEach((element) => {
-    const key = element.getAttribute("data-key");
-    if (translations[lang] && translations[lang][key]) {
-      if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
-        element.placeholder = translations[lang][key];
-      } else {
-        element.innerText = translations[lang][key];
-      }
-    }
-  });
-
-  // 2. Spezial-Logik für das Overlay (falls es gerade offen ist)
-  const overlayDescription = document.getElementById("overlay-description");
-  if (overlayDescription && window.currentProjectId) {
-    const projectDescKey = projectData[window.currentProjectId].descKey;
-    overlayDescription.innerText = translations[lang][projectDescKey];
+/** @param {HTMLElement} el @param {string} value */
+function applyTranslation(el, value) {
+  if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+    el.placeholder = value;
+  } else {
+    el.innerText = value;
   }
+}
 
-  // 3. Alle Sprachbuttons aktualisieren (Desktop + Mobile + legal-notice)
-  //    Matching per data-lang Attribut oder per Textinhalt
+/** @param {"en"|"de"} lang */
+function updateTextNodes(lang) {
+  const t = TRANSLATIONS[lang];
+  document.querySelectorAll("[data-key]").forEach((el) => {
+    const value = t[el.getAttribute("data-key")];
+    if (value) applyTranslation(el, value);
+  });
+}
+
+/** @param {"en"|"de"} lang */
+function updateLangButtons(lang) {
   document.querySelectorAll(".lang").forEach((el) => {
     const elLang = (
       el.getAttribute("data-lang") || el.textContent.trim()
     ).toLowerCase();
     el.classList.toggle("active", elLang === lang);
   });
+}
 
-  // 4. Sprache im Browser speichern
+/** @param {"en"|"de"} lang */
+function updateOverlay(lang) {
+  const overlay = document.getElementById("project-overlay");
+  if (!overlay || overlay.classList.contains("d-none")) return;
+  const id = window.currentProjectId;
+  if (id && typeof PROJECT_DATA !== "undefined") {
+    const el = document.getElementById("overlay-description");
+    if (el) el.innerText = TRANSLATIONS[lang][PROJECT_DATA[id].descKey] || "";
+  }
+}
+
+/** @param {"en"|"de"} lang */
+function changeLanguage(lang) {
+  updateTextNodes(lang);
+  updateOverlay(lang);
+  updateLangButtons(lang);
   localStorage.setItem("preferredLang", lang);
-
-  // 5. HTML lang Attribut aktualisieren
   document.documentElement.lang = lang;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("preferredLang") || "en";
-  changeLanguage(savedLang);
+  changeLanguage(localStorage.getItem("preferredLang") || "en");
 });

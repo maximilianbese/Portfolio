@@ -1,54 +1,68 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const slider = document.querySelector(".testimonial-slider");
-  const cards = document.querySelectorAll(".testimonial-card");
-  const dots = document.querySelectorAll(".dot");
-  const prevBtn = document.querySelector(".arrow.prev");
-  const nextBtn = document.querySelector(".arrow.next");
+"use strict";
 
-  let currentIndex = 1; // Startet bei der zweiten Karte
+(function () {
+  const CARDS_SEL = ".testimonial-card";
+  const DOTS_SEL = ".dot";
+  const STATE_CLASSES = ["active", "prev", "next"];
 
-  function updateSlider() {
-    cards.forEach((card, index) => {
-      // Zuerst alle Klassen entfernen
-      card.classList.remove("active", "prev", "next");
+  function getElements() {
+    return {
+      cards: Array.from(document.querySelectorAll(CARDS_SEL)),
+      dots: Array.from(document.querySelectorAll(DOTS_SEL)),
+      prevBtn: document.querySelector(".arrow.prev"),
+      nextBtn: document.querySelector(".arrow.next"),
+    };
+  }
 
-      // Logik für Endlos-Schleife (Modulo)
-      if (index === currentIndex) {
-        card.classList.add("active");
-      } else if (index === (currentIndex - 1 + cards.length) % cards.length) {
-        card.classList.add("prev");
-      } else if (index === (currentIndex + 1) % cards.length) {
-        card.classList.add("next");
-      }
-    });
-
-    // Dots aktualisieren
-    dots.forEach((dot, index) => {
-      dot.classList.toggle("active", index === currentIndex);
+  /** @param {Element[]} cards @param {number} current */
+  function applyCardClasses(cards, current) {
+    const total = cards.length;
+    cards.forEach((card, i) => {
+      card.classList.remove(...STATE_CLASSES);
+      if (i === current) card.classList.add("active");
+      else if (i === (current - 1 + total) % total) card.classList.add("prev");
+      else if (i === (current + 1) % total) card.classList.add("next");
     });
   }
 
-  // Event Listener für Pfeile (mit Endlos-Logik)
-  if (prevBtn && nextBtn) {
-    prevBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-      updateSlider();
-    });
-
-    nextBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % cards.length;
-      updateSlider();
-    });
+  /** @param {Element[]} dots @param {number} current */
+  function syncDots(dots, current) {
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === current));
   }
 
-  // Klick direkt auf eine Karte
-  cards.forEach((card, index) => {
-    card.addEventListener("click", () => {
-      currentIndex = index;
-      updateSlider();
-    });
-  });
+  /** @param {{ cards: Element[], dots: Element[] }} els @param {number} current */
+  function render(els, current) {
+    applyCardClasses(els.cards, current);
+    syncDots(els.dots, current);
+  }
 
-  // Initialisierung beim Laden der Seite
-  updateSlider();
-});
+  function init() {
+    const els = getElements();
+    if (!els.cards.length) return;
+
+    let current = Math.floor(els.cards.length / 2);
+    const go = (delta) => {
+      current = (current + delta + els.cards.length) % els.cards.length;
+      render(els, current);
+    };
+
+    els.prevBtn?.addEventListener("click", () => go(-1));
+    els.nextBtn?.addEventListener("click", () => go(+1));
+    els.dots.forEach((dot, i) =>
+      dot.addEventListener("click", () => {
+        current = i;
+        render(els, current);
+      }),
+    );
+    els.cards.forEach((card, i) =>
+      card.addEventListener("click", () => {
+        current = i;
+        render(els, current);
+      }),
+    );
+
+    render(els, current);
+  }
+
+  document.addEventListener("DOMContentLoaded", init);
+})();
