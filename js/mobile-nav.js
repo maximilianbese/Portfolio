@@ -29,8 +29,3 @@
     if (window.innerWidth > 850) close();
   });
 })();
-function changeLanguage(lang) {
-  document.querySelectorAll(".lang").forEach(function (el) {
-    el.classList.toggle("active", el.textContent.trim().toLowerCase() === lang);
-  });
-}

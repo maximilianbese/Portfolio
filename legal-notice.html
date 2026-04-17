@@ -19,10 +19,18 @@
     <header class="main-header container">
       <div class="nav-left">
         <div class="lang-toggle">
-          <span class="lang active" id="btn-en" onclick="changeLanguage('en')"
+          <span
+            class="lang active"
+            id="btn-en"
+            data-lang="en"
+            onclick="changeLanguage('en')"
             >EN</span
           >
-          <span class="lang" id="btn-de" onclick="changeLanguage('de')"
+          <span
+            class="lang"
+            id="btn-de"
+            data-lang="de"
+            onclick="changeLanguage('de')"
             >DE</span
           >
         </div>
@@ -52,8 +60,15 @@
           <a href="./index.html#projects" class="mobile-nav-link">Projects</a>
         </nav>
         <div class="mobile-lang-toggle">
-          <span class="lang active" onclick="changeLanguage('en')">EN</span>
-          <span class="lang" onclick="changeLanguage('de')">DE</span>
+          <span
+            class="lang active"
+            data-lang="en"
+            onclick="changeLanguage('en')"
+            >EN</span
+          >
+          <span class="lang" data-lang="de" onclick="changeLanguage('de')"
+            >DE</span
+          >
         </div>
       </div>
     </div>
@@ -188,6 +203,7 @@
       </div>
     </footer>
 
+    <script src="./js/language.js"></script>
     <script src="./js/mobile-nav.js"></script>
   </body>
 </html>
