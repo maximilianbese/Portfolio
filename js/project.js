@@ -8,8 +8,7 @@ const PROJECT_DATA = {
     descKey: "desc_join",
     img: "./assets/img/join-preview.png",
     tech: ["angular", "typescript", "html", "css", "firebase"],
-    github:
-      "https://github.com/Jan-OliverKaemmererDev/Join/commits?author=maximilianbese",
+    github: "https://github.com/maximilianbese/Join.git",
     live: "https://join.maximilian-bese.de/",
   },
   loco: {
@@ -20,15 +19,6 @@ const PROJECT_DATA = {
     tech: ["html", "css", "javascript"],
     github: "https://github.com/maximilianbese/El-Pollo-Loco.git",
     live: "https://el-pollo-loco.maximilian-bese.de/",
-  },
-  bubble: {
-    number: "03",
-    title: "DA Bubble",
-    descKey: "desc_bubble",
-    img: "./assets/img/in-progress.png",
-    tech: ["angular", "typescript", "firebase"],
-    github: "https://github.com/maximilianbese/da-bubble",
-    live: "#",
   },
 };
 
@@ -85,32 +75,32 @@ function nextProject() {
 }
 
 function initProjectHover() {
+  const previewContainer = document.querySelector(".preview-container");
   const previewImg = document.getElementById("project-image");
+  const projectItems = document.querySelectorAll(".project-item");
 
-  // Hide image and remove active state on initial load
-  document
-    .querySelectorAll(".project-item")
-    .forEach((i) => i.classList.remove("active"));
-  previewImg.style.opacity = 0;
-
-  document.querySelectorAll(".project-item").forEach((item) => {
+  projectItems.forEach((item) => {
     const key = item.getAttribute("data-project");
 
     item.addEventListener("mouseenter", () => {
-      document
-        .querySelectorAll(".project-item")
-        .forEach((i) => i.classList.remove("active"));
+      // 1. Alle anderen Items deaktiveren, aktuelles aktivieren
+      projectItems.forEach((i) => i.classList.remove("active"));
       item.classList.add("active");
-      previewImg.style.opacity = 0;
-      setTimeout(() => {
-        previewImg.src = PROJECT_DATA[key].img;
-        previewImg.style.opacity = 1;
-      }, 150);
+
+      // 2. Bildquelle tauschen
+      previewImg.src = PROJECT_DATA[key].img;
+
+      // 3. Den ganzen Container (inkl. Muster) einblenden
+      previewContainer.style.opacity = "1";
+      previewContainer.style.transform = "translateY(0)";
     });
 
     item.addEventListener("mouseleave", () => {
       item.classList.remove("active");
-      previewImg.style.opacity = 0;
+
+      // 4. Den ganzen Container wieder ausblenden
+      previewContainer.style.opacity = "0";
+      previewContainer.style.transform = "translateY(10px)";
     });
 
     item.addEventListener("click", () => openProject(key));

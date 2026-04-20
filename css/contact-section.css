@@ -68,6 +68,25 @@
   color: white;
 }
 
+.field-error {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 5px;
+  height: 18px;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.field-error.visible {
+  opacity: 1;
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid {
+  border-bottom: 1px solid #ff4d4d !important;
+}
+
 /* Checkbox & Button */
 .privacy-check {
   display: flex;
@@ -130,6 +149,13 @@
   font-size: 18px;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(1);
+  transform: none !important;
 }
 
 .btn-submit:hover {
