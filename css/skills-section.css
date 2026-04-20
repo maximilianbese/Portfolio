@@ -19,7 +19,7 @@
 }
 
 .skills-heading {
-  font-size: 80px; /* Sehr groß wie im Design */
+  font-size: 64px; /* Sehr groß wie im Design */
   color: var(--accent-green);
   margin-bottom: 30px;
   line-height: 1;
@@ -29,7 +29,7 @@
   color: #e0e0e0;
   line-height: 1.6;
   margin-bottom: 40px;
-  font-size: 1.1rem;
+  font-size: 18px;
 }
 
 .skills-cta h3 {
@@ -80,7 +80,7 @@
 
 .skill-item span {
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 18px;
   color: #888;
 }
 

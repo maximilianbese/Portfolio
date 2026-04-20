@@ -79,7 +79,7 @@
 /* --- Text & Details --- */
 .about-intro {
   color: #e0e0e0;
-  font-size: 0.95rem;
+  font-size: 18px;
   line-height: 1.6;
   margin-bottom: 40px;
 }
@@ -107,6 +107,6 @@
 
 .about-details p {
   color: #e0e0e0;
-  font-size: 0.9rem;
+  font-size: 18px;
   line-height: 1.5;
 }
