@@ -1,4 +1,11 @@
-/* Responsive — tablet & large mobile (≤1024px, ≤850px) */
+@media (max-width: 1440px) {
+  .sidebar-left {
+    left: 40px;
+  }
+  .sidebar-right {
+    right: 40px;
+  }
+}
 
 /* ==========================================================================
    1024px – Tablets & kleine Laptops
@@ -139,5 +146,12 @@
   .contact-info {
     text-align: center;
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

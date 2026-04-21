@@ -39,9 +39,11 @@ body {
 }
 
 .container {
-  padding: 0 var(--container-padding);
   max-width: 1440px;
   margin: 0 auto;
+  padding-left: 60px; /* Gleicht dein Header-Padding aus */
+  padding-right: 60px; /* Gleicht dein Header-Padding aus */
+  width: 100%;
 }
 
 .nav-right img {

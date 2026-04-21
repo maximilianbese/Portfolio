@@ -3,12 +3,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative; /* Wichtig für die absolute Positionierung der Sidebars */
+  position: relative;
   overflow: hidden;
 }
 
 .hero-center {
   text-align: center;
+  max-width: 1200px;
+  padding: 0 20px;
+  z-index: 2;
 }
 
 .hero-btns {
@@ -62,11 +65,12 @@
 }
 
 .sidebar-left {
-  left: 40px;
+  left: calc(
+    50% - 720px + 40px
+  ); /* Zentriert bezogen auf 1440px (720 ist die Hälfte) */
 }
 .sidebar-right {
-  right: 40px;
-  gap: 20px;
+  right: calc(50% - 720px + 40px);
 }
 
 .arrow-circle {
