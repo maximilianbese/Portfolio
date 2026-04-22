@@ -1,6 +1,32 @@
+/**
+ * @file language.js
+ * @description Internationalisation (i18n) module for EN / DE language switching.
+ *
+ * Responsibilities:
+ *  - Holds the complete translation map for all pages.
+ *  - Applies translations to every `[data-key]` element in the DOM.
+ *  - Keeps language toggle buttons in sync with the active language.
+ *  - Updates any open project overlay description when the language changes.
+ *  - Persists the user's choice in `localStorage` under `preferredLang`.
+ *
+ * Other page-specific modules (e.g. `privacy.js`) may extend `TRANSLATIONS`
+ * by merging additional keys into both language objects before calling
+ * {@link changeLanguage}.
+ *
+ * @module language
+ * @author Maximilian Bese <maximilian-bese@gmx.de>
+ * @version 1.0.0
+ */
+
 "use strict";
 
-/** @type {{ en: Record<string,string>, de: Record<string,string> }} */
+/**
+ * Complete bilingual translation map.
+ * Keys use a `section_identifier` naming convention (e.g. `nav_about`,
+ * `hero_role`, `form_name_label`).
+ *
+ * @type {{ en: Record<string, string>, de: Record<string, string> }}
+ */
 const TRANSLATIONS = {
   en: {
     nav_about: "About me",
@@ -195,7 +221,7 @@ const TRANSLATIONS = {
       "Portfolio ist ausschließlich für rechtmäßige Zwecke bestimmt. Jede Nutzung für illegale Aktivitäten oder zur Schädigung, Belästigung oder Einschüchterung anderer ist strengstens untersagt.",
     legal_disclaimer_h2: "Haftungsausschluss",
     legal_disclaimer_p:
-      'Portfolio wird „wie besehen" ohne jegliche Gewährleistung bereitgestellt. Weder die aufgeführten Studierenden noch die Developer Akademie GmbH haften für direkte, indirekte, zufällige oder Folgeschäden, die sich aus der Nutzung ergeben.',
+      'Portfolio wird „wie besehen\" ohne jegliche Gewährleistung bereitgestellt. Weder die aufgeführten Studierenden noch die Developer Akademie GmbH haften für direkte, indirekte, zufällige oder Folgeschäden, die sich aus der Nutzung ergeben.',
     legal_indemnity_h2: "Freistellung",
     legal_indemnity_p:
       "Sie verpflichten sich, die aufgeführten Studierenden, die Developer Akademie GmbH und deren verbundene Unternehmen von Ansprüchen oder Verbindlichkeiten freizustellen, die aus Ihrer Nutzung von Portfolio oder einem Verstoß gegen dieses Impressum entstehen.",
@@ -208,7 +234,15 @@ const TRANSLATIONS = {
   },
 };
 
-/** @param {HTMLElement} el @param {string} value */
+/**
+ * Applies a single translation value to a DOM element.
+ * Uses `placeholder` for input/textarea elements and `innerHTML` for all others,
+ * allowing translation strings to contain HTML markup (e.g. links).
+ *
+ * @param {HTMLElement} el    - Target DOM element.
+ * @param {string}      value - Translation string (may contain HTML).
+ * @returns {void}
+ */
 function applyTranslation(el, value) {
   if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
     el.placeholder = value;
@@ -217,7 +251,13 @@ function applyTranslation(el, value) {
   }
 }
 
-/** @param {"en"|"de"} lang */
+/**
+ * Updates every `[data-key]` element in the document with the translation
+ * string for the given language.
+ *
+ * @param {"en" | "de"} lang - Target language code.
+ * @returns {void}
+ */
 function updateTextNodes(lang) {
   const t = TRANSLATIONS[lang];
   document.querySelectorAll("[data-key]").forEach((el) => {
@@ -226,7 +266,13 @@ function updateTextNodes(lang) {
   });
 }
 
-/** @param {"en"|"de"} lang */
+/**
+ * Syncs the visual active state of all `.lang` toggle buttons with the
+ * currently selected language.
+ *
+ * @param {"en" | "de"} lang - The language that should be marked active.
+ * @returns {void}
+ */
 function updateLangButtons(lang) {
   document.querySelectorAll(".lang").forEach((el) => {
     const elLang = (
@@ -236,7 +282,13 @@ function updateLangButtons(lang) {
   });
 }
 
-/** @param {"en"|"de"} lang */
+/**
+ * Re-renders the description inside an open project overlay when the language
+ * changes. Does nothing if no overlay is open or project data is unavailable.
+ *
+ * @param {"en" | "de"} lang - The newly selected language.
+ * @returns {void}
+ */
 function updateOverlay(lang) {
   const overlay = document.getElementById("project-overlay");
   if (!overlay || overlay.classList.contains("d-none")) return;
@@ -247,7 +299,15 @@ function updateOverlay(lang) {
   }
 }
 
-/** @param {"en"|"de"} lang */
+/**
+ * Switches the UI language and persists the selection.
+ *
+ * Orchestrates text node updates, overlay refresh, button state sync,
+ * localStorage persistence, and the `lang` attribute on `<html>`.
+ *
+ * @param {"en" | "de"} lang - Target language code.
+ * @returns {void}
+ */
 function changeLanguage(lang) {
   updateTextNodes(lang);
   updateOverlay(lang);
@@ -256,6 +316,12 @@ function changeLanguage(lang) {
   document.documentElement.lang = lang;
 }
 
+/**
+ * Applies the persisted (or default English) language on page load.
+ *
+ * @listens DOMContentLoaded
+ * @returns {void}
+ */
 document.addEventListener("DOMContentLoaded", () => {
   changeLanguage(localStorage.getItem("preferredLang") || "en");
 });

@@ -1,5 +1,28 @@
+/**
+ * @file contact.js
+ * @description Contact form validation and submission handler.
+ *
+ * Responsibilities:
+ *  - Real-time per-field validation (name, email, message).
+ *  - Dynamic enable/disable of the submit button based on overall form state.
+ *  - Async form submission via fetch to `send-mail.php`.
+ *  - Bilingual error and status messages (EN / DE) driven by localStorage.
+ *
+ * Dependencies: None (standalone module).
+ *
+ * @module contact
+ * @author Maximilian Bese <maximilian-bese@gmx.de>
+ * @version 1.0.0
+ */
+
 "use strict";
 
+/**
+ * Bilingual UI strings for all validation and status messages.
+ * Each key maps to an object with `en` and `de` properties.
+ *
+ * @type {Record<string, { en: string, de: string }>}
+ */
 const CONTACT_MESSAGES = {
   fill: {
     en: "Please fill in all fields.",
@@ -51,12 +74,28 @@ const CONTACT_MESSAGES = {
   },
 };
 
+/**
+ * Returns the localised message string for the given key.
+ * Falls back to English if the stored language is not found.
+ *
+ * @param {keyof typeof CONTACT_MESSAGES} key - Message key.
+ * @returns {string} Localised message text.
+ */
 function msg(key) {
   const lang = localStorage.getItem("preferredLang") || "en";
   return CONTACT_MESSAGES[key][lang] || CONTACT_MESSAGES[key].en;
 }
 
-/** Steuert die Sichtbarkeit und Farbe der Fehlermeldungen */
+/**
+ * Shows or hides the inline error message for a given form field.
+ * Also toggles the red-border invalid style on the input element.
+ *
+ * @param {string} fieldId  - Field identifier without the `contact-` prefix (e.g. `"name"`).
+ * @param {string} message  - Error text to display. Pass an empty string to clear the error.
+ * @param {boolean} [isLimit=false] - When `true`, uses an orange colour for limit warnings
+ *   instead of the default red, and does not apply the invalid border style.
+ * @returns {void}
+ */
 function setFieldError(fieldId, message, isLimit = false) {
   const errorSpan = document.getElementById(`error-${fieldId}`);
   const inputEl = document.getElementById(`contact-${fieldId}`);
@@ -75,7 +114,12 @@ function setFieldError(fieldId, message, isLimit = false) {
   }
 }
 
-/** Prüft das gesamte Formular und aktiviert/deaktiviert den Button */
+/**
+ * Checks all form fields and enables or disables the submit button accordingly.
+ * Called after every input event and after the privacy checkbox changes.
+ *
+ * @returns {void}
+ */
 function updateButtonState() {
   const name = document.getElementById("contact-name").value.trim();
   const email = document.getElementById("contact-email").value.trim();
@@ -83,7 +127,6 @@ function updateButtonState() {
   const privacy = document.getElementById("privacy");
   const btn = document.querySelector(".btn-submit");
 
-  // Validierungs-Checks
   const isNameValid =
     name.length >= 3 && name.length <= 25 && /^[a-zA-ZäöüÄÖÜß\s]*$/.test(name);
 
@@ -97,7 +140,6 @@ function updateButtonState() {
   const isMessageValid = message.length >= 5 && message.length <= 500;
   const isPrivacyChecked = privacy && privacy.checked;
 
-  // Button aktivieren nur wenn alles okay ist
   btn.disabled = !(
     isNameValid &&
     isEmailValid &&
@@ -106,7 +148,15 @@ function updateButtonState() {
   );
 }
 
-/** Validiert die Felder in Echtzeit */
+/**
+ * Validates a single contact form field and updates the error display.
+ * For the `name` field, invalid characters are stripped in place.
+ *
+ * @param {"name" | "email" | "message"} id - The field identifier.
+ * @param {string} value - Current value of the field.
+ * @returns {boolean} `true` if the field is valid or only shows a limit warning;
+ *   `false` if there is a hard validation error.
+ */
 function validateField(id, value) {
   let errorMessage = "";
   let isLimit = false;
@@ -158,7 +208,17 @@ function validateField(id, value) {
   return errorMessage === "" || isLimit;
 }
 
-/** Formular absenden */
+/**
+ * Submits the contact form data to the server via a POST request.
+ *
+ * On success, resets the form and shows a success message.
+ * On failure, restores the button and shows an error message.
+ *
+ * @async
+ * @param {{ name: string, email: string, message: string }} data - Sanitised form payload.
+ * @param {HTMLButtonElement} btn - The submit button element (disabled during the request).
+ * @returns {Promise<void>}
+ */
 async function submitForm(data, btn) {
   const lang = localStorage.getItem("preferredLang") || "en";
   btn.disabled = true;
@@ -179,7 +239,7 @@ async function submitForm(data, btn) {
     privacyErr.style.color = "#3dcfb6";
     privacyErr.classList.add("visible");
     document.getElementById("contact-form").reset();
-    updateButtonState(); // Button nach Reset wieder sperren
+    updateButtonState();
   } catch {
     const privacyErr = document.getElementById("privacy-error");
     privacyErr.textContent = msg("error");
@@ -190,6 +250,14 @@ async function submitForm(data, btn) {
   }
 }
 
+/**
+ * Initialises all contact form event listeners once the DOM is ready.
+ * Attaches input handlers for real-time validation and a submit handler
+ * for async form submission.
+ *
+ * @listens DOMContentLoaded
+ * @returns {void}
+ */
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contact-form");
   if (!form) return;
@@ -197,7 +265,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const fields = ["name", "email", "message"];
   const privacy = document.getElementById("privacy");
 
-  // Initialer Check
   updateButtonState();
 
   fields.forEach((fieldId) => {
