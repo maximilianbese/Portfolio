@@ -64,12 +64,13 @@ const TRANSLATIONS = {
     form_msg_label: "How can I help you?",
     form_msg_placeholder: "Hello Maximilian, I am interested in...",
     form_privacy:
-      "I've read the privacy policy and agree to the processing of my data as outlined.",
+      "I've read the <a href='./privacy-policy.html'>privacy policy</a> and agree to the processing of my data as outlined.",
     form_error: "Please accept the privacy policy.",
     form_btn: "Say Hello ;)",
     footer_role: "Web Developer",
     footer_loc: "Lübbecke, Germany",
     footer_link_legal: "Legal Notice",
+    footer_link_privacy: "Privacy Policy",
     legal_page_title: "Legal Notice",
     legal_nav_about: "About me",
     legal_nav_skills: "Skills",
@@ -101,6 +102,7 @@ const TRANSLATIONS = {
     legal_footer_role: "Frontend Developer",
     legal_footer_loc: "Lübbecke, Germany",
     legal_footer_legal: "Legal Notice",
+    legal_footer_privacy: "Privacy Policy",
   },
   de: {
     nav_about: "Über mich",
@@ -164,12 +166,13 @@ const TRANSLATIONS = {
     form_msg_label: "Wie kann ich dir helfen?",
     form_msg_placeholder: "Hallo Maximilian, ich interessiere mich für...",
     form_privacy:
-      "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten zu.",
+      "Ich habe die <a href='./privacy-policy.html'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
     form_error: "Bitte akzeptiere die Datenschutzerklärung.",
     form_btn: "Sag Hallo ;)",
     footer_role: "Web-Entwickler",
     footer_loc: "Lübbecke, Deutschland",
     footer_link_legal: "Impressum",
+    footer_link_privacy: "Datenschutzerklärung",
     legal_page_title: "Impressum",
     legal_nav_about: "Über mich",
     legal_nav_skills: "Skills",
@@ -201,6 +204,7 @@ const TRANSLATIONS = {
     legal_footer_role: "Web-Entwickler",
     legal_footer_loc: "Lübbecke, Deutschland",
     legal_footer_legal: "Impressum",
+    legal_footer_privacy: "Datenschutzerklärung",
   },
 };
 
@@ -209,7 +213,7 @@ function applyTranslation(el, value) {
   if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
     el.placeholder = value;
   } else {
-    el.innerText = value;
+    el.innerHTML = value;
   }
 }
 
