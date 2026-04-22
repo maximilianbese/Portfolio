@@ -59,14 +59,14 @@
 /* --- Seitliche Karten (Flach und besser sichtbar) --- */
 .testimonial-card.prev {
   opacity: 0.35;
-  transform: scale(0.85) translateX(-550px); /* Keine Drehung mehr */
+  transform: scale(0.85) translateX(-550px);
   pointer-events: auto;
   z-index: 5;
 }
 
 .testimonial-card.next {
   opacity: 0.35;
-  transform: scale(0.85) translateX(550px); /* Keine Drehung mehr */
+  transform: scale(0.85) translateX(550px);
   pointer-events: auto;
   z-index: 5;
 }
@@ -79,10 +79,10 @@
 /* --- Anführungszeichen (wie in der Vorlage) --- */
 .quote-icon {
   position: absolute;
-  top: -45px; /* Ragt nach oben raus */
-  left: -25px; /* Ragt nach links raus */
+  top: -35px;
+  left: -25px;
   font-size: 150px;
-  color: white; /* Weiß und massiv */
+  color: white;
   font-family: serif;
   line-height: 1;
   z-index: 5;

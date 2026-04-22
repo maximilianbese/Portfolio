@@ -42,7 +42,7 @@
 }
 
 .nav-links a {
-  position: relative; /* Wichtig, damit der Punkt relativ zum Link positioniert wird */
+  position: relative;
   text-decoration: none;
   color: white;
   transition: color 0.3s ease;
@@ -51,10 +51,10 @@
 .nav-links a::after {
   content: "";
   position: absolute;
-  bottom: -8px; /* Abstand unter dem Text */
-  left: 50%; /* Horizontal zentrieren */
-  transform: translateX(-50%) scale(0); /* Startet unsichtbar und klein */
-  width: 6px; /* Größe des Punktes */
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  width: 6px;
   height: 6px;
   background-color: var(--accent-green);
   border-radius: 50%;
@@ -72,7 +72,7 @@
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 40px; /* Exakter Abstand zwischen Sprache und Links */
+  gap: 40px;
 }
 
 .nav-right {

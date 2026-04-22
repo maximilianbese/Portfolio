@@ -17,9 +17,9 @@
 
 .background-lines {
   position: absolute;
-  top: -50px; /* Versatz nach oben */
-  left: -50px; /* Versatz nach links */
-  width: 250px; /* Größe des Musters */
+  top: -50px;
+  left: -50px;
+  width: 250px;
   height: 250px;
   background-image: repeating-linear-gradient(
     -45deg,
@@ -28,7 +28,7 @@
     transparent 1px,
     transparent 10px
   );
-  z-index: 1; /* Hinter das Foto */
+  z-index: 1;
 }
 
 .about-portrait {
@@ -49,7 +49,7 @@
 
 .about-card {
   background: rgba(61, 207, 182, 0.1);
-  border: 1px solid var(--accent-green); /* Dünner leuchtender Rand */
+  border: 1px solid var(--accent-green);
   border-radius: 30px;
   padding: 50px;
   backdrop-filter: blur(10px);
@@ -67,13 +67,13 @@
 
 .word-about {
   position: relative;
-  transform: perspective(300px) rotateY(-5deg); /* Leichte Drehung */
+  transform: perspective(300px) rotateY(-5deg);
 }
 
 .word-me {
   position: relative;
-  top: 5px; /* Kleiner vertikaler Versatz */
-  transform: perspective(300px) rotateY(5deg); /* Gegendrehung */
+  top: 5px;
+  transform: perspective(300px) rotateY(5deg);
 }
 
 /* --- Text & Details --- */

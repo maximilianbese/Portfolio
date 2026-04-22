@@ -27,10 +27,9 @@
 }
 
 .hero-title {
-  /* Die Schrift passt sich zwischen 2.5rem (klein) und 8rem (groß) an */
   font-size: clamp(2.5rem, 8vw, 8rem);
   line-height: 1.1;
-  white-space: nowrap; /* Verhindert Umbruch, wenn gewollt */
+  white-space: nowrap;
   width: 100%;
   text-align: center;
 }
@@ -56,18 +55,16 @@
 .sidebar-left,
 .sidebar-right {
   position: absolute;
-  bottom: 0; /* Klebt am unteren Rand der Sektion */
+  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100px;
-  height: auto; /* Höhe wird durch Inhalt bestimmt */
+  height: auto;
 }
 
 .sidebar-left {
-  left: calc(
-    50% - 720px + 40px
-  ); /* Zentriert bezogen auf 1440px (720 ist die Hälfte) */
+  left: calc(50% - 720px + 40px);
 }
 .sidebar-right {
   right: calc(50% - 720px + 40px);
@@ -93,7 +90,7 @@
 
 .scroll-line {
   width: 1px;
-  height: 15vh; /* Nutze Viewport-Einheiten für konsistente Länge */
+  height: 15vh;
   background: linear-gradient(to bottom, var(--accent-green), transparent);
 }
 
@@ -129,25 +126,25 @@
 /* --- Ticker/Banner Styling --- */
 .hero-ticker {
   position: absolute;
-  bottom: 50px; /* Position über dem unteren Rand */
-  width: 120%; /* Breiter als 100%, damit die Ecken bei Drehung nicht sichtbar sind */
+  bottom: 50px;
+  width: 120%;
   left: -10%;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(61, 207, 182, 0.2);
   border-bottom: 1px solid rgba(61, 207, 182, 0.2);
   padding: 15px 0;
-  transform: rotate(-2deg); /* Die Schräglage aus dem Screenshot */
+  transform: rotate(-2deg);
   overflow: hidden;
   white-space: nowrap;
   z-index: 10;
 }
 
 .ticker-content {
-  display: flex; /* Flexbox sorgt für exakte Abstände */
+  display: flex;
   white-space: nowrap;
-  width: max-content; /* Wichtig: Die Box passt sich dem Inhalt an */
-  animation: marquee 30s linear infinite; /* Etwas langsamer wirkt oft edler */
+  width: max-content;
+  animation: marquee 30s linear infinite;
 }
 
 .ticker-content span {
@@ -167,7 +164,6 @@
     transform: translateX(0);
   }
   100% {
-    /* Wir springen zurück, wenn die erste Hälfte des Textes durch ist */
     transform: translateX(-50%);
   }
 }
@@ -175,10 +171,9 @@
 /* --- Sidebar Fix für das Banner --- */
 .sidebar-left,
 .sidebar-right {
-  z-index: 5; /* Hinter dem Banner, damit es sich schneidet */
+  z-index: 5;
 }
 
-/* Die Linien müssen lang genug sein, um hinter das Banner zu laufen */
 .scroll-line {
   height: 200px;
   background: linear-gradient(to bottom, var(--accent-green), transparent);

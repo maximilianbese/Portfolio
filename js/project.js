@@ -11,8 +11,17 @@ const PROJECT_DATA = {
     github: "https://github.com/maximilianbese/Join.git",
     live: "https://join.maximilian-bese.de/",
   },
-  loco: {
+  pokedex: {
     number: "02",
+    title: "Pokedex",
+    descKey: "desc_pokedex",
+    img: "./assets/img/pokedex-preview.png",
+    tech: ["html", "css", "javascript", "pokeapi"],
+    github: "https://github.com/maximilianbese/Pokedex.git",
+    live: "https://pokedex.maximilian-bese.de/",
+  },
+  loco: {
+    number: "03",
     title: "El Pollo Loco",
     descKey: "desc_loco",
     img: "./assets/img/elpollo-preview.png",

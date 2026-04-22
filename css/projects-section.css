@@ -126,24 +126,23 @@
 
 .status-badge {
   background-color: var(--accent-green);
-  color: var(--bg-dark); /* Oder direkt #0e1111 */
+  color: var(--bg-dark);
   font-size: 14px;
   font-family: var(--font-mono);
   font-weight: 700;
   text-transform: uppercase;
   padding: 6px 18px;
-  border-radius: 50px; /* Voll abgerundet für den Pillen-Look */
+  border-radius: 50px;
   margin-left: 15px;
   vertical-align: middle;
   display: inline-block;
   letter-spacing: 1px;
 }
 
-/* Optional: Ein kleiner Puls-Effekt, um die Aufmerksamkeit zu steigern */
 .status-badge {
   animation: status-pulse 2s infinite;
 }
-/* Grundzustand: Overlay versteckt */
+
 .d-none {
   display: none !important;
 }
@@ -155,12 +154,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.9
-  ); /* Fast komplett schwarz, damit der Fokus voll auf dem Projekt liegt */
+  background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,9 +164,7 @@
 
 /* Die Karte im Overlay (schwarz mit grünem Rand) */
 .overlay-content {
-  /* Ein radialer Gradient: startet oben links mit einem dunklen Grün und wird nach unten rechts schwarz */
   background: radial-gradient(circle at top right, #062b22 0%, #0b0b0b 100%);
-
   border: 1px solid #3dcfb6;
   border-radius: 30px;
   width: 100%;
@@ -180,8 +172,6 @@
   padding: 60px;
   position: relative;
   color: white;
-
-  /* Ein leichter Schein nach außen, damit es sich vom dunklen Hintergrund abhebt */
   box-shadow: 0 0 40px rgba(61, 207, 182, 0.1);
 }
 
@@ -211,7 +201,7 @@
 
 #overlay-number {
   font-size: 128px;
-  color: #3dcfb6; /* Sehr dezente Nummer im Hintergrund */
+  color: #3dcfb6;
   margin: 0;
   line-height: 1;
 }

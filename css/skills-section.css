@@ -4,7 +4,7 @@
 
 .skills-layout {
   display: grid;
-  grid-template-columns: 1fr 1.2fr; /* Links etwas schmaler als rechts */
+  grid-template-columns: 1fr 1.2fr;
   gap: 80px;
   align-items: start;
   margin-top: 30px;
@@ -19,7 +19,7 @@
 }
 
 .skills-heading {
-  font-size: 64px; /* Sehr groß wie im Design */
+  font-size: 64px;
   color: var(--accent-green);
   margin-bottom: 30px;
   line-height: 1;
@@ -59,8 +59,8 @@
 /* Rechtes Grid */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 Icons pro Zeile */
-  gap: 60px 40px; /* Mehr vertikaler Abstand als horizontaler */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px 40px;
   padding-top: 40px;
 }
 
@@ -75,7 +75,7 @@
 .skill-item img {
   width: 60px;
   height: 60px;
-  filter: brightness(0) invert(1); /* Macht Icons weiß */
+  filter: brightness(0) invert(1);
 }
 
 .skill-item span {
@@ -86,7 +86,7 @@
 
 /* Das farbige Icon (Growth Mindset) */
 .skill-item.accent img {
-  filter: none; /* Zeigt Originalfarbe */
+  filter: none;
 }
 
 .skill-item.accent span {

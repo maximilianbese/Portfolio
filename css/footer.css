@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  border-top: 1px solid rgba(255, 255, 255, 0.05); /* Dezente Trennung */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   margin-top: 50px;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .footer-logo {
-  height: 75px; /* Passe die Höhe an dein Logo an */
+  height: 75px;
   width: 100px;
   display: block;
 }
@@ -30,7 +30,7 @@
 .footer-center {
   align-self: center;
   color: var(--accent-green);
-  font-family: var(--font-mono); /* Falls du eine Monospace-Schrift nutzt */
+  font-family: var(--font-mono);
   font-size: 18px;
 }
 
