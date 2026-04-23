@@ -66,10 +66,10 @@ const TRANSLATIONS = {
     overlay_next: "Next project",
     desc_join:
       "Task manager inspired by the Kanban System. Create and organize tasks with drag & drop, assign users and categories.",
+    desc_pokedex:
+      "An interactive library based on the PokéAPI. Explore a vast collection of Pokémon, search for your favorites, and analyze their detailed base stats in a clean, responsive interface.",
     desc_loco:
       "A jump-and-run game in object-oriented JavaScript. Help Pepe collect coins and bottles to defeat the final boss.",
-    desc_bubble:
-      "A real-time messaging app inspired by Slack. Built with Angular and Firebase, supporting channels and direct messages.",
     testimonials_title: "What my colleagues say about me",
     testimonial_1:
       "Maximilian, your willingness to help was worth its weight in gold for the entire team. No matter what challenge we faced, you always had an open ear and actively helped find solutions. You complemented the team perfectly, both personally and professionally. Through your level-headed nature and your commitment, you played a key role in ensuring that our collaboration ran so smoothly.",
@@ -168,10 +168,10 @@ const TRANSLATIONS = {
     overlay_next: "Nächstes Projekt",
     desc_join:
       "Aufgaben-Manager nach dem Kanban-Prinzip. Per Drag & Drop erstellen und organisieren, Benutzer und Kategorien zuweisen.",
+    desc_pokedex:
+      "Eine interaktive Bibliothek basierend auf der PokéAPI. Entdecke eine riesige Sammlung von Pokémon, suche nach deinen Favoriten und analysiere deren detaillierte Statuswerte in einer modernen, responsiven Benutzeroberfläche.",
     desc_loco:
       "Ein Jump-and-Run-Spiel in objektorientiertem JavaScript. Hilf Pepe, Münzen und Flaschen zu sammeln.",
-    desc_bubble:
-      "Eine Echtzeit-Messaging-App inspiriert von Slack. Mit Angular und Firebase, Kanal- und Direktnachrichten-Funktion.",
     testimonials_title: "Was meine Kollegen über mich sagen",
     testimonial_1:
       "Maximilian deine Hilfsbereitschaft war für das gesamte Team Gold wert. Egal, vor welcher Herausforderung wir standen, du hattest immer ein offenes Ohr und hast aktiv mitgeholfen, Lösungen zu finden. Du hast das Team menschlich und fachlich perfekt ergänzt. Durch deine besonnene Art und dein Engagement hast du maßgeblich dazu beigetragen, dass die Zusammenarbeit so reibungslos verlaufen ist.",
