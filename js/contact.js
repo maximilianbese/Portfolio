@@ -238,6 +238,7 @@ async function submitForm(data, btn) {
     privacyErr.textContent = msg("success");
     privacyErr.style.color = "#3dcfb6";
     privacyErr.classList.add("visible");
+    btn.textContent = lang === "de" ? "Gesendet ✓" : "Sent ✓";
     document.getElementById("contact-form").reset();
     updateButtonState();
   } catch {

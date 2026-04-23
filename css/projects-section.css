@@ -96,6 +96,8 @@
 
 .preview-container img {
   width: 100%;
+  height: 280px;
+  object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   position: relative;
@@ -169,10 +171,12 @@
   border-radius: 30px;
   width: 100%;
   max-width: 1100px;
+  height: 600px;
   padding: 60px;
   position: relative;
   color: white;
   box-shadow: 0 0 40px rgba(61, 207, 182, 0.1);
+  overflow: hidden;
 }
 
 /* Schließen-Button oben rechts */
@@ -192,6 +196,7 @@
   display: flex;
   align-items: center;
   gap: 50px;
+  height: 100%;
 }
 
 /* Text-Bereich */
@@ -247,6 +252,12 @@
   color: white;
 }
 
+.overlay-tech-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 /* Buttons (GitHub & Live) */
 .overlay-btns {
   display: flex;
@@ -256,11 +267,15 @@
 /* Bild-Bereich */
 .overlay-image {
   flex: 1.2;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .overlay-image img {
   width: 100%;
-  height: auto;
+  height: 380px;
+  object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
@@ -285,9 +300,11 @@
   .overlay-body {
     flex-direction: column;
     text-align: center;
+    height: auto;
   }
   .overlay-content {
     padding: 40px 20px;
+    height: auto;
     max-height: 90vh;
     overflow-y: auto;
   }
