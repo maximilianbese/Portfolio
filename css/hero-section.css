@@ -148,7 +148,7 @@
   width: max-content;
   position: absolute;
   left: 0;
-  top: 0px;
+  top: 10px;
   /* Animation wird via JS (ticker.js) gesteuert */
 }
 
