@@ -72,18 +72,38 @@
   align-items: center;
   gap: 15px;
   text-align: center;
+  cursor: default;
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+.skill-item:hover {
+  transform: scale(1.18) translateY(-4px);
 }
 
 .skill-item img {
   width: 60px;
   height: 60px;
   filter: brightness(0) invert(1);
+  transition:
+    filter 0.25s ease,
+    drop-shadow 0.25s ease;
+}
+
+.skill-item:hover img {
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(61, 207, 182, 0.7));
 }
 
 .skill-item span {
   font-family: var(--font-mono);
   font-size: 18px;
   color: #888;
+  transition: color 0.25s ease;
+}
+
+.skill-item:hover span {
+  color: var(--accent-green);
 }
 
 /* Das farbige Icon (Growth Mindset) */
@@ -91,6 +111,14 @@
   filter: none;
 }
 
+.skill-item.accent:hover img {
+  filter: drop-shadow(0 0 8px rgba(61, 207, 182, 0.6));
+}
+
 .skill-item.accent span {
   color: white;
+}
+
+.skill-item.accent:hover span {
+  color: var(--accent-green);
 }

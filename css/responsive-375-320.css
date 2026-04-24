@@ -147,3 +147,47 @@
     font-size: 12px;
   }
 }
+
+/* ==========================================================================
+   Horizontal overflow fix — all breakpoints ≤ 375 px
+   Clamps elements that extend beyond the viewport width.
+   ========================================================================== */
+@media (max-width: 375px) {
+  /* Hero title must wrap on narrow screens */
+  .hero-title {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  /* Contain the ticker inside the hero so it cannot push the scroll width */
+  .hero {
+    overflow: hidden;
+  }
+
+  /* Decorative lines must not bleed outside their parent */
+  .background-lines {
+    left: 0;
+    overflow: hidden;
+  }
+
+  /* About section: clip the absolutely-positioned decorative image */
+  .about-image-wrapper {
+    overflow: hidden;
+  }
+
+  /* Project number badge sits at right: -20px on desktop — reset on mobile */
+  .project-number {
+    right: 0;
+  }
+
+  /* Testimonial quote-icon overhangs left — clip inside the card */
+  .testimonial-card {
+    overflow: hidden;
+  }
+
+  /* Sidebar elements must not overflow horizontally */
+  .sidebar-left,
+  .sidebar-right {
+    max-width: 40px;
+  }
+}

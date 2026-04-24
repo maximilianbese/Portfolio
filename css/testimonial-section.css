@@ -24,6 +24,7 @@
   position: absolute;
   width: 520px;
   min-height: 300px;
+  overflow: hidden;
   background: rgba(61, 207, 182, 0.05);
   border: 1px solid rgba(61, 207, 182, 0.2);
   border-radius: 30px;

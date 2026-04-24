@@ -134,17 +134,22 @@
   border-top: 1px solid rgba(61, 207, 182, 0.2);
   border-bottom: 1px solid rgba(61, 207, 182, 0.2);
   padding: 15px 0;
+  height: 60px;
   transform: rotate(-2deg);
   overflow: hidden;
   white-space: nowrap;
   z-index: 10;
 }
 
-.ticker-content {
+.ticker-content,
+.ticker-clone {
   display: flex;
   white-space: nowrap;
   width: max-content;
-  animation: marquee 30s linear infinite;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  /* Animation wird via JS (ticker.js) gesteuert */
 }
 
 .ticker-content span {

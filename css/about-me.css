@@ -15,6 +15,10 @@
   position: relative;
 }
 
+.about-image-wrapper {
+  overflow: hidden;
+}
+
 .background-lines {
   position: absolute;
   top: -50px;

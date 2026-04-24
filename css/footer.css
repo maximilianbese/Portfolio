@@ -14,6 +14,19 @@
   gap: 20px;
 }
 
+.footer-logo-link {
+  display: block;
+  width: fit-content;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.footer-logo-link:hover {
+  transform: scale(1.08);
+  opacity: 0.85;
+}
+
 .footer-logo {
   height: 75px;
   width: 100px;

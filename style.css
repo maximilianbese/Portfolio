@@ -2,17 +2,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Karla:wght@400;700&display=swap");
 
 :root {
-  /* Farben aus deinen Screenshots */
+  /* Colour tokens */
   --bg-dark: rgba(28, 28, 28, 1);
   --bg-gradient-green: rgba(8, 70, 59, 1);
   --accent-green: rgba(61, 207, 182, 1);
   --accent-green-10: rgba(61, 207, 182, 0.1);
 
-  /* Schriften */
+  /* Typography */
   --font-main: "Karla", sans-serif;
   --font-mono: "Fira Code", monospace;
 
-  /* Abstände */
+  /* Layout */
   --container-padding: 10%;
 }
 
@@ -23,9 +23,15 @@
   scroll-behavior: smooth;
 }
 
+html {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
 body {
   background-color: var(--bg-dark);
-  /* Der Verlauf aus Figma */
+  /* Diagonal gradient matching the Figma design */
   background: linear-gradient(
     45deg,
     var(--bg-dark) 25%,
@@ -36,16 +42,37 @@ body {
   font-family: var(--font-main);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding-left: 60px; /* Gleicht dein Header-Padding aus */
-  padding-right: 60px; /* Gleicht dein Header-Padding aus */
+  padding-left: 60px;
+  padding-right: 60px;
   width: 100%;
 }
 
 .nav-right img {
   height: 100px;
+}
+
+/* ================================================
+   BACKGROUND CANVAS — Stacking Context
+   ================================================ */
+
+/*
+ * The particle canvas is inserted at z-index 0 (set inline by background.js).
+ * All direct children of <body> that contain page content must sit above it.
+ * Using `position: relative` + `z-index: 1` achieves this without breaking
+ * existing layout, since every structural element already has a defined role.
+ */
+.main-header,
+.main-footer,
+main,
+section,
+footer {
+  position: relative;
+  z-index: 1;
 }
