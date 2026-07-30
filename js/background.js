@@ -134,17 +134,34 @@
 
   /**
    * Resizes the canvas to the current window dimensions (device-pixel-ratio aware)
-   * and rebuilds the particle pool to match the new area.
+   * and keeps the particle pool matched to the new area.
+   *
+   * Existing particles are rescaled proportionally to the new dimensions so the
+   * field always spans the full viewport — without this, particles created for a
+   * smaller viewport would stay clustered in one corner when the window grows,
+   * is maximised, or the zoom level changes.
    *
    * @returns {void}
    */
   function resize() {
     const dpr = window.devicePixelRatio || 1;
+    const prevW = W;
+    const prevH = H;
     W = window.innerWidth;
     H = window.innerHeight;
     canvas.width = W * dpr;
     canvas.height = H * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    /* Rescale existing particles so they redistribute across the new size. */
+    if (prevW > 0 && prevH > 0 && (prevW !== W || prevH !== H)) {
+      const sx = W / prevW;
+      const sy = H / prevH;
+      for (const p of particles) {
+        p.x *= sx;
+        p.y *= sy;
+      }
+    }
 
     const target = particleCount();
     /* Trim excess particles. */
