@@ -29,6 +29,10 @@
   padding: 4px 10px;
   border-radius: 15px;
   cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+  line-height: 1;
 }
 
 .lang.active {

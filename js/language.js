@@ -317,11 +317,31 @@ function changeLanguage(lang) {
 }
 
 /**
- * Applies the persisted (or default English) language on page load.
+ * Wires up every `.lang` toggle button so it switches the UI language on click.
+ * The target language is read from the button's `data-lang` attribute, falling
+ * back to its text content (e.g. "EN" / "DE").
+ *
+ * @returns {void}
+ */
+function initLangButtons() {
+  document.querySelectorAll(".lang").forEach((el) => {
+    el.addEventListener("click", () => {
+      const lang = (
+        el.getAttribute("data-lang") || el.textContent.trim()
+      ).toLowerCase();
+      changeLanguage(lang);
+    });
+  });
+}
+
+/**
+ * Applies the persisted (or default English) language on page load and wires
+ * up the language toggle buttons.
  *
  * @listens DOMContentLoaded
  * @returns {void}
  */
 document.addEventListener("DOMContentLoaded", () => {
   changeLanguage(localStorage.getItem("preferredLang") || "en");
+  initLangButtons();
 });

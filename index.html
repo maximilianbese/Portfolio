@@ -28,20 +28,12 @@
     <header class="main-header container">
       <div class="nav-left">
         <div class="lang-toggle">
-          <span
-            class="lang active"
-            id="btn-en"
-            data-lang="en"
-            onclick="changeLanguage('en')"
-            >EN</span
-          >
-          <span
-            class="lang"
-            id="btn-de"
-            data-lang="de"
-            onclick="changeLanguage('de')"
-            >DE</span
-          >
+          <button type="button" class="lang active" id="btn-en" data-lang="en">
+            EN
+          </button>
+          <button type="button" class="lang" id="btn-de" data-lang="de">
+            DE
+          </button>
         </div>
         <nav class="nav-links" aria-label="Main navigation">
           <a href="#about" data-key="nav_about">About me</a>
@@ -87,15 +79,8 @@
           >
         </nav>
         <div class="mobile-lang-toggle">
-          <span
-            class="lang active"
-            data-lang="en"
-            onclick="changeLanguage('en')"
-            >EN</span
-          >
-          <span class="lang" data-lang="de" onclick="changeLanguage('de')"
-            >DE</span
-          >
+          <button type="button" class="lang active" data-lang="en">EN</button>
+          <button type="button" class="lang" data-lang="de">DE</button>
         </div>
       </div>
     </div>
@@ -458,10 +443,7 @@
                 <span class="field-error" id="error-message"></span>
               </div>
               <div class="privacy-container">
-                <label class="custom-checkbox">
-                  <input type="checkbox" id="privacy" required="" />
-                  <span class="checkmark"></span>
-                </label>
+                <input type="checkbox" id="privacy" required="" />
                 <div class="checkbox-text" data-key="form_privacy">
                   I've read the
                   <a href="./privacy-policy.html">privacy policy</a>
@@ -535,13 +517,7 @@
       aria-labelledby="overlay-title"
     >
       <div class="overlay-content">
-        <button
-          class="close-btn"
-          onclick="closeOverlay()"
-          aria-label="Close overlay"
-        >
-          ✕
-        </button>
+        <button class="close-btn" aria-label="Close overlay">✕</button>
         <div class="overlay-body">
           <div class="overlay-text">
             <h2 id="overlay-number">01</h2>
@@ -572,7 +548,7 @@
             <img id="overlay-img-src" src="" alt="Project screenshot" />
           </div>
         </div>
-        <button class="next-project-btn" onclick="nextProject()">
+        <button class="next-project-btn">
           <span data-key="overlay_next">Next project</span> →
         </button>
       </div>
@@ -584,7 +560,6 @@
     <script src="./js/contact.js"></script>
     <script src="./js/background.js"></script>
     <script src="./js/ticker.js"></script>
-    <script src="./js/marquee.js"></script>
     <script src="./js/mobile-nav.js"></script>
   </body>
 </html>

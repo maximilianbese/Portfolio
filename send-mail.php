@@ -39,6 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
+    // Header-Injection verhindern: CR/LF aus kopfzeilenrelevanten Feldern entfernen
+    $visitorName  = str_replace(["\r", "\n", "%0a", "%0d"], '', $visitorName);
+    $visitorEmail = str_replace(["\r", "\n", "%0a", "%0d"], '', $visitorEmail);
+
     // Bereinigung für die E-Mail
     $safeName    = htmlspecialchars($visitorName, ENT_QUOTES, 'UTF-8');
     $safeEmail   = htmlspecialchars($visitorEmail, ENT_QUOTES, 'UTF-8');

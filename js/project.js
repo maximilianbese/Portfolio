@@ -193,14 +193,24 @@ function initProjectHover() {
 }
 
 /**
- * Registers overlay close handlers:
+ * Registers overlay control handlers:
+ *  - Close button click.
+ *  - "Next project" button click.
  *  - Backdrop click (target === overlay element itself).
  *  - Escape key.
  *
  * @returns {void}
  */
 function initOverlayClose() {
-  document.getElementById("project-overlay").addEventListener("click", (e) => {
+  const overlay = document.getElementById("project-overlay");
+  if (!overlay) return;
+
+  overlay.querySelector(".close-btn")?.addEventListener("click", closeOverlay);
+  overlay
+    .querySelector(".next-project-btn")
+    ?.addEventListener("click", nextProject);
+
+  overlay.addEventListener("click", (e) => {
     if (e.target.id === "project-overlay") closeOverlay();
   });
   document.addEventListener("keydown", (e) => {

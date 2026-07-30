@@ -82,25 +82,41 @@
   opacity: 1;
 }
 
+/* Privacy/status message — hidden until toggled via the .visible class. */
+.error-text {
+  font-size: 14px;
+  margin-top: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.error-text.visible {
+  opacity: 1;
+}
+
 .form-group input.invalid,
 .form-group textarea.invalid {
   border-bottom: 1px solid #ff4d4d !important;
 }
 
 /* Checkbox & Button */
-.privacy-check {
+.privacy-container {
   display: flex;
   align-items: center;
-  gap: 15px;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: 30px;
   font-size: 14px;
   color: #e0e0e0;
 }
 
-.privacy-check input[type="checkbox"] {
-  accent-color: var(--accent-green);
-  width: 20px;
-  height: 20px;
+.privacy-container .checkbox-text {
+  flex: 1;
+  min-width: 220px;
+}
+
+.privacy-container .error-text {
+  flex-basis: 100%;
 }
 
 #privacy {
