@@ -70,6 +70,8 @@ const TRANSLATIONS = {
       "An interactive library based on the PokéAPI. Explore a vast collection of Pokémon, search for your favorites, and analyze their detailed base stats in a clean, responsive interface.",
     desc_loco:
       "A jump-and-run game in object-oriented JavaScript. Help Pepe collect coins and bottles to defeat the final boss.",
+    desc_smartdash:
+      "An interactive smart-home dashboard in pure vanilla JavaScript (ES modules) — no framework, no build. Control lights and thermostats by room, add or remove devices, with a two-level menu, smooth staggered animations and persistent state via localStorage.",
     testimonials_title: "What my colleagues say about me",
     testimonial_1:
       "Maximilian, your willingness to help was worth its weight in gold for the entire team. No matter what challenge we faced, you always had an open ear and actively helped find solutions. You complemented the team perfectly, both personally and professionally. Through your level-headed nature and your commitment, you played a key role in ensuring that our collaboration ran so smoothly.",
@@ -172,6 +174,8 @@ const TRANSLATIONS = {
       "Eine interaktive Bibliothek basierend auf der PokéAPI. Entdecke eine riesige Sammlung von Pokémon, suche nach deinen Favoriten und analysiere deren detaillierte Statuswerte in einer modernen, responsiven Benutzeroberfläche.",
     desc_loco:
       "Ein Jump-and-Run-Spiel in objektorientiertem JavaScript. Hilf Pepe, Münzen und Flaschen zu sammeln.",
+    desc_smartdash:
+      "Ein interaktives Smart-Home-Dashboard in purem Vanilla-JavaScript (ES-Module) — ohne Framework, ohne Build. Steuere Licht und Thermostate pro Raum, füge Geräte hinzu oder lösche sie, mit Zwei-Ebenen-Menü, sanften Animationen und persistentem Zustand via localStorage.",
     testimonials_title: "Was meine Kollegen über mich sagen",
     testimonial_1:
       "Maximilian deine Hilfsbereitschaft war für das gesamte Team Gold wert. Egal, vor welcher Herausforderung wir standen, du hattest immer ein offenes Ohr und hast aktiv mitgeholfen, Lösungen zu finden. Du hast das Team menschlich und fachlich perfekt ergänzt. Durch deine besonnene Art und dein Engagement hast du maßgeblich dazu beigetragen, dass die Zusammenarbeit so reibungslos verlaufen ist.",

@@ -68,6 +68,15 @@ const PROJECT_DATA = {
     github: "https://github.com/maximilianbese/El-Pollo-Loco.git",
     live: "https://el-pollo-loco.maximilian-bese.de/",
   },
+  smartdash: {
+    number: "04",
+    title: "SmartDash",
+    descKey: "desc_smartdash",
+    img: "./assets/img/smartdash-preview.png",
+    tech: ["html", "css", "javascript"],
+    github: "https://github.com/maximilianbese/SmartDash.git",
+    live: "https://smartdash.maximilian-bese.de/",
+  },
 };
 
 /**
