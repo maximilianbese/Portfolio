@@ -72,7 +72,7 @@ const PROJECT_DATA = {
     number: "04",
     title: "SmartDash",
     descKey: "desc_smartdash",
-    img: "./assets/img/smartdash-preview.png",
+    img: "./assets/img/smartdash-white.png",
     tech: ["html", "css", "javascript"],
     github: "https://github.com/maximilianbese/SmartDash.git",
     live: "https://smartdash.maximilian-bese.de/",
